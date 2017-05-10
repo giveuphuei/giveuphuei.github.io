@@ -4,7 +4,7 @@ var radius = 6;
 var margin_left = 250;
 var margin_top = 40;
 
-const endTime = new Date(2017,4,10,23,22,0);
+const endTime = new Date(2017,4,12,23,22,0);
 var curShowTimeseconds = 0 ;
 
 const colors = ["#00ff00","#4a86e8","#9900ff","#ff00ff","#a61c00","#45818e","#db4141","#f6b26b","3399cc","00cc00"]

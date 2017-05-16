@@ -5,19 +5,31 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <meta name="description" content="布尔教育 http://www.itbool.com" />
   <script src="http://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
-  
+<style>
+div{
+    width:150px;
+    padding-top:10px;
+    margin:auto;
+}
+</style>  
 </head>
     <body>
-    	<input type='text' id='txt1' / onfocus> 
-  		<select id='select'> 
-			<option value='+'>+</option>
-			<option value="-">-</option>
-			<option value="*">*</option>
-			<option value="/">/</option>
-   		</select>
-    <input type='text' id='txt2' /> 
-    <input type='button' value=' = '> <!--通过 = 按钮来调用创建的函数，得到结果--> 
-    <input type='text' id='fruit' /> 
+    	<div>
+            <input type='text' id='txt1' / onfocus> 
+            <br />
+      		<select id='select'> 
+    			<option value='+'>+</option>
+    			<option value="-">-</option>
+    			<option value="*">*</option>
+    			<option value="/">/</option>
+       		</select>
+            <br />
+            <input type='text' id='txt2' /> 
+            <br />
+            <input type='button' value=' = '> <!--通过 = 按钮来调用创建的函数，得到结果--> 
+            <br />
+            <input type='text' id='fruit' /> 
+        </div>
     <script type="text/javascript">
     $("#txt1,#select,#txt2").focusin(function (){
         $("#fruit").val("");

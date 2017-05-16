@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="zh-CN">
+<head>
+<title>两栏布局</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, img, form { 
+	padding:0px; margin:0px; border:0; font-size:14px;
+} 
+h1, h2, h3, h4, h5, h6 { 
+	font-size:14px; font-weight:100; margin-top:0px !important; 
+	margin-bottom:0px !important;
+}
+table{border-collapse:collapse;} 
+table td{padding:0;}                  
+ul li{
+	list-style: none;
+}
+#nav{
+	width: auto;
+	height: 30px;
+	border: 2px red solid;
+}
+#content{
+	width: auto;
+	height: 600px;
+	border: 1px blue solid;
+}
+</style>
+</head>
+   <!-- <div id='nav'>
+    	<ul>
+    		<li><a href="/index.html"></a>主页</li>
+    	</ul>
+    </div>-->
+   <!--  <div id='content'>-->
+    	<frameset cols="30%,*">
+  		<frame src="demo_ul.html" >
+  		<frame src="starrysky.html" name="showframe" noresize="noresize">	
+	</frameset>
+	<!-- </div>-->
+</html>

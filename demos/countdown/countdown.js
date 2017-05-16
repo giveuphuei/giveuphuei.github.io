@@ -1,7 +1,7 @@
 var window_width = 1200 ;
 var window_height = 500 ; 
 var radius = 6;
-var margin_left = 250;
+var margin_left = 40;
 var margin_top = 40;
 
 const endTime = new Date(2017,4,18,23,22,0);

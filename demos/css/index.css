@@ -30,38 +30,31 @@ body{ font-size: 12px;
 }
 
 /*一级导航*/
-#nav-main{
+.nav-main{
 	float:left;
 	top: 0;
 	z-index: 12;
 	height: auto;
-	width: 100px;
+	width: 0;
 	color: #fff;
 	background: green;
 }
-#nav-main a{
+.nav-main a{
 	color: #fff;
 }
 .nav-box{
 	position: relative;
-	perspective: 200px;
-	-webkit-perspective: 200px;
-	transform-style: preserve-3d;
-	-webkit-transform-style: preserve-3d;/**/
 	height: 100%;
+	width: 0;
 	z-index: 99;
 }
 .nav-ul li a{
 	display: block;
-	width: 100px;
+	width: 0;
 	height: 100px;
 	overflow: hidden;
 	text-align: center;
 	position: relative;
-	transition: all .5s;
-	-moz-transition: all .5s;
-	-webkit-transition: all .5s;
-	-o-transition: all .5s;
 }
 
 .nav-ul li a:hover{background: #357dd7;}

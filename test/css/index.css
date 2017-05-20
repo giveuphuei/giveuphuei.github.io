@@ -1,0 +1,114 @@
+/*初始化样式*/
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, img, form { 
+	padding:0px; margin:0px; border:0; font-size:14px;
+} 
+h1, h2, h3, h4, h5, h6 { 
+	font-size:14px; font-weight:100; margin-top:0px !important; 
+	margin-bottom:0px !important;
+}
+table{border-collapse:collapse;} 
+table td{padding:0;}                  
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+	color: black;
+}
+a:link,a:visited{
+ 	text-decoration:none; 
+}
+
+#mainBody{
+	margin: auto;
+	background-image: url(../images/mainBg.png) ;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.mainNav{
+	height: 170px;
+	margin:auto;	
+	/*border: 1px red solid;*/
+	position: relative;
+
+}
+/*名字_主页 的样式*/
+#name{
+	z-index: 1;
+	position: absolute;
+	left: 4%;
+	top: 25px;
+	border: 1px blue solid;/**/
+	background-image: url(../images/name.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+.nav table{
+	
+	position: absolute;
+	top:25px;
+	right: 13%;
+/*	border: 2px  blue solid;width: 50%;*/
+}
+.nav li{
+	/*border: 0px  red solid;*/
+	height: 60px;
+	font-size: 20px;
+	font-family: "方正幼线简体";
+	font-weight: lighter;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.nav td{
+	/*border: 1px  yellow solid;*/
+	height: 120px;
+	font-size: 20px;
+	font-family: "方正幼线简体";
+	font-weight: lighter;
+	text-align: center;
+}
+
+.selfResume li:first-child{
+	z-index: 2;
+	background-position: relative;
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position:-9% -1%;/**/
+}
+.selfResume li:last-child{
+	color:orange;
+}
+.workShare li:first-child{
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position: 31% 92%;/**/
+}
+.lifeNote li:first-child{
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position: 72% 92%;/**/
+}
+.contactMe li:first-child{
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position: 113% 92%;
+}
+.tran{
+	width:0px;
+	height:0px;
+	position: absolute;
+	left:11%;
+	top:60px;
+	border-top:7px orange solid;
+	border-right:7px transparent solid;
+	border-bottom:7px transparent solid;
+	border-left:7px transparent solid;	
+}
+.title1{
+	color: orange;
+}

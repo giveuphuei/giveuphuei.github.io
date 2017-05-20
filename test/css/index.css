@@ -38,7 +38,7 @@ a:link,a:visited{
 	position: absolute;
 	left: 4%;
 	top: 25px;
-	border: 1px blue solid;/**/
+	/*border: 1px blue solid;*/
 	background-image: url(../images/name.png);
 	background-repeat: no-repeat;
 	background-position: center center;

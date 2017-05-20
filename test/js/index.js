@@ -19,6 +19,7 @@ function reView(){
 	$("#mainBody").height(Window_wd * whScale)
 	$("#name").width(Window_wd / 1288 *120)
 	$("#name").height(Window_wd / 1288 *120)
+	$("#words").width((Window_wd / 1288 * 470))
 	if(Window_wd/ 1288 * 600 > 480 ){
 		$(".nav table").width(Window_wd/ 1288 * 700)	
 		$(".selfResume li:first-child").css('background-positionX', navleft1)

@@ -112,3 +112,27 @@ a:link,a:visited{
 .title1{
 	color: orange;
 }
+
+#words{
+	height: 240px;
+	position: absolute;
+	right:0;
+	top:460px;
+	background-color: rgba(251,176,59,0.5);
+}
+#words div{
+	width:300px;
+	height: 200px;
+	margin: 30px auto auto  40px;
+}
+#words p{
+	font-size: 26px ;
+	font-family: MingLiU ;
+	color:white;
+	letter-spacing: 2px;
+	line-height: 45px;
+	margin-bottom: 5px;
+}
+#words span{
+	font-size: 34px ;
+}

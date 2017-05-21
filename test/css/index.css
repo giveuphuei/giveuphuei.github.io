@@ -20,6 +20,8 @@ a:link,a:visited{
 }
 
 #mainBody{
+	overflow: hidden;
+	position: relative;
 	margin: auto;
 	background-image: url(../images/mainBg.png) ;
 	background-repeat: no-repeat;
@@ -48,7 +50,7 @@ a:link,a:visited{
 	
 	position: absolute;
 	top:25px;
-	right: 13%;
+	right: 12%;
 /*	border: 2px  blue solid;width: 50%;*/
 }
 .nav li{
@@ -75,7 +77,7 @@ a:link,a:visited{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position:-9% -1%;/**/
+	background-position:70 15;/**/
 }
 .selfResume li:last-child{
 	color:orange;
@@ -84,19 +86,19 @@ a:link,a:visited{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position: 31% 92%;/**/
+	background-position: -104 -65;/**/
 }
 .lifeNote li:first-child{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position: 72% 92%;/**/
+	background-position: -285 -65;/**/
 }
 .contactMe li:first-child{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position: 113% 92%;
+	background-position: -468 -65;
 }
 .tran{
 	width:0px;
@@ -114,25 +116,51 @@ a:link,a:visited{
 }
 
 #words{
-	height: 240px;
 	position: absolute;
 	right:0;
-	top:460px;
-	background-color: rgba(251,176,59,0.5);
+	top:50%;
+	height: 240px;
+	background-color: rgba(251,176,59,0.6);
 }
 #words div{
-	width:300px;
+	width:400px;
 	height: 200px;
 	margin: 30px auto auto  40px;
 }
 #words p{
-	font-size: 26px ;
-	font-family: MingLiU ;
+	font-size: 28px ;
+	font-family: 迷你简硬笔楷书 ;
 	color:white;
 	letter-spacing: 2px;
 	line-height: 45px;
 	margin-bottom: 5px;
 }
 #words span{
-	font-size: 34px ;
+	font-size: 38px ;
 }
+.mainTitle{
+	display: block;
+	height: 60px;
+	background: #3E91CE;
+}
+.mainTitle p{
+	font-family: 微软雅黑;
+	text-align: center;
+	font-size: 40px;
+	padding-top:4px;
+}
+.resume{
+	margin:0 auto;
+	height:800px;
+	background: lightgreen;
+}
+.backTop a{
+	display:none;
+	width: 50px;
+	height: 100px;
+	position: fixed;
+	right:10px;
+	bottom: 20px;
+	background-image: url(../images/tops.png);
+}/**/
+

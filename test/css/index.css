@@ -163,7 +163,7 @@ a:link,a:visited{
 	padding-left: 30px;
 }
 .backTop a{
-	display:none;
+	display:none;  
 	width: 50px;
 	height: 100px;
 	position: fixed;
@@ -173,10 +173,11 @@ a:link,a:visited{
 }/**/
 
 .work{
+	border: 1px orange dotted;
 	width: 90%;
 	margin: auto;
 	height: 700px;
-	background: #667799;
+	background: white;
 }
 
 .life{
@@ -190,5 +191,19 @@ a:link,a:visited{
 	margin: auto;
 	height: 700px;
 	background: gray;
+}
+
+#demos{
+	line-height: 2em;
+	border: 2px blue solid;
+	width:20%;
+	height: 500px;
+	margin-left: 5px;
+	padding-left: 5px;
+	margin-top:20px; 
+	overflow-y:scroll;
+}
+#demos li{
+	font-size: 16px;
 }
 

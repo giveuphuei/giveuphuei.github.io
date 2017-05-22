@@ -109,6 +109,10 @@ function backHome(){
 	reView()
 	$("#mainBody").addClass('mainBody')
 	$("#words").css('display','block')
+	for(i=1;i<5;i++){
+		var s = 'title' + i 
+		$("#"+s).css('display','block')
+	}
 }
 /*标题1 _selfresume*/
 function navTitle1(){

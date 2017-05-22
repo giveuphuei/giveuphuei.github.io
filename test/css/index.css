@@ -154,6 +154,14 @@ a:link,a:visited{
 	height:800px;
 	background: lightgreen;
 }
+
+.littleTitle p{
+	font-family: 微软雅黑;
+	text-align: left;
+	font-size: 40px;
+	padding-top:4px;
+	padding-left: 20px;
+}
 .backTop a{
 	display:none;
 	width: 50px;
@@ -163,4 +171,5 @@ a:link,a:visited{
 	bottom: 20px;
 	background-image: url(../images/tops.png);
 }/**/
+
 

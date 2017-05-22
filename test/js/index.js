@@ -26,6 +26,8 @@ window.onload = function(){
 			$(".backTop a").css('display',"block")
 		}
 	});
+	$("#name").click(backHome)
+
 	$(".selfResume,.title1").click(navTitle1)
 
 	$(".workShare,.title2").click(navTitle2)
@@ -33,7 +35,7 @@ window.onload = function(){
 	$(".lifeNote,.title3").click(navTitle3)
 
 	$(".contactMe,.title4").click(navTitle4)
-		
+
 }
 function reView(){
 		//alert(Window_wd)
@@ -102,6 +104,12 @@ $(window).resize(function(){
 
 	reView();
 })
+
+function backHome(){
+	reView()
+	$("#mainBody").addClass('mainBody')
+	$("#words").css('display','block')
+}
 /*标题1 _selfresume*/
 function navTitle1(){
 	$(".selfResume li:first-child").css({'background-positionY': '15px'})
@@ -114,6 +122,10 @@ function navTitle1(){
 		'left':'11%',
 		'top':'60px'
 	})
+	$("#mainBody").css({
+		'height':'170px',
+	})
+	$("#words").css('display','none')
 }
 /*标题2 _workshare*/
 function navTitle2(){

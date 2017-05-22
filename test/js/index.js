@@ -44,7 +44,7 @@ function reView(){
 	$("#name").width(Window_wd / 1280 *120)
 	$("#name").height(Window_wd / 1280 *120)
 	$("#words").width((Window_wd / 1280 * 470))
-	$(".resume").css({
+	$(".resume,.work,.life,.contact").css({
 		'margin':"0 auto",
 		'width':Window_wd * 0.9
 	})
@@ -74,7 +74,7 @@ function reView(){
 		$("#name").width('120')
 		$("#name").height('120')
 		$("#words").width('470')
-		$(".resume").css({
+		$(".resume,.work,.life,.contact").css({
 			'margin-left':"64", 
 			'width':1280 * 0.9
 		})

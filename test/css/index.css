@@ -19,7 +19,7 @@ a:link,a:visited{
  	text-decoration:none; 
 }
 
-#mainBody{
+.mainBody{
 	overflow: hidden;
 	position: relative;
 	margin: auto;
@@ -160,7 +160,7 @@ a:link,a:visited{
 	text-align: left;
 	font-size: 40px;
 	padding-top:4px;
-	padding-left: 20px;
+	padding-left: 30px;
 }
 .backTop a{
 	display:none;
@@ -172,4 +172,23 @@ a:link,a:visited{
 	background-image: url(../images/tops.png);
 }/**/
 
+.work{
+	width: 90%;
+	margin: auto;
+	height: 700px;
+	background: #667799;
+}
+
+.life{
+	width: 90%;
+	margin: auto;	
+	height: 700px;
+	background: gray;
+}
+.contact{
+	width: 90%;
+	margin: auto;
+	height: 700px;
+	background: gray;
+}
 

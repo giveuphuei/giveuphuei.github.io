@@ -126,6 +126,15 @@ function navTitle1(){
 		'height':'170px',
 	})
 	$("#words").css('display','none')
+	for(i=1;i<5;i++){
+		var s = 'title' + i ;
+		if(i != 1){	
+			$("#"+s).css('display','none')
+		}
+		else{
+			$("#"+s).css('display','block')
+		}
+	}
 }
 /*标题2 _workshare*/
 function navTitle2(){
@@ -140,6 +149,20 @@ function navTitle2(){
 		'left':'36.5%',
 		'top':'60px'
 	})
+
+	$("#mainBody").css({
+		'height':'170px',
+	})
+	$("#words").css('display','none')
+	for(i=1;i<5;i++){
+		var s = 'title' + i ;
+		if(i != 2){
+			$("#"+s).css('display','none')
+		}
+		else{
+			$("#"+s).css('display','block')
+		}
+	}
 }
 /*标题3 _lifenote*/
 function navTitle3(){
@@ -154,6 +177,20 @@ function navTitle3(){
 		'left':'61.5%',
 		'top':'60px'
 	})
+
+	$("#mainBody").css({
+		'height':'170px',
+	})
+	$("#words").css('display','none')
+	for(i=1;i<5;i++){
+		var s = 'title' + i ;
+		if(i != 3){
+			$("#"+s).css('display','none')
+		}
+		else{
+			$("#"+s).css('display','block')
+		}
+	}
 }
 /*标题4 _contactMe*/
 function navTitle4(){
@@ -168,4 +205,18 @@ function navTitle4(){
 		'left':'86.5%',
 		'top':'60px'
 	})
+
+	$("#mainBody").css({
+		'height':'170px',
+	})
+	$("#words").css('display','none')
+	for(i=1;i<5;i++){
+		var s = 'title' + i ;
+		if(i != 4){
+			$("#"+s).css('display','none')
+		}
+		else{
+			$("#"+s).css('display','block')
+		}
+	}
 }

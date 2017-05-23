@@ -1,0 +1,52 @@
+<!Doctype html>
+<html>
+<head>
+<title>在网页上做一个圣诞树</title>
+<style type="text/css">
+	div{
+		width:300px;
+		margin:1px auto;      					 /*使div居中，仅对于定宽度块状元素*/
+		position:relative;     				     /*相对定位*/
+	}	
+	.firstlift{
+		width:0px;
+		height:0px;
+		border-top:100px transparent solid;
+		border-right:100px transparent solid;
+		border-bottom:100px green solid;
+		border-left:100px transparent solid;	  /*利用border形成一个三角形*/
+		position:absolute;            
+		top:0px;
+		left:50px;							     	 /*绝对定位*/
+	}
+	.secondlift{
+		width:0px;
+		height:0px;
+		border-top:140px transparent solid;
+		border-right:140px transparent solid;
+		border-bottom:140px green solid;
+		border-left:140px transparent solid;
+		top:50px;
+	}
+	.last{
+		width:20px;
+		height:250px;
+		margin:1px auto;
+		background-color:green;
+		top:0px;
+	}
+</style>
+</head>
+
+<body>
+	<div>
+	<div class="firstlift">  <!--圣诞树第一片叶子-->
+	</div>
+			
+	<div class="secondlift">
+	</div> <!--圣诞树第二片叶子-->
+	<div class="last">
+	</div>  <!--圣诞树树干-->
+	</div>
+</body>
+</html>

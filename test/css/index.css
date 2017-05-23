@@ -3,7 +3,7 @@ body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, img, form {
 	padding:0px; margin:0px; border:0; font-size:14px;
 } 
 h1, h2, h3, h4, h5, h6 { 
-	font-size:14px; font-weight:100; margin-top:0px !important; 
+	font-size:20px; font-weight:100; margin-top:0px !important; 
 	margin-bottom:0px !important;
 }
 table{border-collapse:collapse;} 
@@ -20,6 +20,8 @@ a:link,a:visited{
 }
 
 .mainBody{
+	width:1280px;
+	height: 850px;
 	overflow: hidden;
 	position: relative;
 	margin: auto;
@@ -29,6 +31,7 @@ a:link,a:visited{
 }
 .mainNav{
 	height: 170px;
+	width:1280px;
 	margin:auto;	
 	/*border: 1px red solid;*/
 	position: relative;
@@ -47,7 +50,7 @@ a:link,a:visited{
 	background-size: contain;
 }
 .nav table{
-	
+	width: 700px;
 	position: absolute;
 	top:25px;
 	right: 12%;
@@ -77,7 +80,7 @@ a:link,a:visited{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position:70 15;/**/
+	background-position:63.5 15;/**/
 }
 .selfResume li:last-child{
 	color:orange;
@@ -86,19 +89,19 @@ a:link,a:visited{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position: -104 -65;/**/
+	background-position: -112.5 -65;/**/
 }
 .lifeNote li:first-child{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position: -285 -65;/**/
+	background-position: -293.5 -65;/**/
 }
 .contactMe li:first-child{
 	border-bottom: 2px orange solid;
 	background-image: url(../images/icons.png);
 	background-repeat: no-repeat;
-	background-position: -468 -65;
+	background-position: -472.5 -65;
 }
 .tran{
 	width:0px;
@@ -175,35 +178,59 @@ a:link,a:visited{
 .work{
 	border: 1px orange dotted;
 	width: 90%;
-	margin: auto;
+	margin:0 auto;
 	height: 700px;
 	background: white;
 }
 
 .life{
 	width: 90%;
-	margin: auto;	
+	margin:0 auto;	
 	height: 700px;
 	background: gray;
 }
 .contact{
 	width: 90%;
-	margin: auto;
+	margin:0 auto;
 	height: 700px;
 	background: gray;
 }
 
-#demos{
-	line-height: 2em;
-	border: 2px blue solid;
-	width:20%;
+#demosTable{
+	float: left;
+	width:260px;
 	height: 500px;
 	margin-left: 5px;
-	padding-left: 5px;
-	margin-top:20px; 
+	padding-left: 10px;
+	margin-top:5px; 
 	overflow-y:scroll;
+	overflow-x:hidden; 
+	direction: rtl;
+	background: #f4f4f6;
 }
-#demos li{
-	font-size: 16px;
+#demosTable li{
+	font-family: 微软雅黑;
+	font-size: 20px;
+	line-height: 2.1em;
+}
+#ifram{
+	float: left;
+	width:860px;
+	height: 500px;
+	background: white;
+	margin-left: 20px; 
+	position: relative; 
+}
+#ifram iframe{
+	width:800px;
+	height: 500px;
+	position: absolute;   
+    top: 50%;   
+    left: 50%;   
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%);  
 }
 

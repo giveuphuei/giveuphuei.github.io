@@ -28,19 +28,21 @@ window.onload = function(){
 	});
 	$("#name").click(backHome)
 
-	$(".selfResume,.title1").click(navTitle1)
+	$(".selfResume,.title1").click(0,navTitle)
 
-	$(".workShare,.title2").click(navTitle2)
+	$(".workShare,.title2").click(1,navTitle)
 
-	$(".lifeNote,.title3").click(navTitle3)
+	$(".lifeNote,.title3").click(2,navTitle)
 
-	$(".contactMe,.title4").click(navTitle4)
+	$(".contactMe,.title4").click(3,navTitle)
 
 }
 function reView(){
 		//alert(Window_wd)
 	$("#mainBody,.mainNav,.mainTitle").width(Window_wd)
-	$("#mainBody").height(Window_wd * whScale)
+	if($("#mainBody").height() != 170){
+		$("#mainBody").height(Window_wd * whScale)
+	}
 	$("#name").width(Window_wd / 1280 *120)
 	$("#name").height(Window_wd / 1280 *120)
 	$("#words").width((Window_wd / 1280 * 470))
@@ -48,7 +50,7 @@ function reView(){
 		'margin':"0 auto",
 		'width':Window_wd * 0.9
 	})
-	
+    $("#ifram").width( $(window).width()*0.9 - 400) ;
 	if(Window_wd/ 1280 * 600 > 480 ){
 		$(".nav table").width(Window_wd/ 1280 * 700)	
 		$(".nav table").css({
@@ -69,8 +71,10 @@ function reView(){
 		})
 	}
 	else{
+		if($("#mainBody").height() != 170){
+			$("#mainBody").height('845')
+		}
 		$("#mainBody,.mainNav,.mainTitle").width('1280')
-		$("#mainBody").height('845')
 		$("#name").width('120')
 		$("#name").height('120')
 		$("#words").width('470')
@@ -78,6 +82,7 @@ function reView(){
 			'margin-left':"64", 
 			'width':1280 * 0.9
 		})
+		$("#ifram").width('850') ;
 		$(".nav table").css({
 			'width':"700",
 			'right':"180"
@@ -85,15 +90,12 @@ function reView(){
 		$(".selfResume li:first-child").css('background-positionX', 63.5)
 		$(".workShare li:first-child").css({
 			'background-positionX': -112.5 ,
-			'background-positionY': '-65px'
 		})
 		$(".lifeNote li:first-child").css({
 			'background-positionX': -293.5 ,
-			'background-positionY': '-65px'
 		})
 		$(".contactMe li:first-child").css({
 			'background-positionX': -472.5,
-			'background-positionY': '-65px'
 		})
 	}			
 }
@@ -102,37 +104,59 @@ $(window).resize(function(){
 	Window_wd = $(this).width();
 	navleft1 = parseInt((Window_wd/ 1280 * 700 )*0.125 - 24)
 
-	reView();
+	reView()
 })
 
 function backHome(){
 	reView()
 	$("#mainBody").addClass('mainBody')
 	$("#words").css('display','block')
-	for(i=1;i<5;i++){
+	for(var i=1;i<5;i++){
 		var s = 'title' + i 
 		$("#"+s).css('display','block')
 	}
-}
-/*标题1 _selfresume*/
-function navTitle1(){
-	$(".selfResume li:first-child").css({'background-positionY': '15px'})
-	$(".workShare li:first-child").css('background-positionY', '-65px')
-	$(".lifeNote li:first-child").css('background-positionY', '-65px')
-	$(".contactMe li:first-child").css('background-positionY', '-65px')
-	$(".selfResume li:last-child").css("color","orange")
-	$(".workShare li:last-child,.lifeNote li:last-child,.contactMe li:last-child").css("color","black")
+	for(var i = 0; i<4;i++){
+		if(i == 0){
+			$("."+navT[i]+' li:first-child').css('background-positionY','15px')
+			$("."+navT[i]+' li:last-child').css("color","orange")
+		}
+		else{
+			$("."+navT[i]).children().eq(0).css('background-positionY', '-65px')
+			$("."+navT[i]+' li:last-child').css("color","black")
+		}
+	}
 	$(".tran").css({
-		'left':'11%',
+		'left':'11%' ,
+		'top':'60px'
+	})
+}
+
+/*导航标题切换*/
+var navT = ['selfResume','workShare','lifeNote','contactMe']
+function navTitle(e){
+	for(var i = 0; i<4;i++){
+		if(i == e.data){
+			$("."+navT[i]+' li:first-child').css('background-positionY','15px')
+			$("."+navT[i]+' li:last-child').css("color","orange")
+		}
+		else{
+			$("."+navT[i]).children().eq(0).css('background-positionY', '-65px')
+			$("."+navT[i]+' li:last-child').css("color","black")
+		}
+		
+	}
+	var navL = parseFloat(11 +  e.data * 25 )
+	$(".tran").css({
+		'left':navL+'%' ,
 		'top':'60px'
 	})
 	$("#mainBody").css({
 		'height':'170px',
 	})
 	$("#words").css('display','none')
-	for(i=1;i<5;i++){
+	for(var i=1;i<5;i++){
 		var s = 'title' + i ;
-		if(i != 1){	
+		if(i != (e.data+1)){	
 			$("#"+s).css('display','none')
 		}
 		else{
@@ -140,9 +164,37 @@ function navTitle1(){
 		}
 	}
 }
-/*标题2 _workshare*/
+/*标题2 _workshare
 function navTitle2(){
-	$(".selfResume li:first-child").css({'background-positionY': '-65px'})
+	for(var i = 0; i<4;i++){
+		if(i == 1){
+			$("."+navT[i]+' li:first-child').css('background-positionY','15px')
+			$("."+navT[i]+' li:last-child').css("color","orange")
+		}
+		else{
+			$("."+navT[i]+' li:first-child').css('background-positionY', '-65px')
+			$("."+navT[i]+' li:last-child').css("color","black")
+		}		
+	}
+
+	$(".tran").css({
+		'left':'36.5%',
+		'top':'60px'
+	})
+	$("#mainBody").css({
+		'height':'170px',
+	})
+	$("#words").css('display','none')
+	for(var i=1;i<5;i++){
+		var s = 'title' + i ;
+		if(i != 2){	
+			$("#"+s).css('display','none')
+		}
+		else{
+			$("#"+s).css('display','block')
+		}
+	}
+	/*$(".selfResume li:first-child").css({'background-positionY': '-65px'})
 	$(".workShare li:first-child").css('background-positionY', '15px')
 	$(".lifeNote li:first-child").css('background-positionY', '-65px')
 	$(".contactMe li:first-child").css('background-positionY', '-65px')
@@ -167,8 +219,8 @@ function navTitle2(){
 			$("#"+s).css('display','block')
 		}
 	}
-}
-/*标题3 _lifenote*/
+}*/
+/*标题3 _lifenote
 function navTitle3(){
 	$(".selfResume li:first-child").css({'background-positionY': '-65px'})
 	$(".workShare li:first-child").css('background-positionY', '-65px')
@@ -195,8 +247,8 @@ function navTitle3(){
 			$("#"+s).css('display','block')
 		}
 	}
-}
-/*标题4 _contactMe*/
+}*/
+/*标题4 _contactMe
 function navTitle4(){
 	$(".selfResume li:first-child").css({'background-positionY': '-65px'})
 	$(".workShare li:first-child").css('background-positionY', '-65px')
@@ -223,4 +275,4 @@ function navTitle4(){
 			$("#"+s).css('display','block')
 		}
 	}
-}
+}*/

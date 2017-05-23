@@ -1,0 +1,242 @@
+/*初始化样式*/
+body, div, p, h1, h2, h3, h4, h5, h6, ul, ol, li, dl, dd, dt, img, form { 
+	padding:0px; margin:0px; border:0; font-size:14px;
+} 
+h1, h2, h3, h4, h5, h6 { 
+	font-size:20px; font-weight:100; margin-top:0px !important; 
+	margin-bottom:0px !important;
+}
+table{border-collapse:collapse;} 
+table td{padding:0;}                  
+ul li{
+	list-style: none;
+}
+a{
+	text-decoration:none;
+	color: black;
+}
+a:link,a:visited{
+ 	text-decoration:none; 
+}
+
+.mainBody{
+	width:1280px;
+	height: 850px;
+	overflow: hidden;
+	position: relative;
+	margin: auto;
+	background-image: url(../images/mainBg.png) ;
+	background-repeat: no-repeat;
+	background-size: 100% auto;
+}
+.mainNav{
+	height: 170px;
+	width:1280px;
+	margin:auto;	
+	/*border: 1px red solid;*/
+	position: relative;
+
+}
+/*名字_主页 的样式*/
+#name{
+	z-index: 1;
+	position: absolute;
+	left: 4%;
+	top: 25px;
+	/*border: 1px blue solid;*/
+	background-image: url(../images/name.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: contain;
+}
+.nav table{
+	width: 700px;
+	position: absolute;
+	top:25px;
+	right: 12%;
+/*	border: 2px  blue solid;width: 50%;*/
+}
+.nav li{
+	/*border: 0px  red solid;*/
+	height: 60px;
+	font-size: 20px;
+	font-family: "方正幼线简体";
+	font-weight: lighter;
+	text-align: center;
+	margin-bottom: 5px;
+}
+.nav td{
+	/*border: 1px  yellow solid;*/
+	height: 120px;
+	font-size: 20px;
+	font-family: "方正幼线简体";
+	font-weight: lighter;
+	text-align: center;
+}
+
+.selfResume li:first-child{
+	z-index: 2;
+	background-position: relative;
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position:63.5 15;/**/
+}
+.selfResume li:last-child{
+	color:orange;
+}
+.workShare li:first-child{
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position: -112.5 -65;/**/
+}
+.lifeNote li:first-child{
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position: -293.5 -65;/**/
+}
+.contactMe li:first-child{
+	border-bottom: 2px orange solid;
+	background-image: url(../images/icons.png);
+	background-repeat: no-repeat;
+	background-position: -472.5 -65;
+}
+.tran{
+	width:0px;
+	height:0px;
+	position: absolute;
+	left:11%;
+	top:60px;
+	border-top:7px orange solid;
+	border-right:7px transparent solid;
+	border-bottom:7px transparent solid;
+	border-left:7px transparent solid;	
+}
+.title1{
+	color: orange;
+}
+
+#words{
+	position: absolute;
+	right:0;
+	top:50%;
+	height: 240px;
+	background-color: rgba(251,176,59,0.6);
+}
+#words div{
+	width:400px;
+	height: 200px;
+	margin: 30px auto auto  40px;
+}
+#words p{
+	font-size: 28px ;
+	font-family: 迷你简硬笔楷书 ;
+	color:white;
+	letter-spacing: 2px;
+	line-height: 45px;
+	margin-bottom: 5px;
+}
+#words span{
+	font-size: 38px ;
+}
+.mainTitle{
+	display: block;
+	height: 60px;
+	background: #3E91CE;
+}
+.mainTitle p{
+	font-family: 微软雅黑;
+	text-align: center;
+	font-size: 40px;
+	padding-top:4px;
+}
+.resume{
+	margin:0 auto;
+	height:800px;
+	background: lightgreen;
+}
+
+.littleTitle p{
+	font-family: 微软雅黑;
+	text-align: left;
+	font-size: 40px;
+	padding-top:4px;
+	padding-left: 30px;
+}
+.backTop a{
+	display:none;  
+	width: 50px;
+	height: 100px;
+	position: fixed;
+	right:10px;
+	bottom: 20px;
+	background-image: url(../images/tops.png);
+}/**/
+
+.work{
+	border: 1px orange dotted;
+	width: 90%;
+	margin:0 auto;
+	height: 700px;
+	background: white;
+}
+
+.life{
+	width: 90%;
+	margin:0 auto;	
+	height: 700px;
+	background: gray;
+}
+.contact{
+	width: 90%;
+	margin:0 auto;
+	height: 700px;
+	background: gray;
+}
+
+
+#demosTable{
+	float: left;
+	width:260px;
+	height: 500px;
+	background: #f4f4f6;
+	line-height: 2em;
+	margin-left: 5px;
+	padding-left: 10px;
+	margin-top:5px; 
+	overflow-y:scroll;
+	overflow-x:hidden; 
+	direction: rtl;
+}
+#demos{
+	width:1280;
+	height: 500px;
+}
+#demosTable li{
+	font-family: 微软雅黑;
+	font-size: 20px;
+	line-height: 2.1em;
+}
+#ifram{
+	float: left;
+	width:860px;
+	height: 500px;
+	background: white;
+	margin-left: 20px; 
+	position: relative; 
+}
+#ifram iframe{
+	width:860px;
+	height: 500px;
+	position: absolute;   
+    top: 50%;   
+    left: 50%;   
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%);  
+}
+

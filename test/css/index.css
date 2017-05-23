@@ -200,19 +200,19 @@ a:link,a:visited{
 #demosTable{
 	float: left;
 	width:260px;
-}
-#demos{
-	line-height: 2em;
-	border: 2px blue solid;
-	width:22%;
 	height: 500px;
+	background: #f4f4f6;
+	line-height: 2em;
 	margin-left: 5px;
 	padding-left: 10px;
 	margin-top:5px; 
 	overflow-y:scroll;
 	overflow-x:hidden; 
 	direction: rtl;
-	background: #f4f4f6;
+}
+#demos{
+	width:1280;
+	height: 500px;
 }
 #demosTable li{
 	font-family: 微软雅黑;
@@ -228,7 +228,7 @@ a:link,a:visited{
 	position: relative; 
 }
 #ifram iframe{
-	width:800px;
+	width:860px;
 	height: 500px;
 	position: absolute;   
     top: 50%;   

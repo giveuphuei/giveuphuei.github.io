@@ -196,9 +196,15 @@ a:link,a:visited{
 	background: gray;
 }
 
+
 #demosTable{
 	float: left;
 	width:260px;
+}
+#demos{
+	line-height: 2em;
+	border: 2px blue solid;
+	width:22%;
 	height: 500px;
 	margin-left: 5px;
 	padding-left: 10px;

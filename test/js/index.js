@@ -51,7 +51,7 @@ function reView(){
 		'width':Window_wd * 0.9
 	})
     $("#demos").width( $(window).width()*0.9) 
-     $("#ifram").width( $("#demos").width() - 300)
+     $("#ifram").width( $("#demos").width() - 280)
 	if(Window_wd/ 1280 * 600 > 480 ){
 		$(".nav table").width(Window_wd/ 1280 * 700)
 		$(".nav table").css({

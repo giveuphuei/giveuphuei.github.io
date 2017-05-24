@@ -141,6 +141,18 @@ a:link,a:visited{
 #words span{
 	font-size: 38px ;
 }
+#title1{
+	display: block;
+}
+#title2{
+	display: none;
+}
+#title3{
+	display: none;
+}
+#title4{
+	display: none;
+}
 .mainTitle{
 	display: block;
 	height: 60px;
@@ -199,11 +211,12 @@ a:link,a:visited{
 
 #demosTable{
 	float: left;
-	width:260px;
+	width:220px;
 	height: 500px;
 	background: #f4f4f6;
 	line-height: 2em;
 	margin-left: 5px;
+	margin-right: 5px;
 	padding-left: 10px;
 	margin-top:5px; 
 	overflow-y:scroll;
@@ -211,7 +224,7 @@ a:link,a:visited{
 	direction: rtl;
 }
 #demos{
-	width:1280;
+	width:1100px;
 	height: 500px;
 }
 #demosTable li{
@@ -220,15 +233,16 @@ a:link,a:visited{
 	line-height: 2.1em;
 }
 #ifram{
-	float: left;
-	width:860px;
+	border: 3px grey solid;
+	float:right;
+	overflow: hidden;  
+	width:700px;
 	height: 500px;
 	background: white;
-	margin-left: 20px; 
 	position: relative; 
 }
 #ifram iframe{
-	width:860px;
+	width:800px;
 	height: 500px;
 	position: absolute;   
     top: 50%;   

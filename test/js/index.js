@@ -50,9 +50,10 @@ function reView(){
 		'margin':"0 auto",
 		'width':Window_wd * 0.9
 	})
-    $("#demos").width( $(window).width()*0.9) ;
+    $("#demos").width( $(window).width()*0.9) 
+     $("#ifram").width( $("#demos").width() - 300)
 	if(Window_wd/ 1280 * 600 > 480 ){
-		$(".nav table").width(Window_wd/ 1280 * 700)	
+		$(".nav table").width(Window_wd/ 1280 * 700)
 		$(".nav table").css({
 			'position':" absolute",
 			'top':"25px",
@@ -82,7 +83,8 @@ function reView(){
 			'margin-left':"64", 
 			'width':1280 * 0.9
 		})
-		$("#demos").width('850') ;
+		$("#demos").width('1100') ;
+	    $("#ifram").width('800')
 		$(".nav table").css({
 			'width':"700",
 			'right':"180"
@@ -108,12 +110,18 @@ $(window).resize(function(){
 })
 
 function backHome(){
+	$("#mainBody").height('845')
 	reView()
 	$("#mainBody").addClass('mainBody')
 	$("#words").css('display','block')
 	for(var i=1;i<5;i++){
 		var s = 'title' + i 
-		$("#"+s).css('display','block')
+		if(i == 1){
+		$("#"+s).css('display','block')			
+		}
+		else{
+			$("#"+s).css('display','none')
+		}
 	}
 	for(var i = 0; i<4;i++){
 		if(i == 0){

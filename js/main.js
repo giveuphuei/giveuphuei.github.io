@@ -16,7 +16,7 @@ function init(){
 	w = dom.width;
 	h = dom.height;
 	skyimg.src = "images/starsky.jpg";
-	starimg.src = "images/star.png";
+	starimg.src = "images/stars.png";
 	for(var i = 0; i < num; i++){
 		var obj = new starObj();
 		stars.push(obj);
@@ -49,7 +49,7 @@ function drawBackground(){
 }
 
 function drawGirl(){
-	ctx.drawImage(skyimg,50,50,700,500);
+	ctx.drawImage(skyimg,5,5,w-10,h-10);
 }
 
 function mousemove(e){
@@ -57,7 +57,7 @@ function mousemove(e){
 		var px = e.offsetX == undefined?e.layerX:e.offsetX;
 		var py = e.offsetY == undefined?e.layerY:e.offsetY;
 	}
-	if(px > 50 && px < 700 && py > 50 && py < 450){
+	if(px > 5 && px < w-10 && py > 5 && py < h-10){
 		switchy = true;
 	}
 	else{

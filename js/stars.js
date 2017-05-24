@@ -9,8 +9,8 @@ var starObj = function() {
 }
 
 starObj.prototype.init = function() {
-	this.x = Math.random() * 700 + 50;
-	this.y = Math.random() * 500 + 50;
+	this.x = Math.random() * (w-10) + 5;
+	this.y = Math.random() * (h-10) + 5;
 	this.starNum = Math.floor(Math.random()*7) ;
 	this.xStep = Math.random() * 6 - 3; 
 	this.yStep = Math.random() * 6 - 3; 
@@ -19,7 +19,7 @@ starObj.prototype.init = function() {
 starObj.prototype.update = function(){
 	this.x += this.xStep * deltaTime * 0.001 ;
 	this.y += this.yStep * deltaTime * 0.001 ;
-	if(this.x < 50 || this.x > 700 || this.y < 50 || this.y > 420 ){
+	if(this.x < 5 || this.x > w-10 || this.y < 5 || this.y > h-60 ){
 		this.init();
 		return;
 	}

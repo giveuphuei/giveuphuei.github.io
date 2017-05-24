@@ -1,83 +1,77 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" 
-  href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-  <title>js设置div</title>
-  <style>
-   
-	#sys1{
+<meta charset="utf-8">
+<title>js设置div</title>
+<style>
+#sys1{
 		margin:20px 25px;
 		height:30px;
-	}
-	#btn1{
+}
+#btn1{
 		width:80px;
 		display:;
 		background:red;
 		color:white;
-	}
-	#maindiv{
-		background-color:lightgray;
-		width:100px;
-		height:100px;
-		border:2px black solid;
-		margin:20px 25px;
-	}
-	#sys2{
-		width:320px;
-		height:240px;
-		margin:auto auto;
-		border:20px green solid;
-		padding:15px 30px;
-		display: none;
-
-
-        position: absolute;   
-        top: 50%;   
-        left: 50%;   
-        -webkit-transform: translate(-50%, -50%);   
-        -moz-transform: translate(-50%, -50%);   
-        -ms-transform: translate(-50%, -50%);   
-        -o-transform: translate(-50%, -50%);   
-        transform: translate(-50%, -50%);      
-        
-	}
-	table{
-		width:220px;
-		height:140px;	
-	}
-	form{
-		height:60px;
-		padding-top: 10px;
-	}
-	input{
-		color:#333;
-		width:35px;
-		height:35px;
-		padding:2px;
-	}
-	#btnred{
-		background:red;
-		color:white;
-	}
-	#btnyew{
-		background:yellow;
-		color:white;
-	}
-	#btnblue{
-		background:blue;
-		color:white;
-	}
-	#reset,#submit{
-		width:45px;
-		height:30px;
-		background:blue;
-		color:white;
-	}
-  </style>
- <script>
+}
+#maindiv{
+	background-color:lightgray;
+	width:100px;
+	height:100px;
+	border:2px black solid;
+	margin:20px 25px;
+}
+#sys2{
+	width:260px;
+	height:240px;
+	margin:auto auto;
+	border:20px green solid;
+	padding:15px 30px;
+	display: none;
+    position: absolute;   
+    top: 50%;   
+    left: 50%;   
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%);      
+    
+}
+table{
+	width:240px;
+	height:140px;	
+}
+form{
+	height:60px;
+	padding-top: 10px;
+}
+input{
+	color:#333;
+	width:35px;
+	height:35px;
+	padding:2px;
+}
+#btnred{
+	background:red;
+	color:white;
+}
+#btnyew{
+	background:yellow;
+	color:white;
+}
+#btnblue{
+	background:blue;
+	color:white;
+}
+#reset,#submit{
+	width:45px;
+	height:30px;
+	background:blue;
+	color:white;
+}
+</style>
+<script>
  	function sys(){
  		document.getElementById('sys2').style.display='block';
  	}
@@ -122,7 +116,7 @@
   	function sys_sure(){
   		document.getElementById('sys2').style.display = 'none';
   	}
- </script>
+</script>
 </head>
 <body style="background-color: lightgreen;">
 	<div id="sys1">

@@ -242,6 +242,7 @@ a:link,a:visited{
 	position: relative; 
 }
 #ifram iframe{
+	overflow: hidden;  
 	width:800px;
 	height: 500px;
 	position: absolute;   

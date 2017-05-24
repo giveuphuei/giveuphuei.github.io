@@ -3,6 +3,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 <title>计数器</title>
+<style>
+div{
+	position: absolute;   
+    top: 50%;   
+    left: 50%;   
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%); 
+}
+#count{
+	border: 2px gray solid;
+}
+</style>
 <script type="text/javascript">
   var num=0;
   function startCount() {
@@ -17,10 +32,12 @@
 </script>
 </head> 
 <body>
-<form>
-<input type="text" id="count" />
-<input type="button" value='开始计数' onclick='startCount()'/>
-<input type="button" value='结束计数' onclick='stopCount()'/>
-</form> 
+<div>
+	<form>
+		<input type="text" id="count"/>
+		<input type="button" value='开始计数' onclick='startCount()'/>
+		<input type="button" value='结束计数' onclick='stopCount()'/>
+	</form> 
+</div>
 </body>
 </html>  

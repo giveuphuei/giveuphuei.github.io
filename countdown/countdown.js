@@ -1,10 +1,10 @@
-var window_width = 1200 ;
-var window_height = 500 ; 
-var radius = 6;
-var margin_left = 250;
+var window_width = 800 ;
+var window_height = 450 ; 
+var radius = 5;
+var margin_left = 0;
 var margin_top = 40;
 
-const endTime = new Date(2017,4,18,23,22,0);
+const endTime = new Date(2017,4,26,22,22,1);
 var curShowTimeseconds = 0 ;
 
 const colors = ["#00ff00","#4a86e8","#9900ff","#ff00ff","#a61c00","#45818e","#db4141","#f6b26b","3399cc","00cc00"]

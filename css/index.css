@@ -168,14 +168,14 @@ a:link,a:visited{
 }
 .resume{
 	margin:0 auto;
-	height:1500px;
+	height:1300px;
 	background-image: url(../images/resumeBg.jpg);
 	background-size: 100% 100%;
 }
 .resume>div{
 	width: 80%;
 	margin: auto auto;
-	height: 1500px;
+	height: 1300px;
 	background: rgba(255,255,255,0.6);
 }
 .career{
@@ -224,15 +224,15 @@ a:link,a:visited{
 }
 .studyExp{
 	width: 90%;
-	margin: 30px auto;		
+	margin: 20px auto;		
 }
 .lifeExp{
 	width: 65%;
-	margin: 30px auto;		
+	margin: 20px auto;		
 }
 .tech{
 	width: 50%;
-	margin: 30px 35%;		
+	margin: 20px 35%;		
 }
 .tech td{
 	text-align: left;

@@ -158,37 +158,105 @@ a:link,a:visited{
 	height: 60px;
 	background: #3E91CE;
 }
-.mainTitle p{
-	font-family: 微软雅黑;
+.selfR{
+	font-family: 宋体;
 	text-align: center;
-	font-size: 40px;
-	padding-top:4px;
+	font-size: 32px;
+	font-weight: lighter;
+	padding-top:12px;
+	color: white;
 }
 .resume{
 	margin:0 auto;
-	height:800px;
-	background: lightgreen;
+	height:1500px;
+	background-image: url(../images/resumeBg.jpg);
+	background-size: 100% 100%;
+}
+.resume>div{
+	width: 80%;
+	margin: auto auto;
+	height: 1500px;
+	background: rgba(255,255,255,0.6);
+}
+.career{
+	margin-top: 40px;
+	text-align: center;
+	font-size: 36px;
+	font-family: 黑体;
+	color:orange;
+}
+#mainCont{
+	width: 90%;
+	margin: 40px auto;
+	font-family: 方正细黑;
+}
+.content{
+	text-align:left;
+	vertical-align:middle;
+	height:170px;
+	font-size:16px;
+	line-height:36px; 
 }
 
-.littleTitle p{
-	font-family: 微软雅黑;
+.modules td:nth-child(2){
+	width: 120px;
+	height: 40px;
+	color: black;
+	text-align: center;
+	font-size: 20px;
+	font-family: 黑体;
+}
+#mainCont hr{
+	height: 1px;
+	border:none;
+	border-top:2px red solid; 
+	width:100%;
+}
+.workEXp{
+	width: 65%;
+	margin: 20px auto;	
+}
+.workEXp td,.studyExp td,.lifeExp td{
+	font-family: 方正细黑;
+	font-size:16px;
+	line-height:36px; 
+	height: 40px;
+}
+.studyExp{
+	width: 90%;
+	margin: 30px auto;		
+}
+.lifeExp{
+	width: 65%;
+	margin: 30px auto;		
+}
+.tech{
+	width: 50%;
+	margin: 30px 35%;		
+}
+.tech td{
 	text-align: left;
-	font-size: 40px;
-	padding-top:4px;
-	padding-left: 30px;
+	font-family: 方正细黑;
+	font-size:16px;
+	line-height:36px; 
+	height: 40px;
 }
-.backTop a{
-	display:none;  
-	width: 50px;
-	height: 100px;
-	position: fixed;
-	right:10px;
-	bottom: 20px;
-	background-image: url(../images/tops.png);
-}/**/
+/*小标题*/
+.littleTitle p{
+	font-family: 宋体;
+	text-align: left;
+	font-size: 32px;
+	font-weight: lighter;
+	padding-top:12px;
+	margin-left: 20px;
+	color: white;
+}
 
+
+
+
+/**/
 .work{
-	border: 1px orange dotted;
 	width: 90%;
 	margin:0 auto;
 	height: 700px;
@@ -207,8 +275,6 @@ a:link,a:visited{
 	height: 700px;
 	background: gray;
 }
-
-
 #demosTable{
 	float: left;
 	width:220px;
@@ -224,7 +290,8 @@ a:link,a:visited{
 	direction: rtl;
 }
 #demos{
-	width:1100px;
+	margin: auto auto;
+	width:90%;
 	height: 500px;
 }
 #demosTable li{
@@ -233,7 +300,7 @@ a:link,a:visited{
 	line-height: 2.1em;
 }
 #ifram{
-	border: 3px grey solid;
+	border: 1px grey solid;
 	float:right;
 	overflow: hidden;  
 	width:700px;
@@ -255,3 +322,24 @@ a:link,a:visited{
     transform: translate(-50%, -50%);  
 }
 
+/*回到顶部*/
+.backTop a{
+	display:none;  
+	width: 50px;
+	height: 100px;
+	position: fixed;
+	right:10px;
+	bottom: 20px;
+	background-image: url(../images/tops.png);
+}
+
+/*footer*/
+#footer{
+	color: white;
+	font-size: 18px;
+	font-family: 宋体;
+	text-align: center;
+	padding-top:20px; 
+	height: 24px;
+	line-height: 24px;
+}

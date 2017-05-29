@@ -174,12 +174,12 @@ a:link,a:visited{
 }
 .resume>div{
 	width: 80%;
-	margin: auto auto;
-	height: 1300px;
+	margin:0 auto;
+	height: 100%;
 	background: rgba(255,255,255,0.6);
 }
 .career{
-	margin-top: 40px;
+	padding-top: 40px;
 	text-align: center;
 	font-size: 36px;
 	font-family: 黑体;

@@ -1,21 +1,25 @@
-var window_width = 800 ;
-var window_height = 450 ; 
+var window_width;
+var window_height; 
 var radius = 5;
 var margin_left = 0;
 var margin_top = 40;
 
-const endTime = new Date(2017,4,26,22,22,1);
+var endTime = new Date();
+endTime.setTime(endTime.getTime() + 3600*1000);
 var curShowTimeseconds = 0 ;
 
 const colors = ["#00ff00","#4a86e8","#9900ff","#ff00ff","#a61c00","#45818e","#db4141","#f6b26b","3399cc","00cc00"]
 var balls = [];
 window.onload = function(){
+	window_width = document.documentElement.clientWidth ;
+	window_height = document.documentElement.clientHeight ;
+	margin_left = window_width / 15;
+	radius = Math.round(window_width * 9/10  / 108)-2;
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
 	
 	canvas.width = window_width;
 	canvas.height = window_height;
-	
 	curShowTimeseconds = getCurSeconds();
 	setInterval(
 		function(){
@@ -90,7 +94,17 @@ function updateballs(){
     	balls[i].y = window_height-radius ;
     	balls[i].vy = -balls[i].vy * 0.5 ;
     	}
-	}	  
+	}	 
+
+	var cnt = 0;
+	for (var i = 0; i<balls.length;i++){
+		if(balls[i].x + radius > 0 && balls[i].x - radius < window_width)
+			balls[cnt++] = balls[i]
+	}
+	while(balls.length > cnt){
+		balls.pop()
+	}
+	console.log(balls.length)
 }
 
 function  getCurSeconds(){

@@ -80,8 +80,7 @@ function reView(){
 		$("#name").height('120')
 		$("#words").width('470')
 		$(".resume,.work,.life,.contact").css({
-			'margin-left':"64", 
-			'width':1280 * 0.9
+			'width':'1280'
 		})
 		$("#demos").width('1100') ;
 	    $("#ifram").width('800')

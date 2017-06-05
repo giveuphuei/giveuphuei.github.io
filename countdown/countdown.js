@@ -11,9 +11,9 @@ var curShowTimeseconds = 0 ;
 const colors = ["#00ff00","#4a86e8","#9900ff","#ff00ff","#a61c00","#45818e","#db4141","#f6b26b","3399cc","00cc00"]
 var balls = [];
 window.onload = function(){
-	window_width = document.documentElement.clientWidth ;
-	window_height = document.documentElement.clientHeight ;
-	margin_left = window_width / 15;
+	window_width = document.documentElement.clientWidth*0.95 ;
+	window_height = document.documentElement.clientHeight *0.95 ;
+	margin_left = window_width /15;
 	radius = Math.round(window_width * 9/10  / 108)-2;
 	var canvas = document.getElementById("canvas");
 	var ctx = canvas.getContext("2d");
@@ -98,7 +98,7 @@ function updateballs(){
 
 	var cnt = 0;
 	for (var i = 0; i<balls.length;i++){
-		if(balls[i].x + radius > 0 && balls[i].x - radius < window_width)
+		if(balls[i].x + radius > margin_left && balls[i].x - radius < window_width)
 			balls[cnt++] = balls[i]
 	}
 	while(balls.length > cnt){

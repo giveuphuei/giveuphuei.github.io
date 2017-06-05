@@ -46,9 +46,17 @@ function reView(){
 	$("#name").width(Window_wd / 1280 *120)
 	$("#name").height(Window_wd / 1280 *120)
 	$("#words").width((Window_wd / 1280 * 470))
-	$(".resume,.work,.life,.contact").css({
+	$(".resume,.work,.contact").css({
 		'margin':"0 auto",
 		'width':Window_wd
+	})
+	$(".life").css({
+		'margin':"0 auto",
+		'width':Window_wd
+	})
+	$(".life div").css({
+		'width':Window_wd * 0.25,
+		'height':Window_wd * 0.25,
 	})
     $("#demos").width( $(window).width()*0.9) 
      $("#ifram").width( $("#demos").width() - 280)
@@ -82,6 +90,11 @@ function reView(){
 		$(".resume,.work,.life,.contact").css({
 			'width':'1280'
 		})
+		$(".life div").css({
+		'width':1280 * 0.25,
+		'height':1280 * 0.25,
+		})
+
 		$("#demos").width('1100') ;
 	    $("#ifram").width('800')
 		$(".nav table").css({

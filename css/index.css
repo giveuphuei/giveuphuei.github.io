@@ -298,12 +298,28 @@ a:link,a:visited{
 	background: white;
 }
 
-.life{
-	width: 90%;
-	margin:0 auto;	
-	height: 700px;
-	background: gray;
+.life table{
+	margin: 10px auto;
+	width: 80%;
+	table-layout: fixed;
 }
+.life table td{
+} 
+.life div{
+	box-shadow: 3px 3px 1px #BCADDE;
+	display: block;
+	float: left;
+	margin: 10px;
+	background:lightgreen;
+}
+.life div p{
+	font-size: 34px;
+	padding-top: 36%;
+	font-weight: lighter;
+	font-family: 方正幼线简体;
+	text-align: center;
+}
+
 .contact{
 	width: 90%;
 	margin:0 auto;

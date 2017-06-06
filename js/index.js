@@ -3,22 +3,7 @@ var Window_wd = $(window).width()
 var navleft1 = parseInt((Window_wd/ 1280 * 700 )*0.125 - 24)
 window.onload = function(){			
 	reView()
-	//alert($(".nav table td") .width() / 2 - 20)
-	//alert(navleft1)
-	//$(window).scroll = function(){
-           // alert("KOJ")
-                    //变量t就是滚动条滚动时，到顶部的距离
-         //  var ttdis =  $(".mainTitle").offset().top;
-         //  var t =document.documentElement.scrollTop||document.body.scrollTop;
-         //   if( ttdis < 170){
-            //    $(".backTop a").css('display',"block")
-               /* $(".nav table").css({
-                    'position':"fixed",
-                    'top':"25px",
-                    'right': "12%"
-                })*/
-        //   }
-     	 $(window).scroll(function () {
+	$(window).scroll(function () {
 		if ($(window).scrollTop() < 700 ) {
 			$(".backTop a").css('display',"none")
 		}
@@ -35,10 +20,11 @@ window.onload = function(){
 	$(".lifeNote,.title3").click(2,navTitle)
 
 	$(".contactMe,.title4").click(3,navTitle)
+	$(".life table div").mouseover(titleLager)
+	$(".life table div").mouseout(titleReset)
 
 }
 function reView(){
-		//alert(Window_wd)
 	$("#mainBody,.mainNav,.mainTitle").width(Window_wd)
 	if($("#mainBody").height() != 170){
 		$("#mainBody").height(Window_wd * whScale)
@@ -50,13 +36,13 @@ function reView(){
 		'margin':"0 auto",
 		'width':Window_wd
 	})
-	$(".life").css({
+	$(".life,.life>div").css({
 		'margin':"0 auto",
 		'width':Window_wd
 	})
-	$(".life div").css({
-		'width':Window_wd * 0.25,
-		'height':Window_wd * 0.25,
+	$(".life table div").css({
+		'width':Window_wd * 0.2,
+		'height':Window_wd * 0.2 / 16 * 9,
 	})
     $("#demos").width( $(window).width()*0.9) 
      $("#ifram").width( $("#demos").width() - 280)
@@ -87,12 +73,12 @@ function reView(){
 		$("#name").width('120')
 		$("#name").height('120')
 		$("#words").width('470')
-		$(".resume,.work,.life,.contact").css({
+		$(".resume,.work,.life,.life>div,.contact").css({
 			'width':'1280'
 		})
-		$(".life div").css({
-		'width':1280 * 0.25,
-		'height':1280 * 0.25,
+		$(".life table div").css({
+		'width':1280 * 0.2 ,
+		'height':1280 * 0.2 / 16 * 9,
 		})
 
 		$("#demos").width('1100') ;
@@ -184,115 +170,23 @@ function navTitle(e){
 		}
 	}
 }
-/*标题2 _workshare
-function navTitle2(){
-	for(var i = 0; i<4;i++){
-		if(i == 1){
-			$("."+navT[i]+' li:first-child').css('background-positionY','15px')
-			$("."+navT[i]+' li:last-child').css("color","orange")
-		}
-		else{
-			$("."+navT[i]+' li:first-child').css('background-positionY', '-65px')
-			$("."+navT[i]+' li:last-child').css("color","black")
-		}		
-	}
 
-	$(".tran").css({
-		'left':'36.5%',
-		'top':'60px'
-	})
-	$("#mainBody").css({
-		'height':'170px',
-	})
-	$("#words").css('display','none')
-	for(var i=1;i<5;i++){
-		var s = 'title' + i ;
-		if(i != 2){	
-			$("#"+s).css('display','none')
-		}
-		else{
-			$("#"+s).css('display','block')
-		}
-	}
-	/*$(".selfResume li:first-child").css({'background-positionY': '-65px'})
-	$(".workShare li:first-child").css('background-positionY', '15px')
-	$(".lifeNote li:first-child").css('background-positionY', '-65px')
-	$(".contactMe li:first-child").css('background-positionY', '-65px')
-	$(".workShare li:last-child").css("color","orange")
-	$(".selfResume li:last-child,.lifeNote li:last-child,.contactMe li:last-child").css("color","black")
+/*鼠标移入移出时文章标题框变化*/
+function titleLager(){
+	$(this).css({
+		'background':'gray'
 
-	$(".tran").css({
-		'left':'36.5%',
-		'top':'60px'
 	})
+	$(this).find('p').css({
+		'font-size':'26px'
+	})
+}
+function titleReset(){
+	$(this).css({
+		'background':'rgb(185, 183, 187)'
 
-	$("#mainBody").css({
-		'height':'170px',
 	})
-	$("#words").css('display','none')
-	for(i=1;i<5;i++){
-		var s = 'title' + i ;
-		if(i != 2){
-			$("#"+s).css('display','none')
-		}
-		else{
-			$("#"+s).css('display','block')
-		}
-	}
-}*/
-/*标题3 _lifenote
-function navTitle3(){
-	$(".selfResume li:first-child").css({'background-positionY': '-65px'})
-	$(".workShare li:first-child").css('background-positionY', '-65px')
-	$(".lifeNote li:first-child").css('background-positionY', '15px')
-	$(".contactMe li:first-child").css('background-positionY', '-65px')
-	$(".lifeNote li:last-child").css("color","orange")
-	$(".selfResume li:last-child,.workShare li:last-child,.contactMe li:last-child").css("color","black")
-
-	$(".tran").css({
-		'left':'61.5%',
-		'top':'60px'
+	$(this).find('p').css({
+		'font-size':'20px'
 	})
-
-	$("#mainBody").css({
-		'height':'170px',
-	})
-	$("#words").css('display','none')
-	for(i=1;i<5;i++){
-		var s = 'title' + i ;
-		if(i != 3){
-			$("#"+s).css('display','none')
-		}
-		else{
-			$("#"+s).css('display','block')
-		}
-	}
-}*/
-/*标题4 _contactMe
-function navTitle4(){
-	$(".selfResume li:first-child").css({'background-positionY': '-65px'})
-	$(".workShare li:first-child").css('background-positionY', '-65px')
-	$(".lifeNote li:first-child").css('background-positionY', '-65px')
-	$(".contactMe li:first-child").css('background-positionY', '15px')
-	$(".contactMe li:last-child").css("color","orange")
-	$(".selfResume li:last-child,.workShare li:last-child,.lifeNote li:last-child").css("color","black")
-
-	$(".tran").css({
-		'left':'86.5%',
-		'top':'60px'
-	})
-
-	$("#mainBody").css({
-		'height':'170px',
-	})
-	$("#words").css('display','none')
-	for(i=1;i<5;i++){
-		var s = 'title' + i ;
-		if(i != 4){
-			$("#"+s).css('display','none')
-		}
-		else{
-			$("#"+s).css('display','block')
-		}
-	}
-}*/
+}

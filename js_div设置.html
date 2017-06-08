@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <title>js设置div</title>
+<script src="https://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+
 <style>
 #sys1{
 	z-index: -1;
@@ -30,14 +32,14 @@
 	border:20px green solid;
 	padding:15px 30px;
 	display: none;
-    position: absolute;   
-    top: 50%;   
-    left: 50%;   
-    -webkit-transform: translate(-50%, -50%);   
-    -moz-transform: translate(-50%, -50%);   
-    -ms-transform: translate(-50%, -50%);   
-    -o-transform: translate(-50%, -50%);   
-    transform: translate(-50%, -50%);      
+	position: absolute;   
+	top: 50%;   
+	left: 50%;   
+	-webkit-transform: translate(-50%, -50%);   
+	-moz-transform: translate(-50%, -50%);   
+	-ms-transform: translate(-50%, -50%);   
+	 -o-transform: translate(-50%, -50%);   
+	transform: translate(-50%, -50%);      
     
 }
 table{
@@ -75,20 +77,22 @@ input{
 </style>
 <script>
  	function sys(){
- 		document.getElementById('sys2').style.display='block';
+ 		$("#sys2").css("display","block");
  	}
  	function setStyle(name,value){
-    	var oDiv=document.getElementById('maindiv');
-    	oDiv.style[name]=value;
-
+ 		$("#maindiv").css(name,value)
 	}
-
  	function sys_reset(){
- 		var reset = document.getElementById('maindiv');
- 		reset.style = "";
+ 		$('#maindiv').css({
+ 			'background':'lightgray',
+			'width':'100px',
+			'height':'100px',
+			'border':'1px black solid',
+			'margin':'20px 25px',
+ 		})
   	}
   	function sys_sure(){
-  		document.getElementById('sys2').style.display = 'none';
+  		$("#sys2").css("display","none")
   	}
 </script>
 </head>

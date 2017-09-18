@@ -170,7 +170,7 @@ a:link,a:visited{
 	position: relative;
 	width: 100%;
 	margin:0 auto;
-	height:1600px;
+	height:1650px;
 	background-image: url(../images/resumeBg.jpg);
 	background-size: 100% 100%;
 }
@@ -189,7 +189,7 @@ a:link,a:visited{
 }
 #mainCont{
 	width: 90%;
-	margin: 40px auto;
+	margin: 30px auto;
 	font-family: 方正细黑;
 }
 .content{
@@ -230,11 +230,11 @@ a:link,a:visited{
 }
 .lifeExp{
 	width: 65%;
-	margin: 20px auto;		
+	margin: 10px auto;		
 }
 .tech{
 	width: 50%;
-	margin: 20px 35%;		
+	margin: 10px 35%;		
 }
 .tech td{
 	text-align: left;

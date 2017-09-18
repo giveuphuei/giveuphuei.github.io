@@ -411,6 +411,7 @@ a:link,a:visited{
 /*footer*/
 #footer{
 	color: white;
+	background: rgb(62,145,206);
 	font-size: 18px;
 	font-family: 宋体;
 	text-align: center;

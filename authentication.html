@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>衡信教育-申请认证</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .hx-edu-body {
+        width: 100%;
+        background: rgb(240,245,245);
+        text-align: center;
+      }
+      .navbar{
+        min-height: 50px;
+        margin:0 auto;
+        background:#FFF;
+      }
+      .navbar-toggle {
+        margin-top: 4px;
+        margin-bottom: 4px;
+      }
+      #hx-navbar>li {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #999;
+        letter-spacing: 0;
+        height: 40px;
+        line-height: 40px;
+      }
+      .dropdown-toggle {
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #0070BA!important;
+        letter-spacing: 0.57px;
+      }
+      .menuActive>a{
+        color: #0070BA!important;
+        border-bottom: 2px #0070BA solid;
+      }
+      .dropdownActive>a {
+        color: #0070BA!important;
+      }
+      .authentication-form {
+        background:#FFF;
+        width: 100%;
+        margin: 10px auto;
+        text-align: left;
+      }
+      .authentication-form span {
+        font-family: PingFangSC-Regular;
+      }
+      .authentication-form-head>div {
+        display: inline-block;
+        margin-right: 20px;
+      }
+      .authentication-form-head {
+        width: 90%;
+        margin: 0 auto;
+        padding-top: 20px;
+        padding-bottom: 10px;
+      }
+      .state-small {
+        font-size: 12px;
+        color: #777777;
+      }
+      .authentication-form-head>p {
+        display: block;
+        font-family: PingFangSC-Medium;
+        font-size: 20px;
+        color: #444444;
+        margin-right: 10px;
+      }
+      .authentication-form-body {
+        width: 90%;
+        margin: 0 auto;
+        padding: 20px;
+        display: flex;
+        border-top: 1px dashed #ddd;
+        border-bottom: 1px dashed #ddd;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+      }
+      .authentication-form-body>dl {
+        display: block;
+      }
+      .authentication-form-body dt,.authentication-form-body dd {
+        display: inline-block;
+      }
+      .authentication-form-body dd {
+        width: 136px;
+        text-align: left;
+        margin-right: 20px;
+        margin-bottom: 5px;
+      }
+      .authentication-form-btn {
+        width: 130px;
+        margin-bottom: 20px;
+      }
+      .uploadImg {
+        position: relative;
+        width: 70px;
+        height: 70px;
+        background-image: url('images/照相机.png');
+        background-size: 50% auto;
+        background-position: center;
+        background-repeat: no-repeat;
+        border: 1px #ddd solid;
+      }
+      .viewImg {
+        position: absolute;
+        left: 0;
+        top: 0;
+        display: none;
+        overflow-x: hidden;
+        overflow-y: hidden;
+      }
+      .viewImg>p {
+        z-index: 10;
+        position: absolute;
+        bottom: -10px;
+        width: 100%;
+        background:rgba(0,0,0,0.5);
+        text-align: center;
+        color: #FFF;
+      }
+      .viewImg>img {
+        width: 70px;
+        height: 70px;
+      }
+      .uploadImg>input {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 70px;
+        height: 70px;
+        opacity: 0;
+      }
+      .uploadImg>p {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        width: 100%;
+        font-size: 12px;
+        color: #777;
+        text-align: center;
+      }
+      .pickDate input {
+        width: 100px;
+        height: 35px;
+        line-height: 35px;
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #333;
+        text-align: center;
+        margin-top: 10px;
+        /*margin-right: 20px;*/
+        border: 1px #ddd solid;
+      }
+      .normalQuestion {
+        border-top: 1px #ddd dashed;
+        padding-top: 10px;
+      }
+      .normalQuestion>ol {
+        margin-left: -20px;
+      }
+      .bottom-tips {
+        width: 100%;
+        text-align: center;
+        font-family: PingFangSC-Regular;
+        font-size: 14px;
+        color: #777777;
+        line-height: 28px;
+        margin: 20px auto;
+        padding-bottom: 20px;
+        padding-left: 20px;
+        padding-right: 20px;
+      }
+      .footer {
+        width: 100%;
+        font-size: 12px;
+        color: #777;
+      }
+      .footer p {
+        text-align: center;
+        padding-top: 10px;
+        padding-right: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+      }
+      @media (min-width: 420px) {
+        #hx-navbar>li {
+          display: inline-block;
+        }
+        .authentication-form-head>p {
+          display: inline-block;
+          font-family: PingFangSC-Medium;
+          font-size: 20px;
+          color: #444444;
+          margin-right: 10px;
+        }
+        .authentication-form {
+          background:#FFF;
+          width: 90%;
+          margin: 10px auto;
+          text-align: left;
+        }
+        .authentication-form-body dd {
+          width: 136px;
+          text-align: right;
+          margin-right: 20px;
+        }
+        .pickDate input {
+          width: 120px;
+          height: 35px;
+          line-height: 35px;
+          font-family: PingFangSC-Regular;
+          font-size: 12px;
+          color: #333;
+          text-align: center;
+          margin-right:10px;
+          border: 1px #ddd solid;
+        }
+        .pickDate input:last-child {
+          margin-left: 10px;
+        }
+        .alignTop {
+          position: relative;
+          top: -50px;
+        }
+      }
+      @media (min-width: 992px) {
+        .navbar-left {
+          margin-left: 10%;
+        }
+        #hx-navbar>li {
+          font-family: PingFangSC-Regular;
+          font-size: 16px;
+          color: #999;
+          letter-spacing: 0;
+          height: 22px;
+          line-height: 22px;
+          margin-right: 58px;
+        }
+        .authentication-form {
+          background:#FFF;
+          width: 70%;
+          margin: 20px auto;
+          text-align: left;
+        }
+        .normalQuestion {
+          width: 300px;
+          border-top: none;
+          border-left: 1px dashed #ddd;
+          padding-left: 24px;
+        }
+        .authentication-form-head>div {
+          display: inline-block;
+          margin-right: 20px;
+        }
+        .authentication-form-body {
+          width: 90%;
+          margin: 0 auto;
+          padding: 20px;
+          display: flex;
+          border-top: 1px dashed #ddd;
+          border-bottom: 1px dashed #ddd;
+          flex-direction: row;
+          align-items: flex-start;
+          justify-content: space-between;
+        }
+        .authentication-form-body dd {
+          width: 136px;
+          text-align: right;
+          margin-right: 20px;
+        }
+        .alignTop {
+          position: relative;
+          top: -50px;
+        }
+        .pickDate input {
+          width: 135px;
+          height: 35px;
+          line-height: 35px;
+          font-family: PingFangSC-Regular;
+          font-size: 14px;
+          color: #333;
+          text-align: center;
+          margin-right:10px;
+          border: 1px #ddd solid;
+        }
+        .pickDate input:last-child {
+          margin-left: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- nav-menu -->
+    <nav class="navbar navbar-default">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#hxedu-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img style="width:112px;height:28px" src="images/brand.png" alt="hxEdu"></a>
+        </div>
+        <div class="collapse navbar-collapse" id="hxedu-navbar-collapse-1" >
+          <ul class="nav navbar-nav navbar-left"  id="hx-navbar">
+            <li class="menuActive"><a href="#">首页</a></li>
+            <li><a href="#">职位发布</a></li>
+            <li><a href="#">应聘管理</a></li>
+            <li><a href="#">系统设置</a> </li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">当前用户 糖糖<span class="caret"></span>
+              </a>
+              <ul class="dropdown-menu dropdown-menu-right hx-dropdown">
+                <li class="dropdownActive"><a href="#">用户中心</a></li>
+                <li><a href="#">修改密码</a></li>
+                <li><a href="#">退出系统</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div><!-- /.container-fluid -->
+    <nav>
+    <div class="container-fluid hx-edu-body">
+      <div class="authentication-form">
+        <div class="authentication-form-head">
+          <p>申请认证</p>
+          <div>
+            <img src="images/Group 2.png" alt="" style='background: #F2F2F2;'>
+            <span class='curCheckState'>未通过</span><span class='state-small'>(当前状态)</span><span style='font-size: 14px;color: #ED6661;'>:营业执照过期</span>
+          </div>
+          <div>
+            <img src="images/未认证.png" alt="">
+            <span class='curConfirmState'>未认证</span><span class='state-small'>(当前状态)</span>
+          </div>
+        </div>
+        <div class="authentication-form-body">
+          <div>
+            <dl>
+              <dd class='alignTop'>上传营业执照</dd>
+              <dt>
+                <div class='uploadImg' for='certification0'>
+                  <p>上传照片</p>
+                  <input type="file" id='certification0' class='certification'>
+                  <div class='viewImg'>
+                    <img src="" alt="">
+                    <p>删除</p>
+                  </div>
+                </div>
+                <div class="preview_box"></div>
+              </dt>
+            </dl>
+            <dl class='pickDate'>
+              <dd>营业执照起止时间</dd>
+              <dt>
+                <input type="date" name='startDate' placeholder="年-月-日">至<input type="date" name='endDate' placeholder="年-月-日">
+              </dt>
+            </dl>
+            <dl>
+              <dd class='alignTop'>上传法人身份证(正面)</dd>
+              <dt>
+                <div class='uploadImg' for='certification1'>
+                  <p>上传照片</p>
+                  <input type="file" id='certification1' class='certification'>
+                  <div class='viewImg'>
+                    <img src="" alt="">
+                    <p>删除</p>
+                  </div>
+                </div>
+              </dt>
+            </dl>
+            <dl>
+              <dd class='alignTop'>上传法人身份证(反面)</dd>
+              <dt>
+                <div class='uploadImg' for='certification2'>
+                  <p>上传照片</p>
+                  <input type="file" id='certification2' class='certification'>
+                  <div class='viewImg'>
+                    <img src="" alt="">
+                    <p>删除</p>
+                  </div>
+                </div>
+              </dt>
+            </dl>            
+          </div>
+          <div class='normalQuestion'>
+            <p>常见问题</p>
+            <ol>
+              <li>
+                如何申请认证?
+                <p>先上传营业执照、法人身份证复印件等信息，再点击申请认证</p>
+              </li>
+              <li>
+                为什么要申请认证?
+                <p>只有申请认证通过的企业才能使用招聘功能</p>
+              </li>
+              <li>
+                为什么要上传证件?
+                <p>上传证件可以增加企业的可信度和排名积分，更容易被应聘人员信任和查到，所以在申请认证之前请上传企业的营业执照、法人身份证复印件等信息.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class='bottom-tips'>
+          <p>1.申请认证之前上传营业执照、法人身份证复印件，可以增加企业的可信度，并可以使企业排名更靠前</p>
+        </div>
+      </div>
+      <button type='button' class='btn btn-primary authentication-form-btn'>认证申请</button>
+    </div>
+    <div class="footer">
+      <p>copyright @2015-2017 衡信会计工作室 浙江衡信教育科技有限公司 版权所有 浙ICP备10009426号-3 <br>浙公网安备 33010602000807号</p>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        console.log('ready')
+        $('#hx-navbar>li').click(function () {
+          console.log(this)
+          $('#hx-navbar>li').removeClass('menuActive')
+          $(this).addClass('menuActive')
+        })
+        $('.hx-dropdown>li').click(function () {
+          $('.hx-dropdown>li').removeClass('menuActive')
+          $(this).addClass('menuActive')
+        })
+        $(".certification").on("change", function(e){
+          let that = this
+          console.log('ready00')
+          let file = e.target.files[0]; //获取图片资源
+          console.log(file)
+          // 只选择图片文件
+          if (!file.type.match('image.*')) {
+            return false;
+          }
+          let reader = new FileReader();
+          reader.readAsDataURL(file); // 读取文件
+          // 渲染文件
+          reader.onload = function(arg) {
+            // let img = '<img src="' + arg.target.result + '" alt="preview"/>';
+            // $(".preview_box").empty().append(img);
+            console.log(arg)
+            // var img = '<img class="preview" src="' + arg.target.result + '" alt="preview"/>';
+            // $(that).next().empty().append(img).css({
+            //   'display': 'block',
+            //   'width': '70px',
+            //   'height': '70px'
+            // })
+            $(that).next().css('display', 'block')
+            $(that).next().find('img').attr('src', arg.target.result)
+            console.log($('.viewImg'))
+          }
+        })
+        $('.viewImg>p').click(function () {
+          let that = this
+          // $(that).css('display', 'none')
+          $(that).prev().attr('src', '')
+          $(that).parent().css('display', 'none')
+        })
+      })
+    </script>
+  </body>
+</html>

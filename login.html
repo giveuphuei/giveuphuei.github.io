@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>衡信教育-登录</title>
+    <!-- Bootstrap -->
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+      .login-jumbotron {
+        background-image: url('images/loginBgImg.png');
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background-size: auto 100%;
+        background-position: center;
+        background-repeat:no-repeat;
+      }
+      .login-info {
+        width: 98%;
+        text-align: left;
+        margin: 20px auto;
+      }
+      .login-info ul {
+        color: rgb(102, 102, 102);
+        letter-spacing: 0;
+        line-height: 45px;
+      }
+      .login-info>p {
+        padding-left: 25px;
+      }
+      .login-form {
+        background: #eee;
+        text-align: left;
+        padding-top: 20px;
+        padding-bottom: 5px;
+        padding-left: 20px;
+        width: 90%;
+        margin: 10px auto;
+      }
+      .login-form>input {
+        width: 96%;
+        display: block;
+        height: 40px;
+        padding-left: 10px;
+        border: 1px #999 solid;
+      }
+      .login-form>input:nth-child(3) {
+        margin-top: 24px;
+        margin-bottom: 24px;
+      }
+      .login-form>input:nth-child(4) {
+        display: inline-block;
+        width: 30%;
+        margin-bottom: 32px;
+      }
+      .login-form img {
+        width: 35%;
+        height: 38px;
+        display: inline-block;
+        margin-left: 16px;
+        margin-right: 17px;
+      }
+      .login-form button {
+        width: 90%;
+        margin: 0 auto;
+      }
+      .login-tips {
+        text-align: center;
+        margin: 21px auto;
+        font-family: PingFangSC-Light;
+        font-size: 14px;
+        color: #666666;
+        letter-spacing: 0;
+      }
+      .login-tips>span {
+        color: #160000;
+        line-height: 20px;
+      }
+      .footer {
+        position: absolute;
+        width: 100%;
+        top: 100%;
+        font-family: PingFangSC-Regular;
+        font-size: 12px;
+        color: #999999;
+        letter-spacing: 0;
+        text-align: center;
+        padding-bottom: 10px;
+      }
+      .footer>p {
+        width: 100%;
+        height: 28px;
+        line-height: 28px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+      }
+      @media (min-width: 400px) {
+        .login-jumbotron>div {
+          width: 100%;
+          position: absolute;
+          top: 50%;
+          transform: translateY(-50%);
+        }
+        .login-info {
+          width: 60%;
+          text-align: left;
+          margin: 50px auto;
+        }
+        .login-form {
+          padding-left: 20px;
+          text-align: left;
+          background: #eee;
+          width: 360px;
+          height: 370px;
+          margin: 10px auto;
+        }
+      }
+      @media (min-width: 992px) {
+        .login-jumbotron>div {
+          display: flex;
+          align-items: flex-start;
+          justify-content: center;
+          text-align: center;
+        }
+        .login-info {
+          width: 362px;
+          text-align: left;
+          margin-right:100px;
+        }
+        .login-form {
+          display: inline-block;
+          width: 360px;
+          padding-left: 20px;
+          text-align: left;
+          background: #eee;
+          margin-left: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid login-jumbotron">
+      <div class='row'>
+        <div class="login-info">
+          <p>人力资源优势</p>
+          <ul>
+            <li>与多所高校合作建立衡信财税工商订单班和衡信会计工作室</li>
+            <li>提供优秀财税应届毕业生</li>
+          </ul>
+        </div>
+        <div class="login-form">
+          <p>企业会员登录</p>
+          <input is-type="text" placeholder="账号" />
+          <input is-type="password" placeholder="密码">
+          <input type="text" placeholder="验证码">
+          <img class='confirmCode' src="images/confirmCode.png" alt=""><span @click='changeConfirmCode()'>换一张</span>
+          <button type='button'  class="btn btn-primary">提交</button>
+          <p class="login-tips">
+            没有登录账号，请点此进行<span>注册</span>
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>copyright @2015-2017 衡信会计工作室 浙江衡信教育科技有限公司 版权所有 浙ICP备10009426号-3 <br>浙公网安备 33010602000807号</p>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.login-form span').click(function () {
+          $('.confirmCode').attr('src', 'images/confirmCode.png')
+          alert('仅测试布局')
+        })
+      })
+    </script>
+  </body>
+</html>

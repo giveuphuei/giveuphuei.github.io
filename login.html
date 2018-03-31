@@ -16,7 +16,6 @@
     <![endif]-->
     <style>
       .login-jumbotron {
-        z-index: 1;
         background-image: url('images/loginBgImg.png');
         width: 100%;
         position: absolute;
@@ -90,10 +89,7 @@
         line-height: 20px;
       }
       .footer {
-        z-index: -1;
-        position: fixed;
         width: 100%;
-        bottom: 0;
         font-family: PingFangSC-Regular;
         font-size: 12px;
         color: #999999;
@@ -149,17 +145,6 @@
           background: #eee;
           margin-left: 100px;
         }
-        .footer {
-          position: absolute;
-          width: 100%;
-          top: 100%;
-          font-family: PingFangSC-Regular;
-          font-size: 12px;
-          color: #999999;
-          letter-spacing: 0;
-          text-align: center;
-          padding-bottom: 10px;
-        }
       }
     </style>
   </head>
@@ -195,10 +180,23 @@
     <script src="bootstrap/js/bootstrap.min.js"></script>
     <script type="text/javascript">
       $(document).ready(function(){
+        let screenheight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        $('.footer').css({
+          'position': 'absolute',
+          'top': screenheight + 'px'
+        })
         $('.login-form span').click(function () {
           $('.confirmCode').attr('src', 'images/confirmCode.png')
           alert('仅测试布局')
         })
+      })
+      $(window).resize(function () {
+        let screenheight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight
+        $('.footer').css({
+          'position': 'absolute',
+          'top': screenheight + 'px'
+        })
+        console.log(screenheight)
       })
     </script>
   </body>

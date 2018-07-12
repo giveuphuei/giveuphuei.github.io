@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>js设置div</title>
+<script src="https://libs.baidu.com/jquery/1.9.1/jquery.js"></script>
+
+<style>
+#sys1{
+	z-index: -1;
+	margin:20px 25px;
+	height:30px;
+}
+#btn1{
+	width:80px;
+	display:;
+	background:red;
+	color:white;
+}
+#maindiv{
+	background-color:lightgray;
+	width:100px;
+	height:100px;
+	border:2px black solid;
+	margin:20px 25px;
+}
+#sys2{
+	z-index: 1;
+	width:260px;
+	height:240px;
+	margin:auto auto;
+	border:20px green solid;
+	padding:15px 30px;
+	display: none;
+	position: absolute;   
+	top: 50%;   
+	left: 50%;   
+	-webkit-transform: translate(-50%, -50%);   
+	-moz-transform: translate(-50%, -50%);   
+	-ms-transform: translate(-50%, -50%);   
+	 -o-transform: translate(-50%, -50%);   
+	transform: translate(-50%, -50%);      
+    
+}
+table{
+	width:240px;
+	height:140px;	
+}
+form{
+	height:60px;
+	padding-top: 10px;
+}
+input{
+	color:#333;
+	width:35px;
+	height:35px;
+	padding:2px;
+}
+#btnred{
+	background:red;
+	color:white;
+}
+#btnyew{
+	background:yellow;
+	color:white;
+}
+#btnblue{
+	background:blue;
+	color:white;
+}
+#reset,#submit{
+	width:45px;
+	height:30px;
+	background:blue;
+	color:white;
+}
+</style>
+<script>
+ 	function sys(){
+ 		$("#sys2").css("display","block");
+ 	}
+ 	function setStyle(name,value){
+ 		$("#maindiv").css(name,value)
+	}
+ 	function sys_reset(){
+ 		$('#maindiv').css({
+ 			'background':'lightgray',
+			'width':'100px',
+			'height':'100px',
+			'border':'1px black solid',
+			'margin':'20px 25px',
+ 		})
+  	}
+  	function sys_sure(){
+  		$("#sys2").css("display","none")
+  	}
+</script>
+</head>
+<body style="background-color: lightgreen;">
+	<div id="sys1">
+	<span style="font-size:16px; font-weight:bold;">为下面的DIV设置样式:</span> 
+	<span><input id="btn1" type="button" value="点击设置" onclick="sys();"></span>
+	</div>
+	<div id="maindiv">
+	</div>
+	<div id="sys2" >
+		<table>
+		<tbody>
+			<tr>
+			<td><strong>请选择背景色:</strong></td>
+			<td><input id="btnred" type="button" value="红" onclick="setStyle('background','red');" /></td>
+			<td><input id="btnyew" type="button" value="黄" onclick="setStyle('background','yellow');" /></td>
+			<td><input id="btnblue" type="button" value="蓝" onclick="setStyle('background','blue');" /></td>
+			</tr>
+			<tr>
+			<td><strong>请选择宽(px):</strong></td>
+			<td><input id="width1" type="button" value="200" onclick="setStyle('width','200px');"></td>
+			<td><input id="width2" type="button" value="300" onclick="setStyle('width','300px');"></td>
+			<td><input id="width3" type="button" value="400" onclick="setStyle('width','400px');"></td>
+			</tr>
+			<tr>
+			<td><strong>请选择高(px):</strong></td>
+			<td><input id="height1" type="button" value="200" onclick="setStyle('height','200px');"></td>
+			<td><input id="height2" type="button" value="300" onclick="setStyle('height','300px');"></td>
+			<td><input id="height3" type="button" value="400" onclick="setStyle('height','400px');"></td>
+			</tr>
+			
+		</tbody>
+		</table>
+		<form align='center'>	
+				<input id="reset" type="button" value="恢复" onclick="sys_reset();">
+				<input id="submit" type="button" value="确定" onclick="sys_sure();">
+		</form>	
+				
+	</div>
+</body>
+</html>

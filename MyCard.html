@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>myCard</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style type="text/css">
+*{
+    margin:0;
+    padding:0;
+    font:normal 14px "微软雅黑";
+    color:#000000;
+}
+ol,ul{
+    list-style-type: none;
+}
+a{
+    text-decoration: none;
+}
+.card { 
+    box-shadow: 0px 1px 0px rgba(255,255,255,0.4), inset 0px 1px 1px rgba(0,0,0,.7); 
+    border-radius: 6px; 
+    background: url("images/quote-bg.png") no-repeat top right rgba(42,42,42,1); 
+    width: 350px; 
+    height: 250px; 
+    margin: auto auto;
+    border-top: 2px gold solid;
+    overflow:hidden;
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%);  
+}
+.card h1 { 
+    font-size: 24px;
+    font-family: 楷体;
+    font-weight: bold;
+    color: gold;
+    padding: 10px;
+    border-top: 
+}
+.card p:first-child { 
+    padding: 40px 0 0 40px;
+} 
+.card p { 
+    font-size: 16px;
+    padding: 0 0 0 40px; 
+    line-height: 28px; 
+    text-shadow: 0px 1px 2px rgba(0,0,0,.5); 
+    color: #89919a; 
+    -webkit-animation: animations2 5s ease-in-out 5s; 
+    -moz-animation: animations2 5s ease-in-out 5s; 
+    -o-animation: animations2 5s ease-in-out 5s; 
+    -ms-animation: animations2 5s ease-in-out 5s; 
+    animation: animations2 5s ease-in-out 5s; 
+}
+.linkmore { 
+    margin: 15px 0 0 15px 
+}
+.linkmore li a { 
+    height: 50px; 
+    width: 50px; 
+    display: block; 
+    overflow: hidden; 
+    box-shadow: 0px 1px 0px rgba(255,255,255,.1), inset 0px 1px 1px rgba(0,0,0,.7); 
+    border-radius: 50%; 
+    float: left; 
+    margin: 0 6px;
+}
+.linkmore li a:hover { opacity: 0.5; -webkit-transform: rotate(30deg); -ms-transform: rotate(30deg); -moz-transform: rotate(30deg); -o-transform: rotate(30deg); transform: rotate(30deg); }
+.talk, .address, .email, .photos, .heart { 
+    background-image: url("images/icon.png"); 
+}
+.address { 
+    background-position:12px -25px;
+}
+.email { 
+    background-position: 12px -60px ;  
+}
+.photos { 
+    background-position: 12px -137px; 
+}
+
+
+</style>
+</head>
+    <body>
+         <div class="card">
+      <h1>我的名片</h1>
+      <p>网名：fireonsea &nbsp;| &nbsp;落焰海</p>
+      <p>职业：Web前端设计师、网页设计</p>
+      <p>电话：157********</p>
+      <p>Email：1392470040@qq.com</p>
+      <ul class="linkmore">
+        <li><a href="/" class="address" title="联系地址"></a></li>
+        <li><a href="/" class="email" title="给我写信"></a></li>
+        <li><a href="/" class="photos" title="生活照片"></a></li>
+      </ul>
+    </div>
+    </body>
+</html>

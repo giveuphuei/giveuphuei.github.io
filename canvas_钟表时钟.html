@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<title>canvas绘制时钟</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="canvas绘制时钟" />
+</head>
+<style>
+#clock{
+	text-align: center;
+	position: absolute;   
+    top: 50%;   
+    left: 50%;   
+    -webkit-transform: translate(-50%, -50%);   
+    -moz-transform: translate(-50%, -50%);   
+    -ms-transform: translate(-50%, -50%);   
+    -o-transform: translate(-50%, -50%);   
+    transform: translate(-50%, -50%); 
+}
+</style>
+    <body>
+    	<div id="clock">
+    		<canvas id="mycan" width="200px" height="200px"></canvas>
+    	</div>
+    	<script type="text/javascript" src="js/clock.js"></script>
+    </body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>计时器</title>
+<script type="text/javascript">
+  var attime;
+  function clock(){
+    var time=new Date();          
+    attime= time.getHours()+':'+time.getMinutes()+':'+time.getSeconds() ;
+    document.getElementById("clock").value = attime;
+  }
+  setInterval(clock,'1000');
+</script>
+<style>
+#clock{
+    width:100px;
+   /* border:white 1px solid; */
+    font-size:24px;
+    font-weight:bold;
+    margin:20px ;border:black 1px solid;
+}
+#div1{
+    
+    
+    width:100px;
+    margin:auto;
+}
+
+</style>
+</head>
+<body>
+<form>
+<div id='div1'><input type="text" id="clock" size="50" /></div>
+</body>
+</html>  

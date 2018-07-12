@@ -1,0 +1,52 @@
+﻿<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+        <title>JS实现选中</title>
+    </head>
+    
+    <body>
+        <form> 
+          请选择你爱好:<br>
+          <input type="checkbox" name="hobby" id="hobby1">  音乐
+          <input type="checkbox" name="hobby" id="hobby2">  登山
+          <input type="checkbox" name="hobby" id="hobby3">  游泳
+          <input type="checkbox" name="hobby" id="hobby4">  阅读
+          <input type="checkbox" name="hobby" id="hobby5">  打球
+          <input type="checkbox" name="hobby" id="hobby6">  跑步 <br />
+          <input type="button" value = "全选" onclick = "checkall();">
+          <input type="button" value = "全不选" onclick = "clearall();">
+          <p>请输入您要选择爱好的序号，序号为1-6:</p>
+          <input id="wb" name="wb" type="text" >
+          <input name="ok" type="button" value="确定" onclick = "checkone();">
+        </form>
+        <script type="text/javascript">
+        function checkall(){
+            var hobby = document.getElementsByTagName("input");
+            for(var i=0;i<hobby.length;i++){
+                if(hobby[i].type == 'checkbox'){
+                    hobby[i].checked = true;
+                }
+            }                           
+        }// 任务1   实现当点击"全选"按钮时，将选中所有的复选项。
+        function clearall(){
+            var hobby = document.getElementsByName("hobby");
+           /**/ for(var i=0;i<hobby.length;i++){
+                if(hobby[i].checked == true)
+                    hobby[i].checked = false;
+            }
+        }// 任务2   实现当点击"全不选"按钮时，将取消所有选中的复选项。
+        
+        function checkone(){
+            var j=document.getElementById("wb").value;
+            var hobby = document.getElementsByName("hobby");
+            var wb = j.split('');
+           for(var ii=0;ii<wb.length;ii++){
+                if(wb[ii]>=1 && wb[ii]<=6){
+                    hobby[wb[ii]-1].checked = true;
+                }
+            }
+        }// 任务3   在文本框中输入输入1-6数值，当点击"确定"按钮时，根据输入的数值，通过id选中相应的复选项。     
+        </script>
+    </body>
+</html>

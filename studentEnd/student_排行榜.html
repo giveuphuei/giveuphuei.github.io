@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css">
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <!-- <link rel="stylesheet" type="text/css" href="http://testresource.caidao8.com/style/cmacedu/css/cmac_school.css"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>学生-排行榜</title>
+  </head>
+  <body class='student_end ranking_list'>
+    <nav class="top_bar_container">
+      <div class="student_top_nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="student_logo">
+          <a class="navbar-brand" href="#">
+            <img class='student_end_nav_logo' alt="" src="../../images/cmacedu/cmacLogo.png">
+            <span>CMAC</span>
+          </a>
+        </div>
+
+        <div class="student_top_bar">
+          <ul class="student_top_bar_left">
+            <li class="menu_item">
+              <a href="#">首页</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">习武堂</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                竞技场<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    打擂台
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    竞技
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    英雄榜
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    排行榜
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                通行证<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    认证体系
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    晋级标准
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    练武分析
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的证书
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    评测报告
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                就业帮<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    职位查看
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的就业
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    就业指导
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                道具商城<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    道具商城
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    考前冲刺
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专精特训
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    财税法规
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="top_nav_search_area">
+            <input class="top_nav_search_input" type="text" placeholder="搜索财税法规、视频、课件等">
+            <span class="icon iconfont icon-chaxun"></span>
+          </div>
+
+          <ul class="student_top_bar_right">
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-qiandao"></div>
+                <div class='nav_item_text'>签到</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-message"></div>
+                <div class='nav_item_text'>消息</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class='top_nav_right_item user_center_gate dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class='top_nav_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                <span class="new_message_dot"></span>
+              </a>
+
+              <!-- 个人中心 -->
+              <div class="dropdown-menu">
+                <div class="caret_icon"></div>
+                <div class="top_bar_user_center">
+                  <div class="user_center_module_1">
+                    <img class='user_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                    <div class="user_info">
+                      <div class="user_info_top">
+                        <span class="user_name">白兔兔</span>
+                        <span class="total_credit">总学分 45</span>
+                      </div>
+                      <div class="user_info_bottom">
+                        <span class="grade_label">CMAC级别：</span>
+                        <span class="current_grade">实习会计</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_2">
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-work"></i>
+                        作业
+                      </div>
+                      <div class="number">
+                        10
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-user_center"></i>
+                        个人中心
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-renwu"></i>
+                        任务
+                      </div>
+                      <div class="number">
+                        14
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-exercise"></i>
+                        我的练习
+                      </div>
+                      <img class="exercise_gift_img" src="../../images/cmacedu/gift.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_3">
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-currentGrade"></i>
+                        本级学分
+                      </span>
+                      <div class="progress_container">
+                        <div class="progress_inner" style="width: 70%;"></div>
+                      </div>
+                      <div class="number">
+                        <span class="has_credit">144</span>/<span class="need_credit">756</span>
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-tongban"></i>
+                        铜板
+                        <span class='module_item_left_sub'>马上充值</span>
+                      </span>
+                      <div class="module_item_right">0.0</div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-jifen"></i>
+                        积分
+                        <span href="" class='module_item_left_sub'>如何获取积分？</span>
+                      </span>
+                      <div class="module_item_right">30</div>
+                    </a>
+                  </div>
+
+                  <div class="user_center_module_4">
+                    <div onclick="openDialog('student_change_password')">修改密码</div>
+                    <div>安全退出</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="student_container">
+      <div class="ranking_list_container">
+        <!-- 排行榜列表区域 -->
+        <div class="rank_list_area">
+          <div class="rank_list_tabbar">
+            <ul class="rank_list_tabbar_main">
+              <li class="selected">学分榜</li>
+              <li>学时榜</li>
+              <li>准确榜</li>
+              <li>积分榜</li>
+              <li>诚信榜</li>
+              <div class="ranking_list_tip">
+                <i class="alert_icon icon iconfont icon-alert"></i>
+                <span class="alert_text">数据每天六点前更新</span>  
+              </div>
+            </ul>
+            <div class="rank_list_tabbar_sub">
+              <div class="grade_label">等级</div>
+              <div class="select_item selected">CMAC1</div>
+              <div class="select_item">CMAC2</div>
+              <div class="select_item">CMAC3</div>
+              <div class="select_item">CMAC4</div>
+            </div>
+          </div>
+          <div class="no_data">
+            <img src="../../images/cmacedu/emptyIcon1.png" alt="">
+            <p>
+              对不起，由于您尚未加入任何学校，<br>
+              无本校排行榜点击<a href="">加入学校</a>吧
+            </p>
+          </div>
+          <ul class="rank_list_body">
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-diyi"></span>
+                    <span class='user_rank_num'>1</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-diyi"></span>
+                    <span class='user_rank_num'>1</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-dier"></span>
+                    <span class='user_rank_num'>2</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disan"></span>
+                    <span class='user_rank_num'>3</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>4</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>4</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>5</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>6</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>7</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>8</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>9</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+            <li class="rank_list_hover">
+              <div class="rank_list_item">
+                <div class="rank_list_item_user">
+                  <div class="user_rank">
+                    <span class="icon iconfont icon-disi"></span>
+                    <span class='user_rank_num'>10</span>
+                  </div>
+                  <img class="user_avatar" src="../../images/cmacedu/userAvatar.png">
+                  <div class="user_name">张译张译张译张译</div>
+                </div>
+                <div class="user_class">301班</div>
+                <div class="user_grade">CMAC1级（实习会计）</div>
+                <div class="user_credit">8000学分</div>
+              </div>
+            </li>
+          </ul>
+          <div class="rank_view_more">
+            <button class="rank_view_more_btn">查看更多排行</button>
+          </div>
+        </div>
+
+        <!-- 当前用户各榜单排名信息 -->
+        <div class="user_rank_info">
+          <div class="user_info">
+            <img class="user_avatar" src="../../images/cmacedu/userAvatar.png" alt="">
+            <div class="user_name">白兔兔</div>
+            <div class="current_grade">CMAC1</div>
+          </div>
+          <div class="rank_info">
+            <div class="rank_info_item">
+              <div class="item_number">999</div>
+              <div class="item_name_rank">
+                学分
+                <span class="item_name_rank_number">
+                  (第<span>22</span>名)
+                </span>
+              </div>
+            </div>
+            <div class="rank_info_item">
+              <div class="item_number">99%</div>
+              <div class="item_name_rank">
+                准确率
+                <span class="item_name_rank_number">
+                  (第<span>22</span>名)
+                </span>
+              </div>
+            </div>
+            <div class="rank_info_item">
+              <div class="item_number">155</div>
+              <div class="item_name_rank">
+                学时
+                <span class='item_name_rank_number'>
+                  (第<span>22</span>名)
+                </span>
+              </div>
+            </div>
+            <div class="rank_info_item">
+              <div class="item_number">999</div>
+              <div class="item_name_rank">
+                积分
+                <span class='item_name_rank_number'>
+                  (第<span>22</span>名)
+                </span>
+              </div>
+            </div>
+            <div class="rank_info_item">
+              <div class="item_number">80%</div>
+              <div class="item_name_rank">
+                诚信
+                <span class='item_name_rank_number'>
+                  (第<span>22</span>名)
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号 <br>Copyright@2015-2016</p>
+    </div>
+
+     <!-- 修改密码 -->
+    <div class="dialog_container student_change_password">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>修改密码</span>
+          <i class='icon iconfont icon-close_hover' onClick="closeDialog('student_change_password')"></i>
+        </div>
+        <div class="dialog_content">
+          <form action="">
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="原密码"/>
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="新密码" />
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="确认密码"/>
+            </div>
+          </form>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onClick="closeDialog('student_change_password')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../../style/cmacedu/js/jquery-3.1.0.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+
+        //  初始化当前榜单选中状态
+        $('.rank_list_tabbar_main>li').click(function () {
+          var that = this
+          $('.rank_list_tabbar_main>li').removeClass('selected')
+          console.log('当前榜单为', $(that).text())
+          $(that).addClass('selected')
+        })
+        $('.rank_list_tabbar_sub .select_item').click(function () {
+          var that = this
+          $('.rank_list_tabbar_sub .select_item').removeClass('selected')
+          console.log('当前CMAC等级为', $(that).text())
+          $(that).addClass('selected')
+        })
+
+
+
+        // 布局展示切换-----参数为true表示已加入学校；false表示尚未加入学校
+        viewData(true)
+
+      })
+      function viewData(hasData) {
+        // 已加入学校（有排名信息）
+        if (hasData) {
+          $('.rank_list_area .no_data').css('display', 'none')
+          $('.rank_list_area .rank_list_body,.rank_list_area .rank_view_more,.user_rank_info .item_name_rank .item_name_rank_number').css('display', 'flex')
+        } else {
+          // 未加入学校（无排名信息）
+          $('.rank_list_area .rank_list_body,.rank_list_area .rank_view_more,.user_rank_info .item_name_rank .item_name_rank_number').css('display', 'none')
+          $('.rank_list_area .no_data').css('display', 'flex')
+        }
+      }
+      function openDialog(className) {
+        $('.student_end').css('overflow','hidden')
+        $('.' + className).css('display', 'block')
+      }
+      function closeDialog(className) {
+        $('.student_end').css('overflow','auto')
+        $('.' + className).css('display', 'none')
+      }
+    </script>
+  </body>
+</html>

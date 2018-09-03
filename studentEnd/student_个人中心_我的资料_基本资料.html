@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/student_user_center.css"> -->
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <link rel="stylesheet" href="../../style/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../../style/css/cropper.min.css">
+    <link rel="stylesheet" href="../../style/css/bootstrap-datetimepicker.min.css" media="screen">
+
+    <script src="../../style/js/jquery-1.11.1.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script src="../../style/js/bootstrap-select.js"></script>
+    <script src="../../style/js/cropper.min.js"></script>
+    <script type="text/javascript" src="../../style/js/bootstrap-datetimepicker.js" charset="UTF-8"></script>
+    <script type="text/javascript" src="../../style/js/locales/bootstrap-datetimepicker.zh-CN.js" charset="UTF-8"></script>
+
+    <!-- <link rel="stylesheet" type="text/css" href="http://testresource.caidao8.com/style/cmacedu/css/cmac_school.css"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>学生-个人中心-我的资料-基本资料</title>
+  </head>
+  <body class='student_end student_user_center'>
+    <nav class="top_bar_container">
+      <div class="student_top_nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="student_logo">
+          <a class="navbar-brand" href="#">
+            <img class='student_end_nav_logo' alt="" src="../../images/cmacedu/cmacLogo.png">
+            <span>CMAC</span>
+          </a>
+        </div>
+
+        <div class="student_top_bar">
+          <ul class="student_top_bar_left">
+            <li class="menu_item">
+              <a href="#">首页</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">习武堂</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                竞技场<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    打擂台
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    竞技
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    英雄榜
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    排行榜
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                通行证<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    认证体系
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    晋级标准
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    练武分析
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的证书
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    评测报告
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                就业帮<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    职位查看
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的就业
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    就业指导
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                道具商城<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    道具商城
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    考前冲刺
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专精特训
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    财税法规
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="top_nav_search_area">
+            <input class="top_nav_search_input" type="text" placeholder="搜索财税法规、视频、课件等">
+            <span class="icon iconfont icon-chaxun"></span>
+          </div>
+
+          <ul class="student_top_bar_right">
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-qiandao"></div>
+                <div class='nav_item_text'>签到</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-message"></div>
+                <div class='nav_item_text'>消息</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class='top_nav_right_item user_center_gate dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class='top_nav_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                <span class="new_message_dot"></span>
+              </a>
+
+              <!-- 个人中心 -->
+              <div class="dropdown-menu">
+                <div class="caret_icon"></div>
+                <div class="top_bar_user_center">
+                  <div class="user_center_module_1">
+                    <img class='user_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                    <div class="user_info">
+                      <div class="user_info_top">
+                        <span class="user_name">白兔兔</span>
+                        <span class="total_credit">总学分 45</span>
+                      </div>
+                      <div class="user_info_bottom">
+                        <span class="grade_label">CMAC级别：</span>
+                        <span class="current_grade">实习会计</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_2">
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-work"></i>
+                        作业
+                      </div>
+                      <div class="number">
+                        10
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-user_center"></i>
+                        个人中心
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-renwu"></i>
+                        任务
+                      </div>
+                      <div class="number">
+                        14
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-exercise"></i>
+                        我的练习
+                      </div>
+                      <img class="exercise_gift_img" src="../../images/cmacedu/gift.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_3">
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-currentGrade"></i>
+                        本级学分
+                      </span>
+                      <div class="progress_container">
+                        <div class="progress_inner" style="width: 70%;"></div>
+                      </div>
+                      <div class="number">
+                        <span class="has_credit">144</span>/<span class="need_credit">756</span>
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-tongban"></i>
+                        铜板
+                        <span class='module_item_left_sub'>马上充值</span>
+                      </span>
+                      <div class="module_item_right">0.0</div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-jifen"></i>
+                        积分
+                        <span href="" class='module_item_left_sub'>如何获取积分？</span>
+                      </span>
+                      <div class="module_item_right">30</div>
+                    </a>
+                  </div>
+
+                  <div class="user_center_module_4">
+                    <div onclick="openDialog('student_change_password')">修改密码</div>
+                    <div>安全退出</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="student_container">
+      <div class="student_wraper">
+        <div class="side_nav">
+          <p class="side_nav_title">个人中心</p>
+          <ul class="ul_menu">
+            <li class="ul_menu_item active">
+              <a href="./student_个人中心_我的资料_基本资料.html">
+                <span class="icon iconfont icon-ziliao"></span>
+                我的资料
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodelvli"></span>
+                我的履历
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_资产_钱包.html">
+                <span class="icon iconfont icon-wodezichan"></span>
+                我的资产
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_练习_今日成绩.html">
+                <span class="icon iconfont icon-exercise"></span>
+                我的练习
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-work"></span>
+                我的文章
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodeliuyan"></span>
+                我的留言
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodekaoshi"></span>
+                我的考试
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-jilu"></span>
+                打擂记录
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="user_center_information">
+          <div class="notice_area_top">
+            <span class="icon iconfont icon-tips"></span>
+            <span class="text">您尚未加入任何学校&nbsp;<a href="javascript:openDialog('join_school');">申请加入</a></span>
+          </div>
+          <div class="notice_area_top" style="display: none;">
+            <span class="icon iconfont icon-tips"></span>
+            <span class="text">我的学校【浙江衡信教育科技有限公司-财务管理1班】&nbsp;
+              <span class="text_red">申请正在审核中...&nbsp;</span>
+              <a href="">重新申请</a>
+            </span>
+          </div>
+          <div class="notice_area_top" style="display: none;">
+            <span class="icon iconfont icon-tips"></span>
+            <span class="text">我的学校【浙江衡信教育科技有限公司-财务管理1班】</span>
+          </div>
+          <div class="main_body">
+            <div class="tab_bar">
+              <ul class="tab_menu">
+                <li class="tab_menu_item active">
+                  <a href="./student_个人中心_我的资料_基本资料.html">
+                    基本资料
+                  </a>
+                </li>
+                <li class="tab_menu_item">
+                  <a href="./student_个人中心_我的资料_我的头像.html">
+                    我的头像
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="edit_info_container">
+              <div class="edit_info_container_left">
+                <div class="notice_area_default">
+                  <span class="text">
+                    请您填写以下信息，您可以选择少填，但填写必须是真实有效的信息。[诚实是会计人生大厦的基石]
+                  </span>
+                </div>
+
+                <div class="form_group">
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_phone"><span class="required">※</span> 手机</label>
+                    <input class="form_item_input" id='usercenter_phone' value="" type="text" name="" />
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_name"><span class="required">※</span> 真实姓名</label>
+                    <input class="form_item_input" id='usercenter_name' value="" type="" name="" />
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_card">
+                      <span class="required">※</span>身份证
+                    </label>
+                    <input class="form_item_input" id='usercenter_card' value="" type="" name="" />
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label">
+                      <span class="required">※</span>性别
+                    </label>
+                    <div class="radio_group radio_group_sex">
+                      <label for="sex_male" class="radio_item col-md-6">
+                        <input type="radio" name="sex" id='sex_male' checked>
+                        <i class="icon iconfont"></i>
+                        <span></span>男
+                      </label>
+                      <label for="sex_female" class="radio_item col-md-6">
+                        <input type="radio" name="sex" id='sex_female'>
+                        <i class="icon iconfont"></i>
+                        <span></span>女
+                      </label>
+                    </div>
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_birthday">
+                      出生日期
+                    </label>
+                    <input class="form_item_input form_item_select" placeholder="年/月/日" readonly data-date-format="dd/MM/yyyy" id='usercenter_birthday' value="" type="text" autocomplete="off" />
+                    <span class="caret"></span>
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item usercenter_birth_address">
+                    <label class="form_input_item_label" for="usercenter_birth_address">
+                      籍贯
+                    </label>
+                    <input class="form_item_input form_item_select" placeholder="省/市/区" id='usercenter_birth_address' readonly type="text" autocomplete="off"/>
+                    <span class="caret"></span>
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_place">
+                      居住地
+                    </label>
+                    <input class="form_item_input form_item_select" placeholder="省/市/区" id='usercenter_place' readonly type="text" autocomplete="off" />
+                    <span class="caret"></span>
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+
+                  <div class="form_item">
+                    <label class="form_input_item_label">
+                      <span class="required">※</span>目前身份
+                    </label>
+                    <div class="radio_group radio_group_identity">
+                      <label for="identity_student" class="radio_item col-md-3">
+                        <input type="radio" name="identity" id='identity_student' checked>
+                        <i class="icon iconfont"></i>
+                        <span></span>学生
+                      </label>
+                      <label for="identity_worker" class="radio_item col-md-3">
+                        <input type="radio" name="identity" id='identity_worker'>
+                        <i class="icon iconfont"></i>
+                        <span></span>职员
+                      </label>
+                      <label for="identity_nojob" class="radio_item col-md-3">
+                        <input type="radio" name="identity" id='identity_nojob'>
+                        <i class="icon iconfont"></i>
+                        <span></span>无业
+                      </label>
+                      <label for="identity_other" class="radio_item col-md-3">
+                        <input type="radio" name="identity" id='identity_other'>
+                        <i class="icon iconfont"></i>
+                        <span></span>其他
+                      </label>
+                    </div>
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_email">EMAIL</label>
+                    <input class="form_item_input" id='usercenter_email' value="" type="" name="" />
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_onlineAddress">
+                      <span class="required">※</span>通信地址
+                    </label>
+                    <input class="form_item_input" id='usercenter_onlineAddress' value="" type="" name="" />
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_youbian">邮编</label>
+                    <input class="form_item_input" id='usercenter_youbian' value="" type="" name="" />
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                  <div class="form_item">
+                    <label class="form_input_item_label" for="usercenter_qq">QQ</label>
+                    <input class="form_item_input" id='usercenter_qq' value="" type="" name="" />
+                    <p class="error_tips">相应错误提示</p>
+                  </div>
+                </div>
+
+                <button class="main_btn form_group_btn">保存</button>
+              </div>
+              <div class="edit_info_container_right">
+                <p class="form_input_item_label"><span class="required">※</span> 证书照片</p>
+
+                <!-- 未上传照片状态 -->
+                <div class="photo_container no_img">
+                  <div class="upload_photo" onclick="openDialog('upload_photo_dialog')">
+
+                    <img class="finial_certificate_photo" width="140" height="200" src="" alt="">
+                    <i class="icon iconfont icon-xiangji"></i>
+                    <div class="mask_state_hover">
+                      上传照片
+                    </div>
+                  </div>
+                  <p class="no_img_tips">上传的照片将被用于制作CMAC证书</p>
+                </div>
+
+                <!-- 等待认证状态 -->
+                <div class="photo_container wait_authentication" style="display: none;">
+                  <div class="upload_photo">
+                    <img class="wait_authentication_img" width="140" height="200" src="" alt="">
+                    <i class="icon iconfont icon-jiazaizhong"></i>
+                  </div>
+                  <p class="wait_authentication_tips">证书照片正在认证中…</p>
+                </div>
+
+                <!-- 未通过认证状态 -->
+                <div class="photo_container failed_authentication" style="display: none;">
+                  <div class="upload_photo" onclick="openDialog('upload_photo_dialog')">
+                    <img class="" width="140" height="200" src="" alt="">
+                    <span>重新上传</span>
+                  </div>
+                  <p class="wait_authentication_tips">
+                    您上传的证书照片未通过认证！
+                  </p>
+                </div>
+
+                <!-- 通过认证状态 -->
+                <div class="photo_container finish_authentication" style="display: none;">
+                  <div class="upload_photo" onclick="openDialog('upload_photo_dialog')">
+                    <img class="finish_authentication_img" width="140" height="200" src="" alt="">
+                    <div class="mask_state_hover">
+                      修改照片
+                    </div>
+                  </div>
+                  <p class="finish_authentication_tips">
+                    照片已通过认证！如需修改需认证后方可使用！
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号 <br>Copyright@2015-2016</p>
+    </div>
+
+     <!-- 上传裁剪证书照片 -->
+    <div class="dialog_container upload_photo_dialog">
+      <div class="dialog_body wd_480">
+        <div class="dialog_head">
+          <span>上传证书照片</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('upload_photo_dialog')"></i>
+        </div>
+        <div class="dialog_content">
+          <div class="upload_left">
+            <div class="clipping_area">
+              <img id="clipping_img">
+            </div>
+            <p class="color_444 clipping_area_tips">
+              请上传一寸照片支持jpg、png、bmp、gif图片格式，图片大小不超过1m
+            </p>
+          </div>
+          <div class="preview_area">
+            <div class="square previewImg"></div>
+            <p>照片预览</p>
+            <label class="upload_photo_btn" for="upload_photo">
+              <input type="file" name="photo" id="upload_photo" class="upload_photo_input" onchange="selectImg(this)">
+              <span>上传照片</span>
+            </label>
+          </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_sub_btn' onclick="closeDialog('upload_photo_dialog')">取消</button>
+          <button class='dialog_main_btn' onclick="savePhoto()">确认</button>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- 加入学校-选择学校班级 -->
+    <div class="dialog_container join_school">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>申请加入学校</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('join_school')"></i>
+        </div>
+        <div class="dialog_content">
+            <div class="join_school_box">
+              <select class="selectpicker show-tick select_school" data-live-search="true">
+                <option selected disabled>请选择学校</option>
+                <option>浙江理工大学</option>
+                <option>z</option>
+                <option>this is a bug</option>
+                <option>it is a dog</option>
+                <option>浙江理工大学</option>
+                <option>杭州电子科技大学</option>
+                <option>工商大学</option>
+                <option>浙江传媒</option>
+              </select>
+              <select class="selectpicker show-tick select_class" data-live-search="true">
+                <option selected disabled>请选择班级</option>
+                <option>一班</option>
+                <option>二班</option>
+                <option>三班</option>
+                <option>四班</option>
+              </select>
+            </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('join_school')">取消</button>
+        </div>
+      </div>
+    </div>
+     <!-- 修改密码 -->
+    <div class="dialog_container student_change_password">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>修改密码</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('student_change_password')"></i>
+        </div>
+        <div class="dialog_content">
+          <form action="">
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="原密码"/>
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="新密码" />
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="确认密码"/>
+            </div>
+          </form>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('student_change_password')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 地址选择弹框 -->
+    <div class="add_list select_city">
+      <ul class="state_tag">
+        <li style="display: none;">请选择</li>
+        <li>全部：</li>
+        <li class="province_label" style="display: none;">安徽省<a href="#">×</a></li>
+        <li class="city_label" style="display: none;">合肥市<a href="#">×</a></li>
+        <li class="add_close"></li>
+      </ul>
+      <ul class="address-chooser-block province_list">
+        <li class="selected"><a href="#" class="">北京</a></li>
+        <li class=""><a href="#" class="">天津</a></li>
+        <li class=""><a href="#" class="">河北省</a></li>
+        <li class=""><a href="#" class="">山西省</a></li>
+        <li class=""><a href="#" class="">辽宁省</a></li>
+        <li class=""><a href="#" class="">吉林省</a></li>
+        <li class=""><a href="#" class="">黑龙江省</a></li>
+        <li class=""><a href="#" class="">上海</a></li>
+        <li class=""><a href="#" class="">江苏省</a></li>
+        <li class=""><a href="#" class="">浙江省</a></li>
+        <li class=""><a href="#" class="">安徽省</a></li>
+        <li class=""><a href="#" class="">福建省</a></li>
+        <li class=""><a href="#" class="">江西省</a></li>
+        <li class=""><a href="#" class="">山东省</a></li>
+        <li class=""><a href="#" class="">河南省</a></li>
+        <li class=""><a href="#" class="">湖北省</a></li>
+        <li class=""><a href="#" class="">湖南省</a></li>
+        <li class=""><a href="#" class="">广东省</a></li>
+        <li class=""><a href="#" class="">海南省</a></li>
+        <li class=""><a href="#" class="">重庆</a></li>
+        <li class=""><a href="#" class="">四川省</a></li>
+        <li class=""><a href="#" class="">贵州省</a></li>
+        <li class=""><a href="#" class="">云南省</a></li>
+        <li class=""><a href="#" class="">西藏自治区</a></li>
+        <li class=""><a href="#" class="">陕西省</a></li>
+        <li class=""><a href="#" class="">甘肃省</a></li>
+        <li class=""><a href="#" class="">青海省</a></li>
+        <li class=""><a href="#" class="">台湾</a></li>
+        <li class=""><a href="#" class="">海外</a></li>
+        <li class=""><a href="#" class="">内蒙古自治区</a></li>
+        <li class=""><a href="#" class="">广西壮族自治区</a></li>
+        <li class=""><a href="#" class="">宁夏回族自治区</a></li>
+        <li class=""><a href="#" class="">新疆维吾尔自治区</a></li>
+        <li class=""><a href="#" class="">香港特别行政区</a></li>
+        <li class=""><a href="#" class="">澳门特别行政区</a></li>
+      </ul>
+      <ul class="address-chooser-block city_list" style="display: none;">
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+        <li class=""><a href="#" class="">市</a></li>
+      </ul>
+      <ul class="address-chooser-block county_list" style="display: none;">
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+        <li class=""><a href="#" class="">县</a></li>
+      </ul>
+    </div>
+
+    <script src="../commonPage/hxDialog.js"></script>
+
+    <script>
+      $jq(function () {
+        Toast.init()
+        /* 左右两侧高度动态调整 ---start */
+          // 左右两侧高度动态调整（布局用）
+          var rightHeight = $jq('.user_center_information').height()
+          console.log('右侧编辑区域高度', rightHeight)
+          if (rightHeight > 530) {
+            $jq('.side_nav').height(rightHeight - 18)
+          }
+        /* 左右两侧高度动态调整 ---- end */
+
+        /* 出生日期选择弹框  */
+        $jq('#usercenter_birthday').datetimepicker({
+            format: 'yyyy/mm/dd',
+            todayBtn: true,
+            language: 'zh-CN',
+            startView: 2,
+            minView: 2
+        });
+        $jq('#usercenter_birthday').datetimepicker().on('changeDate', function(ev){
+          console.log(ev)
+          //$jq('#usercenter_birthday').datetimepicker('remove');
+           $jq('#usercenter_birthday').datetimepicker('hide');
+        })
+        // 以下为css用
+        $jq('.datetimepicker>div').css('width', '274px')
+        $jq('.datetimepicker>div .table-condensed').css('width', '274px')
+        $jq('#usercenter_birthday').focus(function () {
+          $jq('#usercenter_birthday').datetimepicker('show')
+        })
+
+        /* 地址选择弹框部分 ---start */
+          // 控制城市选择弹框显示
+          $jq('.form_item:not(#usercenter_birth_address,#usercenter_place) .form_item_input').focus(function () {
+            $jq('.add_list').css('display', 'none')
+          })
+          $jq('body').scroll(function () {
+            console.log('页面滑动')
+            $jq('.add_list').css('display', 'none')
+          })
+          // 弹框定位
+          $jq('#usercenter_birth_address,#usercenter_place').focus(function () {
+            var top = $jq(this).offset().top;
+            var left = $jq(this).offset().left;
+            var itemHeight = $jq(this).height();
+            var screenHeight = $jq('screenHeight').height();
+            console.log('地址弹框定位', top)
+            if( top > screenHeight / 2 ) {
+              $jq('.add_list').appendTo($jq(this).parent('.form_item'));
+
+              $jq('.add_list').css({
+                'position': 'absolute',
+                'zIndex': 10,
+                'display': 'block',
+                'top': 'auto',
+                'bottom':itemHeight + 8 + 'px',
+                'left': 93 + 'px'
+              })
+            } else {
+              $jq('.add_list').css({
+                'position': 'absolute',
+                'zIndex': 10,
+                'display': 'block',
+                'top': itemHeight + 8 + 'px',
+                'bottom': 'auto',
+                'left': left + 'px'
+              })
+            }
+          })
+          // 控制城市选择弹框关闭
+          $jq('.add_list .add_close').click(function () {
+            $jq('.add_list').css('display', 'none')
+            console.warn('关闭地址选择弹框')
+            // $jq('.form_item').children('.add_list').remove()
+          })
+
+          /*选择省份*/
+          $jq('.add_list .province_list li').click(function () {
+            $jq('.add_list .province_list,.city_label').css('display', 'none')
+            $jq('.add_list,.add_list .city_list').css('display', 'block')
+            $jq('.add_list .province_label').css('display', 'inline-block')
+          })
+          /*选择城市*/
+          $jq('.add_list .city_list li').click(function () {
+            $jq('.add_list .city_list').css('display', 'none')
+            $jq('.add_list,.add_list .county_list').css('display', 'block')
+            $jq('.add_list .city_label').css('display', 'inline-block')
+          })
+          /* 关闭区县选择列表 标签 */
+          $jq('.add_list .city_label a').click(function () {
+            $jq('.add_list .county_list,.add_list .province_list,.add_list .city_label').css('display', 'none')
+            $jq('.add_list,.add_list .city_list').css('display', 'block')
+          })
+          /* 关闭城市选择列表 标签 */
+          $jq('.add_list .province_label a').click(function () {
+            $jq('.add_list .county_list,.add_list .city_list,.add_list .city_label').css('display', 'none')
+            $jq('.add_list .province_list').css('display', 'block')
+          })
+        /* 地址选择弹框部分 ---end */
+
+        /* 证书上传---- start */
+          // 初始化图像数据
+          initUpload();
+        /* 证书上传---- end */
+
+      })
+
+      // 初始化图像数据
+      function initUpload() {
+        // 此处判断证书状态，及获取当前证书照片
+        // 若存在，则配置到
+      }
+
+      //图像上传
+      function selectImg(file) {
+        var file = document.getElementById("upload_photo").files[0];
+        if (typeof FileReader == 'undefined') {
+          console.log('浏览器 不兼容')
+          //使选择控件不可操作
+          file.setAttribute("disabled", "disabled");
+        }
+        if (!/image\/\w+/.test(file.type)) {
+          alert("看清楚，这个需要图片！");
+          return false;
+        }
+        var reader = new FileReader();
+        console.log('上传文件-reader', file)
+        reader.onload = function (evt) {
+        //   // 打开弹框
+          // console.log('reader-evt', evt);
+          openDialog('upload_photo_dialog');
+        //   // 初始化剪裁参数
+          initCropperProps();
+        //   // 获取照片路径
+          var replaceSrc = evt.target.result;
+        //   //更换需裁剪的图片
+          $jq('#clipping_img').cropper('replace',replaceSrc,false);//默认false，适应高度，不失真
+        }
+        // console.log(reader.readAsDataURL, file)
+        reader.readAsDataURL(file);
+      }
+      // 保存照片
+      function savePhoto() {
+        if ($jq("#clipping_img").attr("src") == null ){
+          Toast.show('您还没上传照片，请继续上传')
+          // 关闭弹框
+          // closeDialog('upload_photo_dialog')
+          // return false;
+        }else{
+          var cas = $jq('#clipping_img').cropper('getCroppedCanvas');//获取被裁剪后的canvas
+          var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
+          // $jq('.final_img').attr('src', base64url)
+          // 最后图片路径，保存
+          console.log('剪裁后照片路径为', base64url)
+          $jq('.wait_authentication .wait_authentication_img').attr('src', base64url)
+
+          // 下面一行可以删除，仅作展示用
+          $jq('.finish_authentication .finish_authentication_img').attr('src', base64url)
+          // 关闭弹框
+          closeDialog('upload_photo_dialog')
+          // 成功提示
+          Toast.show('图片保存成功')
+          // 隐藏其他证书状态，展示认证中状态
+          $jq('.no_img,.failed_authentication,.finish_authentication').css('display', 'none')
+          $jq('.wait_authentication').css('display', 'block')
+
+        }
+      }
+      function initCropperProps() {
+        $jq('#clipping_img').cropper({
+          aspectRatio: 7/10,//默认比例
+          preview: '.previewImg',//预览视图
+          guides: true,  //裁剪框的虚线(九宫格)
+          autoCropArea: 0.8,  //0-1之间的数值，定义自动剪裁区域的大小，默认0.8
+          movable: false, //是否允许移动图片
+          dragCrop: true,  //是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域
+          movable: true,  //是否允许移动剪裁框
+          resizable: true,  //是否允许改变裁剪框的大小
+          zoomable: false,  //是否允许缩放图片大小
+          mouseWheelZoom: false,  //是否允许通过鼠标滚轮来缩放图片
+          touchDragZoom: true,  //是否允许通过触摸移动来缩放图片
+          rotatable: true,  //是否允许旋转图片
+          crop: function(e) {
+              // 输出结果数据裁剪图像。
+          }
+        });
+      }
+
+      function openDialog(className) {
+        $jq('.student_end').css('overflow','hidden')
+        $jq('.' + className).css('display', 'block')
+      }
+      function closeDialog(className) {
+        $jq('.student_end').css('overflow','auto')
+        $jq('.' + className).css('display', 'none')
+      }
+    </script>
+  </body>
+</html>

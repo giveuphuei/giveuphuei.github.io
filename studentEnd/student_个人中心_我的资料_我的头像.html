@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css">
+    <!-- <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/student_user_center.css"> -->
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <link rel="stylesheet" href="../../style/css/bootstrap-select.css">
+    <link rel="stylesheet" href="../../style/css/cropper.min.css">
+
+    <script src="../../style/js/jquery-1.11.1.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script src="../../style/js/bootstrap-select.js"></script>
+    <script src="../../style/js/cropper.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="http://testresource.caidao8.com/style/cmacedu/css/cmac_school.css"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>学生-个人中心-我的资料-我的头像</title>
+  </head>
+  <body class='student_end student_user_center'>
+    <nav class="top_bar_container">
+      <div class="student_top_nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="student_logo">
+          <a class="navbar-brand" href="#">
+            <img class='student_end_nav_logo' alt="" src="../../images/cmacedu/cmacLogo.png">
+            <span>CMAC</span>
+          </a>
+        </div>
+
+        <div class="student_top_bar">
+          <ul class="student_top_bar_left">
+            <li class="menu_item">
+              <a href="#">首页</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">习武堂</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                竞技场<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    打擂台
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    竞技
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    英雄榜
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    排行榜
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                通行证<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    认证体系
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    晋级标准
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    练武分析
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的证书
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    评测报告
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                就业帮<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    职位查看
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的就业
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    就业指导
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                道具商城<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    道具商城
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    考前冲刺
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专精特训
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    财税法规
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="top_nav_search_area">
+            <input class="top_nav_search_input" type="text" placeholder="搜索财税法规、视频、课件等">
+            <span class="icon iconfont icon-chaxun"></span>
+          </div>
+
+          <ul class="student_top_bar_right">
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-qiandao"></div>
+                <div class='nav_item_text'>签到</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-message"></div>
+                <div class='nav_item_text'>消息</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class='top_nav_right_item user_center_gate dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class='top_nav_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                <span class="new_message_dot"></span>
+              </a>
+
+              <!-- 个人中心 -->
+              <div class="dropdown-menu">
+                <div class="caret_icon"></div>
+                <div class="top_bar_user_center">
+                  <div class="user_center_module_1">
+                    <img class='user_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                    <div class="user_info">
+                      <div class="user_info_top">
+                        <span class="user_name">白兔兔</span>
+                        <span class="total_credit">总学分 45</span>
+                      </div>
+                      <div class="user_info_bottom">
+                        <span class="grade_label">CMAC级别：</span>
+                        <span class="current_grade">实习会计</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_2">
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-work"></i>
+                        作业
+                      </div>
+                      <div class="number">
+                        10
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-user_center"></i>
+                        个人中心
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-renwu"></i>
+                        任务
+                      </div>
+                      <div class="number">
+                        14
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-exercise"></i>
+                        我的练习
+                      </div>
+                      <img class="exercise_gift_img" src="../../images/cmacedu/gift.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_3">
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-currentGrade"></i>
+                        本级学分
+                      </span>
+                      <div class="progress_container">
+                        <div class="progress_inner" style="width: 70%;"></div>
+                      </div>
+                      <div class="number">
+                        <span class="has_credit">144</span>/<span class="need_credit">756</span>
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-tongban"></i>
+                        铜板
+                        <span class='module_item_left_sub'>马上充值</span>
+                      </span>
+                      <div class="module_item_right">0.0</div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-jifen"></i>
+                        积分
+                        <span href="" class='module_item_left_sub'>如何获取积分？</span>
+                      </span>
+                      <div class="module_item_right">30</div>
+                    </a>
+                  </div>
+
+                  <div class="user_center_module_4">
+                    <div onclick="openDialog('student_change_password')">修改密码</div>
+                    <div>安全退出</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="student_container">
+      <div class="student_wraper">
+        <div class="side_nav">
+          <p class="side_nav_title">个人中心</p>
+          <ul class="ul_menu">
+            <li class="ul_menu_item active">
+              <a href="./student_个人中心_我的资料_基本资料.html">
+                <span class="icon iconfont icon-ziliao"></span>
+                我的资料
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodelvli"></span>
+                我的履历
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_资产_钱包.html">
+                <span class="icon iconfont icon-wodezichan"></span>
+                我的资产
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_练习_今日成绩.html">
+                <span class="icon iconfont icon-exercise"></span>
+                我的练习
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-work"></span>
+                我的文章
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodeliuyan"></span>
+                我的留言
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodekaoshi"></span>
+                我的考试
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-jilu"></span>
+                打擂记录
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="user_center_information">
+          <div class="notice_area_top">
+            <span class="icon iconfont icon-tips"></span>
+            <span class="text">您尚未加入任何学校&nbsp;<a href="">申请加入</a></span>
+          </div>
+          <div class="notice_area_top" style="display: none;">
+            <span class="icon iconfont icon-tips"></span>
+            <span class="text">我的学校【浙江衡信教育科技有限公司-财务管理1班】&nbsp;
+              <span class="text_red">申请正在审核中...&nbsp;</span>
+              <a href="">重新申请</a>
+            </span>
+          </div>
+          <div class="notice_area_top" style="display: none;">
+            <span class="icon iconfont icon-tips"></span>
+            <span class="text">我的学校【浙江衡信教育科技有限公司-财务管理1班】</span>
+          </div>
+          <div class="main_body">
+            <div class="tab_bar">
+              <ul class="tab_menu">
+                <li class="tab_menu_item">
+                  <a href="./student_个人中心_我的资料_基本资料.html">
+                    基本资料
+                  </a>
+                </li>
+                <li class="tab_menu_item active">
+                  <a href="./student_个人中心_我的资料_我的头像.html">
+                    我的头像
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="upload_avatar_container edit_info_container">
+              <div class="edit_info_container_left">
+
+                <div class="select_upload_way">
+                  <div class="color_444">方法一：选择本地照片，上传编辑自己的头像</div>
+                  <label class="upload_avatar_btn" for="upload_avatar">
+                    <input type="file" name="avatar" id="upload_avatar" class="upload_avatar_input" onchange="selectImg(this)">
+                    <span class="icon iconfont icon-xuanzedaochu"></span>
+                    <span>上传头像</span>
+                  </label>
+                  <span class="color_777">支持jpg、jpeg、gif、png、bmp格式的图片</span>
+
+                  <div class="color_444">方法二：选择CMAC提供的头像，快速更换</div>
+                  <ul class="system_avatar_list">
+                    <li id="system_avatar-1" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/1">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-2" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/2">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-3" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/3">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-4" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/4">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-5" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/5">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li class="system_avata-more" onclick="showSystemAlbums()">
+                      <span>更多&gt;</span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="upload_local_img" style="display: none;">
+                  <div class="route_nav_1" style="display: none;">
+                    <span>当前位置：</span>
+                    <a href="javascript:backSelectWay();">我的头像</a>
+                    <span class="seporate_icon icon iconfont">></span>
+                    <span>本地上传</span>
+                  </div>
+
+                  <div class="clipping_area">
+                    <img id="clipping_img">
+                  </div>
+                </div>
+
+                <div class="upload_system_img" style="display: none;">
+                  <div class="route_nav_1" style="display: none;">
+                    <span>当前位置：</span>
+                    <a href="javascript:backSelectWay();">我的头像</a>
+                    <span class="seporate_icon icon iconfont">></span>
+                    <span>系统图册</span>
+                  </div>
+                  <ul class="system_avatar_list">
+                    <li id="system_avatar-1" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/1">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-2" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/2">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-3" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/3">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-4" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/4">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-5" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/5">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-6" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/1">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-7" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/2">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-8" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/3">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-9" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/4">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-10" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/5">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-6" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/1">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-7" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/2">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-8" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/3">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-9" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/4">
+                      <span class="recommendSpan"></span>
+                    </li>
+                    <li id="system_avatar-10" class="">
+                      <img src="https://ss0.bdstatic.com/7Ls0a8Sm1A5BphGlnYG/sys/portrait/hotitem/wildkid/5">
+                      <span class="recommendSpan"></span>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="upload_avatar_btn_group">
+                  <button class="disable_btn upload_avatar_save wd_130" disabled>保存头像</button>
+                  <label for="upload_avatar_rechoose" class="sub_btn upload_avatar_rechoose wd_130 hidden">
+                    <input type="file" name="avatar" id="upload_avatar_rechoose" class="upload_avatar_input" onchange="selectImg(this)">重新选择
+                  </label>
+                </div>
+
+              </div>
+              <div class="edit_info_container_right">
+                <div class="preview_area">
+                  <h5>效果预览</h5>
+                  <p class="color_777">你上传的图片会自动生成2种尺寸，请注意小尺寸的头像是否清晰</p>
+                  <div class="circular previewImg" style="width: 80px;height: 80px;"></div>
+                  <p style="padding-left: 10px;">80X80像素</p>
+                  <div class="circular previewImg" style="width: 40px;height: 40px;margin-left: "></div>
+                  <p style="">40X40像素</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号 <br>Copyright@2015-2016</p>
+    </div>
+
+     <!-- 修改密码 -->
+    <div class="dialog_container student_change_password">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>修改密码</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('student_change_password')"></i>
+        </div>
+        <div class="dialog_content">
+          <form action="">
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="原密码"/>
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="新密码" />
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="确认密码"/>
+            </div>
+          </form>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('student_change_password')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../commonPage/hxDialog.js"></script>
+    <script>
+      $jq(function () {
+        Toast.init()
+        /* 左右两侧高度动态调整 ---start */
+          // 左右两侧高度动态调整（布局用）
+          var rightHeight = $jq('.user_center_information').height()
+          console.log('右侧编辑区域高度', rightHeight)
+          if (rightHeight > 530) {
+            $jq('.side_nav').height(rightHeight - 18)
+          }
+        /* 左右两侧高度动态调整 ---- end */
+
+
+
+        // 系统图像
+        $jq('.system_avatar_list>li:not(.system_avata-more)').click(function () {
+          $jq('.system_avatar_list>li').find('.recommendSpan').css('visibility', 'hidden')
+          if ($jq(this).find('.recommendSpan').css('visibility') === 'hidden') {
+            $jq(this).find('.recommendSpan').css('visibility', 'visible')
+          } else {
+            $jq(this).find('.recommendSpan').css('visibility', 'hidden')
+          }
+          var tmpSrc = $jq(this).find('img').attr('src')
+          $jq('.previewImg').empty().append('<img src="" alt="" style="width: 100%;height:100%;">').find('img').attr('src',tmpSrc)
+          $jq('.upload_avatar_save').removeClass('disable_btn').addClass('main_btn').removeAttr('disabled')
+          // $jq('#clipping_img').cropper('replace',$jq(this).find('img').attr('src'),false);
+        })
+
+        // 初始化剪裁参数
+        $jq('#clipping_img').cropper({
+          aspectRatio: 1,//默认比例
+          preview: '.previewImg',//预览视图
+          guides: true,  //裁剪框的虚线(九宫格)
+          autoCropArea: 0.8,  //0-1之间的数值，定义自动剪裁区域的大小，默认0.8
+          movable: false, //是否允许移动图片
+          dragCrop: true,  //是否允许移除当前的剪裁框，并通过拖动来新建一个剪裁框区域
+          movable: true,  //是否允许移动剪裁框
+          resizable: true,  //是否允许改变裁剪框的大小
+          zoomable: false,  //是否允许缩放图片大小
+          mouseWheelZoom: false,  //是否允许通过鼠标滚轮来缩放图片
+          touchDragZoom: true,  //是否允许通过触摸移动来缩放图片
+          rotatable: true,  //是否允许旋转图片
+          crop: function(e) {
+              // 输出结果数据裁剪图像。
+          }
+        });
+
+        // 判断当前是否存在已设置头像
+        initUpload();
+
+
+        //裁剪后的处理
+        $jq(".upload_avatar_save").click(function () {
+            if ($jq("#clipping_img").attr("src") == null && $jq(".previewImg>img").attr("src") == null){
+                Toast.show('您还没上传照片，请继续上传')
+                return false;
+            } else {
+              if ($jq('.upload_local_img').css('display') === 'block' ) {
+                var cas = $jq('#clipping_img').cropper('getCroppedCanvas');//获取被裁剪后的canvas
+                var base64url = cas.toDataURL('image/png'); //转换为base64地址形式
+                // $jq('.final_img').attr('src', base64url)
+                // 最后图片路径，保存
+
+                // console.log('剪裁后照片路径为', base64url)
+              }
+              $jq('.upload_avatar_save').removeClass('main_btn').addClass('disable_btn').attr('disabled', 'disabled')
+              backSelectWay();
+              Toast.show('图片保存成功')
+            }
+        });
+
+      })
+
+      // 返回到选择上传方式部分
+      function backSelectWay () {
+        $jq('.upload_local_img,.upload_system_img,.route_nav_1').css('display', 'none')
+        $jq('.select_upload_way').css('display', 'block')
+        $jq('.upload_avatar_rechoose,.upload_avatar_back').addClass('hidden')
+        $jq('.upload_avatar_save').removeClass('main_btn').addClass('disable_btn').attr('disabled', 'disabled')
+      };
+
+      // 切换显示到系统头像图册部分
+      function showSystemAlbums() {
+        $jq('.select_upload_way,.upload_local_img').css('display', 'none')
+        $jq('.upload_system_img,.route_nav_1').css('display', 'block')
+        $jq('.upload_avatar_rechoose,.upload_avatar_back').addClass('hidden')
+        $jq('.upload_avatar_save').removeClass('main_btn').addClass('disable_btn').attr('disabled', 'disabled')
+      };
+      // 切换显示到本地上传部分
+      function showUploadLocal() {
+        $jq('.select_upload_way,.upload_system_img').css('display', 'none')
+        $jq('.upload_local_img,.route_nav_1').css('display', 'block')
+        $jq('.upload_avatar_rechoose').removeClass('hidden')
+        $jq('.upload_avatar_save').removeClass('disable_btn').addClass('main_btn').removeAttr('disabled')
+      };
+      // 初始化图像数据
+      function initUpload() {
+        // 已配置的图像 -oldAvatar
+        // 此处应判断是否存在
+        console.log('已配置的图像')
+        // var oldAvatar = 'http://n.sinaimg.cn/translate/20170726/Zjd3-fyiiahz2863063.jpg'
+        // $jq('#clipping_img').cropper('replace',oldAvatar,false);
+      };
+      //图像上传
+      function selectImg(file) {
+        if (!file.files || !file.files[0]){
+            return;
+        }
+        var reader = new FileReader();
+        reader.onload = function (evt) {
+            var replaceSrc = evt.target.result;
+            // 切换显示到本地上传部分
+            showUploadLocal();
+            //更换cropper的图片
+            $jq('#clipping_img').cropper('replace',replaceSrc,false);//默认false，适应高度，不失真
+        }
+        reader.readAsDataURL(file.files[0]);
+      }
+
+      function openDialog(className) {
+        $jq('.student_end').css('overflow','hidden')
+        $jq('.' + className).css('display', 'block')
+      }
+      function closeDialog(className) {
+        $jq('.student_end').css('overflow','auto')
+        $jq('.' + className).css('display', 'none')
+      }
+
+    </script>
+  </body>
+</html>

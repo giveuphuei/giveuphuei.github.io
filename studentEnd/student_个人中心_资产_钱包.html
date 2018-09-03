@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css">
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <link rel="stylesheet" href="../../style/css/bootstrap-select.css">
+
+    <script src="../../style/js/jquery-1.11.1.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script src="../../style/js/bootstrap-select.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="http://testresource.caidao8.com/style/cmacedu/css/cmac_school.css"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>学生-个人中心-我的资产-钱包</title>
+  </head>
+  <body class='student_end student_user_center'>
+    <nav class="top_bar_container">
+      <div class="student_top_nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="student_logo">
+          <a class="navbar-brand" href="#">
+            <img class='student_end_nav_logo' alt="" src="../../images/cmacedu/cmacLogo.png">
+            <span>CMAC</span>
+          </a>
+        </div>
+
+        <div class="student_top_bar">
+          <ul class="student_top_bar_left">
+            <li class="menu_item">
+              <a href="#">首页</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">习武堂</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                竞技场<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    打擂台
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    竞技
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    英雄榜
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    排行榜
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                通行证<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    认证体系
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    晋级标准
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    练武分析
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的证书
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    评测报告
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                就业帮<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    职位查看
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的就业
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    就业指导
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                道具商城<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    道具商城
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    考前冲刺
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专精特训
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    财税法规
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="top_nav_search_area">
+            <input class="top_nav_search_input" type="text" placeholder="搜索财税法规、视频、课件等">
+            <span class="icon iconfont icon-chaxun"></span>
+          </div>
+
+          <ul class="student_top_bar_right">
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-qiandao"></div>
+                <div class='nav_item_text'>签到</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-message"></div>
+                <div class='nav_item_text'>消息</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class='top_nav_right_item user_center_gate dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class='top_nav_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                <span class="new_message_dot"></span>
+              </a>
+
+              <!-- 个人中心 -->
+              <div class="dropdown-menu">
+                <div class="caret_icon"></div>
+                <div class="top_bar_user_center">
+                  <div class="user_center_module_1">
+                    <img class='user_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                    <div class="user_info">
+                      <div class="user_info_top">
+                        <span class="user_name">白兔兔</span>
+                        <span class="total_credit">总学分 45</span>
+                      </div>
+                      <div class="user_info_bottom">
+                        <span class="grade_label">CMAC级别：</span>
+                        <span class="current_grade">实习会计</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_2">
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-work"></i>
+                        作业
+                      </div>
+                      <div class="number">
+                        10
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-user_center"></i>
+                        个人中心
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-renwu"></i>
+                        任务
+                      </div>
+                      <div class="number">
+                        14
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-exercise"></i>
+                        我的练习
+                      </div>
+                      <img class="exercise_gift_img" src="../../images/cmacedu/gift.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_3">
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-currentGrade"></i>
+                        本级学分
+                      </span>
+                      <div class="progress_container">
+                        <div class="progress_inner" style="width: 70%;"></div>
+                      </div>
+                      <div class="number">
+                        <span class="has_credit">144</span>/<span class="need_credit">756</span>
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-tongban"></i>
+                        铜板
+                        <span class='module_item_left_sub'>马上充值</span>
+                      </span>
+                      <div class="module_item_right">0.0</div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-jifen"></i>
+                        积分
+                        <span href="" class='module_item_left_sub'>如何获取积分？</span>
+                      </span>
+                      <div class="module_item_right">30</div>
+                    </a>
+                  </div>
+
+                  <div class="user_center_module_4">
+                    <div onclick="openDialog('student_change_password')">修改密码</div>
+                    <div>安全退出</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="student_container">
+      <div class="student_wraper">
+        <div class="side_nav">
+          <p class="side_nav_title">个人中心</p>
+          <ul class="ul_menu">
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_我的资料_基本资料.html">
+                <span class="icon iconfont icon-ziliao"></span>
+                我的资料
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodelvli"></span>
+                我的履历
+              </a>
+            </li>
+            <li class="ul_menu_item active">
+              <a href="./student_个人中心_资产_钱包.html">
+                <span class="icon iconfont icon-wodezichan"></span>
+                我的资产
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_练习_今日成绩.html">
+                <span class="icon iconfont icon-exercise"></span>
+                我的练习
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-work"></span>
+                我的文章
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodeliuyan"></span>
+                我的留言
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodekaoshi"></span>
+                我的考试
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-jilu"></span>
+                打擂记录
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main_body">
+          <div class="tab_bar">
+            <ul class="tab_menu">
+              <li class="tab_menu_item active">
+                <a href="./student_个人中心_资产_钱包.html">
+                  我的钱包
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_资产_积分.html">
+                  我的积分
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_资产_我的道具.html">
+                  我的道具
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_资产_经验卡申请.html"">
+                  经验卡申请
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="operate_area">
+            <div class="wallet_text_area">
+              <span class="wallet_type">我的铜板：</span>
+              <span class="wallet_num">29</span>
+              <span class="text_tip">（铜板不仅可以购买试题，还可以购买道具和试卷，让您的学习永远领先别人一步）</span>
+            </div>
+            <a class="wallet_btn main_btn" href="./student_个人中心_资产_钱包充值1.html">充值铜板</a>
+          </div>
+
+          <div class="detail_content">
+            <div class="detail_content_head">
+              <span class="title">铜板明细</span>
+              <span class="select_area">
+                <span class="select_area_label">按月份查询</span>
+                <!--bootstrap-select插件文档地址：  http://silviomoreto.github.io/bootstrap-select/examples/  -->
+                <select class="selectpicker show-tick" name="byMonth">
+                  <option value="2018年1月" selected>2018年1月</option>
+                  <option value="2018年2月">2018年2月</option>
+                  <option value="2018年3月">2018年3月</option>
+                  <option value="2018年4月">2018年4月</option>
+                  <option value="2018年12月">2018年12月</option>
+                </select>
+              </span>
+            </div>
+            <table class="detail_content_table">
+              <tbody>
+                <tr class="table_head">
+                  <th>铜板</th>
+                  <th>活动</th>
+                  <th>描述</th>
+                  <th>时间</th>
+                </tr>
+                <!--  空白提示切换 display: none;和display: table-row; -->
+                <tr class="noneData" style="display:none;">
+                  <td colspan="4">
+                    本月还没有消费记录，铜板可以购买道具、试卷、打擂台...
+                  </td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">+ 1.8</td>
+                  <td>擂台胜擂台胜擂台胜擂台胜擂台胜擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">+ 1.8</td>
+                  <td>擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">+ 1.8</td>
+                  <td>擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">+ 1.8</td>
+                  <td>擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">- 1.8</td>
+                  <td>擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">+ 1.8</td>
+                  <td>擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">+ 1.8</td>
+                  <td>擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+                <tr class="table_list">
+                  <td class="num">+ 1.8</td>
+                  <td>擂台胜</td>
+                  <td>恭喜您，攻擂成功，共获得1.8个铜板入账（含之前被锁定的1.0个铜板）</td>
+                  <td>2018.03.26  12:23</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="page">
+              <div class="page_tips">共10页，60条记录</div>
+              <div class="page_number" align="center">
+                <a href="javascript:void(0);">首页</a>
+                <a href="javascript:void(0);">上一页</a>
+                <a class="a_hover" href="javascript:void(0);">1</a>
+                <a href="javascript:void(0);">···</a>
+                <a href="javascript:void(0);">2</a>
+                <a href="javascript:void(0);">下一页</a>
+                <a href="javascript:void(0);">尾页</a>
+              </div>
+              <div class='page_right'>
+                <span>到第<input class='page_number_input' type="text">页</span>
+                <button class="page_btn">确认</button>
+              </div>
+            </div>
+           <!--  <div class="view_more">
+              查看更多记录
+            </div> -->
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号 <br>Copyright@2015-2016</p>
+    </div>
+
+     <!-- 修改密码 -->
+    <div class="dialog_container student_change_password">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>修改密码</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('student_change_password')"></i>
+        </div>
+        <div class="dialog_content">
+          <form action="">
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="原密码"/>
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="新密码" />
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="确认密码"/>
+            </div>
+          </form>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('student_change_password')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      $jq(function () {
+
+      })
+
+      function openDialog(className) {
+        $jq('.student_end').css('overflow','hidden')
+        $jq('.' + className).css('display', 'block')
+      }
+      function closeDialog(className) {
+        $jq('.student_end').css('overflow','auto')
+        $jq('.' + className).css('display', 'none')
+      }
+    </script>
+  </body>
+</html>

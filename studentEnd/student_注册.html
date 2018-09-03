@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css">
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>学生-注册</title>
+  </head>
+  <body class='student_register'>
+    <div class="student_login_box">
+      <div class="box_logo">
+        <img src="../../images/cmacedu/cmacLogo.png" alt="">
+      </div>
+      <div class="box_content">
+        <p class="login_box_title">注册</p>
+        <div class="box_form password_step_1">
+          <div class="form_item">
+            <input class='form_item_input' type="text" placeholder="用户名">
+            <p class="error_tips">相应错误提示</p>
+          </div>
+          <div class="form_item form_item_other">
+            <input class='form_item_input select_address' type="text" placeholder="选择地区">
+            <!-- 下拉弹框-选择到城市 -->
+            <div class="add_list select_city" style="display: none;">
+              <ul class="state_tag">
+                <li style="display: none;">请选择</li>
+                <li>全部：</li>
+                <li>安徽省<a href="#">×</a></li>
+                <li>合肥市<a href="#">×</a></li>
+                <li class="add_close"></li>
+              </ul>
+              <ul class="address-chooser-block">
+                <li class=""><a href="#" class="">北京</a></li>
+                <li class=""><a href="#" class="">天津</a></li>
+                <li class=""><a href="#" class="">河北省</a></li>
+                <li class=""><a href="#" class="">山西省</a></li>
+                <li class=""><a href="#" class="">辽宁省</a></li>
+                <li class=""><a href="#" class="">吉林省</a></li>
+                <li class=""><a href="#" class="">黑龙江省</a></li>
+                <li class=""><a href="#" class="">上海</a></li>
+                <li class=""><a href="#" class="">江苏省</a></li>
+                <li class=""><a href="#" class="">浙江省</a></li>
+                <li class=""><a href="#" class="">安徽省</a></li>
+                <li class=""><a href="#" class="">福建省</a></li>
+                <li class=""><a href="#" class="">江西省</a></li>
+                <li class=""><a href="#" class="">山东省</a></li>
+                <li class=""><a href="#" class="">河南省</a></li>
+                <li class=""><a href="#" class="">湖北省</a></li>
+                <li class=""><a href="#" class="">湖南省</a></li>
+                <li class=""><a href="#" class="">广东省</a></li>
+                <li class=""><a href="#" class="">海南省</a></li>
+                <li class=""><a href="#" class="">重庆</a></li>
+                <li class=""><a href="#" class="">四川省</a></li>
+                <li class=""><a href="#" class="">贵州省</a></li>
+                <li class=""><a href="#" class="">云南省</a></li>
+                <li class=""><a href="#" class="">西藏自治区</a></li>
+                <li class=""><a href="#" class="">陕西省</a></li>
+                <li class=""><a href="#" class="">甘肃省</a></li>
+                <li class=""><a href="#" class="">青海省</a></li>
+                <li class=""><a href="#" class="">台湾</a></li>
+                <li class=""><a href="#" class="">海外</a></li>
+                <li class="w160"><a href="#" class="">内蒙古自治区</a></li>
+                <li class="w160"><a href="#" class="">广西壮族自治区</a></li>
+                <li class="w160"><a href="#" class="">宁夏回族自治区</a></li>
+                <li class="w160"><a href="#" class="">新疆维吾尔自治区</a></li>
+                <li class="w160"><a href="#" class="">香港特别行政区</a></li>
+                <li class="w160"><a href="#" class="">澳门特别行政区</a></li>
+              </ul>
+              <a href="#" class="btn04">确认</a>
+              <a href="#" class="btn02">取消</a>
+            </div>
+            <span class="input_dropdown_icon icon iconfont icon-pull_down"></span>
+            <p class="error_tips">相应错误提示</p>
+          </div>
+          <div class="form_item">
+            <input class='form_item_input' type="text" placeholder="设置密码">
+            <p class="error_tips">相应错误提示</p>
+          </div>
+          <div class="form_item form_item_other">
+            <input class='form_item_input' type="text" placeholder="输入短信验证码">
+            <span class="get_confirm_code">
+              获取验证码
+            </span>
+            <span class="confirm_code_countdown">
+              60s
+            </span>
+            <p class="error_tips">验证码输入错误</p>
+          </div>
+          <div class='user_agreement'>
+            <div class='user_agreement_check'>
+              <span class='user_agreement_check_state icon iconfont icon-checkbox_uncheck'>
+              </span>
+              <span>我已阅读并同意</span>
+            </div>
+            <a class='link_color' onclick="openUserAgreement()">《用户协议》</a>
+          </div>
+          <button class='login_form_btn'>立即注册</button>
+          <div class='sign_in_gate'>
+            <div class="sign_in_gate_label">已有账号？</div>
+            <a class="link_color" href="">登录</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号 <br>Copyright@2015-2016</p>
+    </div>
+
+    <!-- 用户协议弹框————start -->
+    <div class="user_agreement_dialog">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span class=''>CMAC服务协议</span>
+          <i class='icon iconfont icon-close' onclick="closeUserAgreement()"></i>
+        </div>
+        <div class="dialog_content">
+          <p>
+            CMAC服务（以下简称本服务）指由浙江衡信教育科技有限公司（以下简称本公司）向授权学校学员提供的学习平台（以下简称学习平台）及相关的服务。CMAC以建立会计人员学习平台为己任，追求“给予方便、给予欢喜、给予希望等价值的产品、服务”，心怀“提高会计综合能力，降低社会交易成本”的使命，在会计人的工作、学习、考证、就业、晋升评价等方面提供一些帮助。 <br>
+             CMAC提倡持续学习、终身学习的理念，追求每天进步一点点，并持之以恒地在工作中学习，在学习中快乐，在快乐中生活的美好人生。为方便学员了解和使用CMAC，学员注册可免费获100个积分，以便有一段时间熟悉CMAC的各种功能。具体约定如下：
+          </p>
+          <p class="user_agreement_title">一、 声明与承诺</p>
+          <p class="user_agreement_text">
+            <ul>
+              <li>1、您确认在注册成为CMAC学员以接受本协议之前，已充分阅读、理解并接受本协议的全部内容，一旦您使用本服务，即表示您同意遵循本协议之所有约定。</li>
+              <li>2、您同意本公司有权对本协议内容进行变更，并以在本网站公告的方式予以公布，公布一个月后自动生效，无需另行单独通知您；若您在本协议内容公告变更一个月后继续使用本服务的，表示您已充分阅读、理解并接受修改后的协议内容，也将遵循修改后的协议内容使用本服务；若您不同意修改后的协议内容，您应停止使用本服务。</li>
+              <li>3、您同意CMAC网络服务的所有权、运作权、解释权归本公司所有。</li>
+            </ul>
+          </p>
+          <p class="user_agreement_title">二、注册说明</p>
+          <p class="user_agreement_text">
+            <ul>
+              <li>
+                1、基于CAMC提供的网络服务的重要性，学员在进行注册时同意以下事项：
+                <ul>
+                  <li>1）依CMAC的学员信息要求，提供、注册您本人真实、准确、完整及有效的资料；</li>
+                  <li>2）维持并更新所注册的信息资料,确保其为真实、准确、完整及有效。如果学员提供任何错误、不实、过时或不完整的资料，CMAC保留结束学员使用网络服务资格的权利；
+                  </li>
+                </ul>　
+              </li>
+              <li>
+                2、CMAC将不公开学员在信息注册过程中填写的个人资料。以下情况除外：
+                <ul>
+                  <li>1）经学员授权CMAC进行使用、公布或批露的信息；</li>
+                  <li>2）当政府机关依照法定程序要求本网站披露的个人资料。</li>
+                </ul>　
+              </li>
+            </ul>
+          </p>
+          <p class="user_agreement_title">三、 学员的账号、密码和安全性</p>
+          <p class="user_agreement_text">
+            <ul>
+              <li>1）在注册过程中，您将选择用户名和密码。学员对维护自己的用户名和密码安全负全部责任，且学员要对以其用户名和密码发生的所有活动及事件承担全部责任。因其所衍生之任何损失或损害，CMAC不承担任何责任。</li>
+              <li>2）对半年以上没有登录、帐户余额为0且不是年度会员的学员帐户，CMAC保留删除或封存注册信息的权利。</li>
+            </ul>
+          </p>
+          <p class="user_agreement_title">四、学员服务</p>
+          <p class="user_agreement_text">
+            <ul>
+              <li>
+                1、财刀充值卡
+                <ul>
+                  <li>1）财刀充值卡上的卡号和密码需经网上注册充值后方能使用；</li>
+                  <li>2）如果在购买时卡号或密码覆盖层已经被刮开，则该卡很可能已被他人用过，请拒绝接受这张卡，并请及时与经销商或本公司联系；
+                  </li>
+                  <li>3）财刀充值卡卡不记名、不挂失、不提现，一经售出概不退换。</li>
+                  <li>4）严禁任何单位和个人仿冒财刀充值卡，一经发现将追究其法律责任</li>
+                </ul>
+              </li>
+              <li>
+                2、铜板的获取与使用 <br>
+                <ul>
+                  <li>您认同铜板仅作为CMAC学习媒介，不能用于学员间铜板的交易，也不能提现。学员可以通过以下渠道获得铜板：
+                    <ul>
+                      <li>1）推荐学员，当被推荐学员在规定的时间内通过网银或支付宝充值，可以获得铜板奖励；</li>
+                      <li>2）购买财刀充值卡获得铜板；</li>
+                      <li>3）通过支付宝、微信、网银充值获得铜板；</li>
+                    </ul>
+                  </li>
+                  <li>
+                    铜板作为主要媒介，您认同以下用途：
+                    <ul>
+                      <li>1）购买道具、课程、课件、工具、视频；</li>
+                      <li>2）设定擂台PK条件；</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                 3、积分的获取与使用
+                 <ul>
+                   <li>
+                     积分是当学员在学习表现优秀、为CMAC发展做出一定的贡献时系统给与的奖励，学员可以通过以下渠道获得积分：
+                     <ul>
+                       <li>1）学员初次注册，获得相应的积分奖励；</li>
+                       <li>2）学员每天获得规定的学分，可以获得1个积分奖励；</li>
+                       <li>3）在习武堂练武，连续做对三道题获得1个积分奖励；</li>
+                       <li>4）学员在各模块学习过程中，发现有不正确或者某些错误时提交系统纠错，确认并接受后系统给与5-10个积分奖励；</li>
+                       <li>5）撰写心得体会供广大学员共享，并被列为精华帖，可以获得相应的积分奖励；</li>
+                       <li>6）提交案例，对案例进行解析，并被列为精华帖，可以获得相应的积分奖励；</li>
+                       <li>7）回答学员的问题，并被版主确认回答正确，获得一定的积分奖励；</li>
+                     </ul>
+                   </li>
+                   <li>
+                     积分有以下几种用途：
+                     <ul>
+                       <li>1）用于购买部分道具、课程、课件、工具和视频；</li>
+                       <li>2）用于对回答问题答案最好的学员的奖励；</li>
+                     </ul>
+                   </li>
+                 </ul>
+              </li>
+              <li>
+                4、学员咨询 <br>
+                在如下时间里您可拨CMAC的客服咨询电话： <br>
+                咨询服务电话：0571-56688106 <br>
+                咨询时间：8：15-17：30（周一至周日）
+              </li>
+            </ul>
+          </p>
+
+          <p class="user_agreement_title">五、相关约定</p>
+          <p class="user_agreement_text">
+            <ul>
+              <li>
+                1、网络服务内容的所有权 <br>
+                CMAC定义的网络服务内容包括：文字、资料、资讯、信息、声音、照片、图形、图片、录像、图表、邮件、广告中的全部内容及其它资料。CAMC拥有以上内容的完全版权，严禁任何个人或单位在未经CMAC许可的情况下对这些内容进行翻版、复制、转载、篡改等一切用于商业活动的行为，如若发现上述情况，CMAC将有权停止其账号使用，并根据情节的严重程度对其实行相应处理或诉诸法律。
+              </li>
+              <li>
+                2、转发资讯权 <br>
+                CMAC学员以本人原创名义发布于CMAC的内容，视为默认同意CAMC在本站各专栏及其他范围使用（包括但不限于电子书籍等），并以来源于CMAC的名义，推荐到CMAC合作媒体。
+              </li>
+              <li>
+                3、学员管理 <br>
+                学员需对自己在网上的行为承担法律责任。不得发表、散布、传播任何反动、色情及违反国家安全、扰乱社会秩序等有害信息，学员若在CMAC上散布和传播反动、色情或其他违反国家法律的信息，CMAC的系统记录将会作为学员违反法律的证据
+              </li>
+            </ul>
+          </p>
+
+          <p class="user_agreement_title">六、免责条款</p>
+          <p class="user_agreement_text">
+            <ul>
+              <li>
+                1、当本网站以链接形式推荐其他网站内容时，由于本站并不控制相关网站和资源，因此访问者需理解并同意，本站并不对这些网站或资源的可用性负责，且不保证从这些网站获取的任何内容、产品、服务或其他材料的真实性、合法性，对于任何因使用或信赖从此类网站或资源上获取的内容、产品、服务或其他材料而造成（或声称造成）的任何直接或间接损失，本站均不承担任何责任。
+              </li>
+              <li>
+                2、任何由于黑客攻击、计算机病毒侵入或发作、因政府管制而造成的暂时性关闭等影响网络正常经营的不可抗力而造成的个人资料泄露、丢失、被盗用、被窜改或不能正常看课等，本网站均得免责。
+              </li>
+              <li>
+                3、本网站如因系统维护或升级而需暂停服务时，将事先公告。若因线路及非本公司控制范围内的硬件故障或其它不可抗力而导致暂停服务，于暂停服务期间造成的一切不便与损失，本网站不负任何责任。
+              </li>
+              <li>
+                4、本网站使用者因为违反本声明的规定而触犯中华人民共和国法律的，一切后果自己负责，本网站不承担任何责任。
+              </li>
+              <li>
+                5、本声明未涉及的问题参见国家有关法律法规，当本声明与国家法律法规冲突时，以国家法律法规为准
+              </li>
+            </ul>
+          </p>
+        </div>
+        <div class="dialog_btn">
+          <button class="dialog_btn_item" onclick="closeUserAgreement()">同意并继续</button>
+        </div>
+      </div>
+    </div>
+    <!-- 用户协议弹框————end -->
+
+    <script src="../../style/cmacedu/js/jquery-3.1.0.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script>
+      $(function () {
+        // console.log('start')
+        // 布局测试用
+        // $('.error_tips').css('display', 'block')
+
+        /* 用户协议状态切换*/
+        $('.user_agreement_check').click(function () {
+          if($('.user_agreement_check_state').hasClass('icon-checkbox_checked')) {
+            $('.user_agreement_check_state').removeClass('icon-checkbox_checked').addClass('icon-checkbox_uncheck')
+          } else {
+            $('.user_agreement_check_state').removeClass('icon-checkbox_uncheck').addClass('icon-checkbox_checked')
+          }
+        })
+
+        // 显示城市选择列表
+        $('.select_address').click(function () {
+          $('.select_city').css('display', 'block');
+        })
+        // 隐藏城市选择列表
+        $('.select_city .btn02,.select_city .add_close').click(function () {
+          $('.select_city').css('display', 'none');
+        })
+
+        // 获取验证码
+        $('.get_confirm_code').click(function () {
+          var tt = 60
+          $('.get_confirm_code').css('display', 'none')
+          setTimeout(function () {
+            $('.confirm_code_countdown').css('display', 'block').empty().text(tt+'s')
+            tt -= 1
+          })
+          var setInter = setInterval(function () {
+            $('.confirm_code_countdown').css('display', 'block').empty().text(tt+'s')
+            tt -= 1
+            if (tt <=0) {
+              clearInterval(setInter)
+              $('.get_confirm_code').css('display', 'block')
+              $('.confirm_code_countdown').css('display', 'none')
+            }
+          }, 1000)
+        })
+      })
+
+
+      function changeCode() {
+        var tmpSrc = 'http://cmacep1.caidao8.com/grouppub/ImageServlet?'+ Math.random() * 10
+        $('#verifyCodeSpan').attr('src',tmpSrc)
+      }
+
+      function openUserAgreement() {
+        $('.user_agreement_dialog').css('display', 'block')
+      }
+
+      function closeUserAgreement() {
+        $('.user_agreement_dialog').css('display', 'none')
+      }
+    </script>
+
+  </body>
+</html>

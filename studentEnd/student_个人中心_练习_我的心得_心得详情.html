@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css">
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <link rel="stylesheet" href="../../style/css/bootstrap-select.css">
+
+    <script src="../../style/js/jquery-1.11.1.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script src="../../style/js/bootstrap-select.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="http://testresource.caidao8.com/style/cmacedu/css/cmac_school.css"> -->
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>学生-个人中心-我的练习_我的心得-心得详情</title>
+  </head>
+  <body class='student_end student_user_center'>
+    <nav class="top_bar_container">
+      <div class="student_top_nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="student_logo">
+          <a class="navbar-brand" href="#">
+            <img class='student_end_nav_logo' alt="" src="../../images/cmacedu/cmacLogo.png">
+            <span>CMAC</span>
+          </a>
+        </div>
+
+        <div class="student_top_bar">
+          <ul class="student_top_bar_left">
+            <li class="menu_item">
+              <a href="#">首页</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">习武堂</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                竞技场<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    打擂台
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    竞技
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    英雄榜
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    排行榜
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                通行证<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    认证体系
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    晋级标准
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    练武分析
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的证书
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    评测报告
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                就业帮<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    职位查看
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的就业
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    就业指导
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                道具商城<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    道具商城
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    考前冲刺
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专精特训
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    财税法规
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="top_nav_search_area">
+            <input class="top_nav_search_input" type="text" placeholder="搜索财税法规、视频、课件等">
+            <span class="icon iconfont icon-chaxun"></span>
+          </div>
+
+          <ul class="student_top_bar_right">
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-qiandao"></div>
+                <div class='nav_item_text'>签到</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-message"></div>
+                <div class='nav_item_text'>消息</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class='top_nav_right_item user_center_gate dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class='top_nav_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                <span class="new_message_dot"></span>
+              </a>
+
+              <!-- 个人中心 -->
+              <div class="dropdown-menu">
+                <div class="caret_icon"></div>
+                <div class="top_bar_user_center">
+                  <div class="user_center_module_1">
+                    <img class='user_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                    <div class="user_info">
+                      <div class="user_info_top">
+                        <span class="user_name">白兔兔</span>
+                        <span class="total_credit">总学分 45</span>
+                      </div>
+                      <div class="user_info_bottom">
+                        <span class="grade_label">CMAC级别：</span>
+                        <span class="current_grade">实习会计</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_2">
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-work"></i>
+                        作业
+                      </div>
+                      <div class="number">
+                        10
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-user_center"></i>
+                        个人中心
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-renwu"></i>
+                        任务
+                      </div>
+                      <div class="number">
+                        14
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-exercise"></i>
+                        我的练习
+                      </div>
+                      <img class="exercise_gift_img" src="../../images/cmacedu/gift.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_3">
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-currentGrade"></i>
+                        本级学分
+                      </span>
+                      <div class="progress_container">
+                        <div class="progress_inner" style="width: 70%;"></div>
+                      </div>
+                      <div class="number">
+                        <span class="has_credit">144</span>/<span class="need_credit">756</span>
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-tongban"></i>
+                        铜板
+                        <span class='module_item_left_sub'>马上充值</span>
+                      </span>
+                      <div class="module_item_right">0.0</div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-jifen"></i>
+                        积分
+                        <span href="" class='module_item_left_sub'>如何获取积分？</span>
+                      </span>
+                      <div class="module_item_right">30</div>
+                    </a>
+                  </div>
+
+                  <div class="user_center_module_4">
+                    <div onclick="openDialog('student_change_password')">修改密码</div>
+                    <div>安全退出</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="student_container">
+      <div class="student_wraper">
+        <div class="side_nav">
+          <p class="side_nav_title">个人中心</p>
+          <ul class="ul_menu">
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_我的资料_基本资料.html">
+                <span class="icon iconfont icon-ziliao"></span>
+                我的资料
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodelvli"></span>
+                我的履历
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="./student_个人中心_资产_钱包.html">
+                <span class="icon iconfont icon-wodezichan"></span>
+                我的资产
+              </a>
+            </li>
+            <li class="ul_menu_item active">
+              <a href="./student_个人中心_练习_今日成绩.html">
+                <span class="icon iconfont icon-exercise"></span>
+                我的练习
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-work"></span>
+                我的文章
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodeliuyan"></span>
+                我的留言
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-wodekaoshi"></span>
+                我的考试
+              </a>
+            </li>
+            <li class="ul_menu_item">
+              <a href="">
+                <span class="icon iconfont icon-jilu"></span>
+                打擂记录
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="main_body user_center_shiti">
+          <div class="tab_bar">
+            <ul class="tab_menu">
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_练习_今日成绩.html">
+                  今日成绩
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_练习_我的试题.html">
+                  我的试题
+                </a>
+              </li>
+              <li class="tab_menu_item active">
+                <a href="./student_个人中心_练习_我的心得.html">
+                  我的心得
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_练习_试题纠错.html">
+                  试题纠错
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_练习_知识纠错.html"">
+                  知识纠错
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_练习_专家解析.html"">
+                  专家解析
+                </a>
+              </li>
+              <li class="tab_menu_item">
+                <a href="./student_个人中心_练习_我的经书.html"">
+                  我的经书
+                </a>
+              </li>
+              <!--下列删除图标默认隐藏；需要 判断 试题列表是否 存在被选中项，若有则显示 -->
+              <li class="right delete_box_area" style="display: none;">
+                <button class="delete_btn sub_btn">
+                  <span class="icon iconfont icon-delete_box"></span>
+                  <span class="text">删除</span>
+                </button>
+              </li>
+            </ul>
+          </div>
+
+          <div class="route_nav_1">
+            <a href="./student_个人中心_练习_我的心得.html">我的心得</a>
+            <span class="seporate_icon icon iconfont icon-qianjincopy"></span>
+            <span>心得详情</span>
+          </div>
+
+          <ul class="left_box shrink_state">
+            <div class="detail_display_area">
+              <div class="detail_display_head">
+                <span class="title left">我的心得</span>
+                <a class="detail_display_head_operate right" onclick="openDialog('doing_think')">
+                  <i class="icon iconfont icon-xiejiexi"></i>
+                  编辑
+                </a>
+              </div>
+              <div class="detail_display_content">
+                  解释:感谢亲亲的到来，并且留下印记喔~~每一位亲的来临都会带给我们惊喜，每一位亲对我们的肯定与支持都是我们奋斗路上前进的原动力。非常感谢亲对我们的支持，祝愿可爱的您每天都能拥有阳光般的心情哟~~~
+              </div>
+
+            </div>
+
+            <p class="tit">
+              <span class="f24_3AB28A">(单选2分)</span>
+              2013年6月30日甲公司将一项金额为200万元的应收票据到银行以附追索权方式进行贴现，扣除贴现息50万后，共取得价款150万元，则关于甲公司的处理，下列说法正确的有（　）。
+            </p>
+            <li>
+              <a class="xz_tit_n">
+                <span class="xz_tit_1">A</span>
+                甲公司应终止确认此应收票据
+              </a>
+            </li>
+            <li>
+              <a class="xz_tit_n">
+                <span class="xz_tit_2">B</span>
+                甲公司应终止确认此应收票据
+              </a>
+            </li>
+            <li>
+              <a class="xz_tit_n">
+                <span class="xz_tit_3">A</span>
+                甲公司应终止确认此应收票据
+              </a>
+            </li>
+            <li>
+              <a class="xz_tit_n">
+                <span class="xz_tit_4">B</span>
+                甲公司应终止确认此应收票据
+              </a>
+            </li>
+            <li>
+              <a class="xz_tit_n">
+                <span class="xz_tit_3">√</span>
+                正确
+              </a>
+            </li>
+            <li>
+              <a class="xz_tit_n">
+                <span class="xz_tit_4">×</span>
+                错误
+              </a>
+            </li>
+
+            <div class="daan_jiexi_box">
+              <ul class="daan">
+                <li class="xt_daan">
+                  <b class="gr_text">正确答案</b>
+                  <span>A</span>
+                  <span>B</span>
+                </li>
+              </ul>
+              <ul class="jiexi">
+                <li class="jiexi_hd">
+                  <strong class="jx_text_b" >官方解析</strong>
+                  <span>决策不当的并购。企业在并购前，或者没有认真地分析目标企业的潜在成本和效益，过于草率地并购，结果无法对被并购企业进行合理的管理;或者过高估计并购对象所在产业的吸引力和自己对被并购企业的管理能力，高估并购后所带来的潜在经济效益，结果遭到失败。</span>
+                </li>
+                <li class="jx_text">
+                  <p class="title_1">中华人民共和国现金管理暂行条例</p>
+                  <p class="title_2">第二章第五条</p>
+                  <div class="jx_text_con">
+                    <p>第十二章 第一审普通程序</p>
+                    <p>第一节 起诉和受理</p>
+                    <p>第二节 审理前的准备</p>
+                    <p>第三节 开庭审理</p>
+                    <p>第四节 诉讼中止和终结</p>
+                    <p>第五节 判决和裁定</p>
+                    <p>第十二章 第一审普通程序</p>
+                    <p>第一节 起诉和受理</p>
+                  </div>
+                </li>
+                <li class="jx_text_list">
+                  <p>第一条 中华人民共和国民事诉讼法以宪法为根据，结合我国民事审判工作的经验和实际情况制定。
+                    <a class="v_jx_btn"><span class="icon iconfont icon-right"></span>查看该试题考试重点</a>
+                  </p>
+                  <p>第二条 中华人民共和国民事诉讼法的任务，是保护当事人行使诉讼权利，保证人民法院查明事实，</p>
+                  <p>第三条 人民法院受理公民之间、法人之间、其他组织之间以及他们相互之间因财产关系和人身关系提起的民事诉讼，适用本法的规定。</p>
+                  <p>第四条 凡在中华人民共和国领域内进行民事诉讼，必须遵守本法。</p>
+                  <p>第五条 外国人、无国籍人、外国企业和组织在人民法院起诉、应诉，同中华人民共和国公民、法人和其他组织有同等的诉讼权利义务。</p>
+                </li>
+              </ul>
+            </div>
+            <div class="shrink_mask" style="">
+            </div>
+          </ul>
+          <div class="clearFix"></div>
+          <button class="view_more_btn" onclick="stretchDetail()">查看更多</button>
+          <div class="step_btn_group right">
+            <!-- 链接地址 数据纯属虚造 -->
+            <a href="./student_个人中心_练习_我的心得_心得详情.html?tid=1" class="pre_btn main_btn">上一题</a>
+            <a href="./student_个人中心_练习_我的心得_心得详情.html?tid=3" class="next_btn main_btn">下一题</a>
+          </div>
+          <div class="clearFix"></div>
+
+        </div>
+      </div>
+    </div>
+    <div class="footer">
+      <p>浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号 <br>Copyright@2015-2016</p>
+    </div>
+
+     <!-- 修改密码 -->
+    <div class="dialog_container student_change_password">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>修改密码</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('student_change_password')"></i>
+        </div>
+        <div class="dialog_content">
+          <form action="">
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="原密码"/>
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="新密码" />
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="确认密码"/>
+            </div>
+          </form>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('student_change_password')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 做题心得弹框 start -->
+    <div class="dialog_container dialog_only_textarea doing_think">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>做题心得</span>
+          <i class='icon iconfont icon-close' onclick="closeDialog('doing_think')"></i>
+        </div>
+        <div class="dialog_content">
+          <textarea class="dialog_textarea_text" name="" id="" maxlength="500" placeholder="请您将心得字数控制在500字以内，超出部分将无法显示"></textarea>
+          <p class="dialog_textarea_tips">共可输入<span class="mark_color">500</span>字，还剩<span class="mark_color">500</span>字</p>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>提交</button>
+        </div>
+      </div>
+    </div>
+    <!-- 做题心得弹框 end -->
+
+    <script>
+      $jq(function () {
+        var rightHeight = $jq('.student_container .main_body').height()
+        console.log('右侧编辑区域高度', rightHeight)
+        if (rightHeight > 530) {
+          $jq('.student_container .side_nav').height(rightHeight - 8)
+        }
+      })
+
+      function openDialog(className) {
+        $jq('.student_end').css('overflow','hidden')
+        $jq('.' + className).css('display', 'block')
+      }
+      function closeDialog(className) {
+        $jq('.student_end').css('overflow','auto')
+        $jq('.' + className).css('display', 'none')
+      }
+
+      function stretchDetail() {
+        if ($jq('.left_box').hasClass('shrink_state')) {
+          $jq('.left_box').removeClass('shrink_state')
+          $jq('.view_more_btn').text('收起全部')
+        } else {
+          $jq('.left_box').addClass('shrink_state')
+          $jq('.view_more_btn').text('查看更多')
+        }
+      }
+    </script>
+  </body>
+</html>

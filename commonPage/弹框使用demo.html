@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=9; IE=8; IE=7; IE=EDGE">
+
+    <!-- bootstrap-select 依赖css -->
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/css/bootstrap-select.css">
+
+    <!-- 关闭弹框的图标为字体文件，需要引入字体文件 -->
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <link rel="stylesheet" href="../../style/cmacedu/css/cmac_school.css">
+
+    <!-- bootstrap-select 依赖js -->
+    <script src="../../style/cmacedu/js/jquery-3.1.0.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script src="../../style/js/bootstrap-select.js"></script>
+
+    <title>弹框demo</title>
+    <style>
+      .dialogDemo {
+        /*width: 100%;*/
+        min-height: 50vh;
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-flow: row wrap;
+      }
+      .dialogDemo>div {
+        background: #44fa21;
+        padding: 5px 10px;
+        margin: 20px;
+        text-align: center;
+      }
+
+      /* 弹框样式 */
+      input:focus {
+        border: 1px solid rgba(0,122,255,0.50);
+          outline:none;
+        -webkit-box-shadow:0 0 0 3px rgba(0,122,255,0.15);
+        box-shadow:0 0 0 3px rgba(0,122,255,0.15);
+      }
+      textarea:focus {
+        border: 1px solid rgba(0,122,255,0.50);
+          outline:none;
+        -webkit-box-shadow:0 0 0 2px rgba(0,122,255,0.15);
+        box-shadow:0 0 0 2px rgba(0,122,255,0.15);
+      }
+      .dialog_container {
+        z-index: 99;
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background: rgba(133,133,133,0.8);
+        overflow: hidden;
+        overflow-y: hidden;
+        overflow-x: hidden;
+      }
+      .dialog_container .dialog_body {
+        width: 90%;
+        max-width: 400px;
+        margin: 0 auto;
+        background: #FFF;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.35);
+        border-radius: 4px;
+      }
+      .dialog_container .dialog_body .dialog_head {
+        height: 40px;
+        line-height: 40px;
+        padding-left: 20px;
+        background: #F4F4F4;
+        border-radius: 2px 2px 0 0;
+
+        font-size: 14px;
+        color: #444444;
+        letter-spacing: 0;
+      }
+      .dialog_container .dialog_head .icon {
+        font-size: 17px;
+        color: #ccc;
+        float: right;
+        padding-right: 16px;
+      }
+      .dialog_container .dialog_head .icon:hover {
+        color: #F35F41;
+      }
+      .dialog_container .dialog_body .dialog_content {
+        font-size: 14px;
+        padding-bottom: 30px;
+        border-bottom: 1px #F1F2F4 solid;
+      }
+      .teacher_end .dialog_container .dialog_body .dialog_content {
+        background: #FFF;
+      }
+      .dialog_container .dialog_body .dialog_btn {
+        background: #FFF;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        width: 100%;
+        padding-right: 20px;
+        text-align: right;
+        padding-top: 9px;
+        padding-bottom: 9px;
+      }
+      .dialog_container .dialog_body .dialog_btn button {
+        width: 80px;
+        height: 32px;
+        font-size: 14px;
+        font-weight: normal;
+        text-align: center;
+        border-radius: 4px;
+        margin-left: 10px;
+        outline: none;
+      }
+      .dialog_main_btn {
+        background: #007AFF;
+        border: 1px transparent solid;
+        color: #FFFFFF;
+        font-weight: 200;
+        margin-right: 10px;
+      }
+
+      .dialog_sub_btn {
+        color: #444444;
+        background: #FFFFFF;
+        border: 1px solid #DEDEDE;
+      }
+      .dialog_sub_btn:hover
+      .dialog_container .dropdown {
+          position: relative;
+      }
+      .dialog_container .dropdown .icon {
+        position: absolute;
+        top: 7px;
+        right: 0;
+      }
+      .dialog_container .dropdown .dropdown-menu {
+        min-width: 100%;
+      }
+
+      /* 修改密码 */
+      .dialog_container .dialog_body .dialog_content .form_input_item {
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 24px;
+      }
+      .dialog_container .dialog_body .dialog_content label {
+        color: #F35F39;
+        margin-right: 6px;
+        position: relative;
+          top: 5px;
+      }
+      .dialog_container .dialog_body .dialog_content input[type='text'],.dialog_container .dialog_body .dialog_content input[type='password'] {
+        text-align: left;
+        display: inline-block;
+        width: 100%;
+        height: 35px;
+        background: #FFFFFF;
+        border: 1px solid #DEDEDE;
+        border-radius: 4px;
+        padding-left: 10px;
+      }
+
+      /* 转移班级 */
+      .exchange_grade .dialog_content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 0;
+      }
+
+      .exchange_grade .exchange_grade_box .bootstrap-select {
+        text-align: left;
+        display: inline-block;
+        width: 90%;
+        min-width: 250px;
+        height: 35px;
+        background: #FFFFFF;
+        border-radius: 4px;
+        padding-left: 10px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+      }
+      .exchange_grade .exchange_grade_box .bootstrap-select .btn-group .dropdown-menu {
+        min-width: 200px;
+          width: 100%;
+      }
+
+      .exchange_grade .exchange_grade_box .bootstrap-select:hover,.exchange_grade .exchange_grade_box .bootstrap-select>button:hover,.exchange_grade .exchange_grade_box .bootstrap-select>button:focus {
+        background: #FFF;
+        border: 1px solid #DEDEDE;
+      }
+      .exchange_grade_box .btn-default:focus,.exchange_grade .exchange_grade_box .bootstrap-select:focus {
+        background: #FFF;
+        border: 1px solid rgba(0,122,255,0.50);
+          outline:none;
+        -webkit-box-shadow:0 0 0 3px rgba(0,122,255,0.15);
+        box-shadow:0 0 0 3px rgba(0,122,255,0.15);
+      }
+      .exchange_grade_box .btn-default.active, .btn-default:active,.exchange_grade_box .open>.dropdown-toggle.btn-default {
+        background: #FFF;
+        border: 1px solid rgba(0,122,255,0.50);
+          outline:none;
+        -webkit-box-shadow:0 0 0 3px rgba(0,122,255,0.15);
+        box-shadow:0 0 0 3px rgba(0,122,255,0.15);
+      }
+      .exchange_grade_box .dropdown-menu .selected a,.exchange_grade_box .dropdown-menu .active a {
+        color: #007AFF!important;
+        background: transparent!important;
+      }
+      .exchange_grade_box .dropdown-menu .selected a:hover {
+        background: #F0F8FD!important;
+      }
+      .exchange_grade_box .dropdown-menu li,.exchange_grade_box .dropdown-menu a {
+        width: 100%;
+        height: 38px;
+        display: flex;
+        align-items: center;
+      }
+      .exchange_grade_box .dropdown-menu .selected .glyphicon {
+        display: none!important;
+      }
+      .exchange_grade_box .dropdown-menu a:hover {
+         background: #F0F8FD;
+      }
+
+      /* 纠错 */
+      .student_end .error_correction .dialog_body{
+        max-width: 500px!important;
+      }
+      .student_end .error_correction_content {
+        padding: 25px 20px 0 20px;
+        padding-bottom: 0px!important;
+      }
+      .student_end .error_correction_content_item {
+        padding: 0 0 20px 0;
+      }
+      .student_end .error_correction_content .item_body {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: flex-start;
+        align-items: center;
+      }
+      .student_end .error_correction .error_type {
+        padding-right: 30px;
+        font-weight: 400;
+        font-size: 13px;
+        color: #777777!important;
+        letter-spacing: 0;
+      }
+      .student_end .error_correction input[type='checkbox'] {
+        width: 12px;
+        height: 12px;
+        outline: none;
+        margin-right: 10px;
+      }
+      .student_end .error_correction input[type='checkbox']:focus {
+        background: transparent;
+        box-shadow: none;
+      }
+      .student_end .error_correction .dialog_textarea_text {
+        width: 100%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        min-height: 120px;
+        background: #FFF;
+        border: 1px solid #DEDEDE!important;
+        border: none;
+        margin-top: 10px;
+        padding: 8px 20px;
+      }
+      .student_end .error_correction .dialog_textarea_text::-webkit-input-placeholder {
+        font-weight: 400;
+        font-size: 13px;
+        color: #CCCCCC;
+        letter-spacing: 0;
+      }
+      .student_end .error_correction .dialog_textarea_text::-moz-input-placeholder {
+        font-weight: 400;
+        font-size: 13px;
+        color: #CCCCCC;
+        letter-spacing: 0;
+      }
+
+      /* 心得弹框（带textarea） */
+      .dialog_only_textarea {
+        background: rgba(0,0,0,0.6)!important;
+      }
+      .dialog_only_textarea .dialog_content {
+        width: 100%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        padding: 0 20px 10px 20px;
+        padding-bottom: 20px!important;
+      }
+      .dialog_only_textarea .dialog_textarea_text {
+        width: 100%;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        min-height: 230px;
+        background: #FFF;
+        border: none;
+        padding: 8px 20px;
+        line-height: 1.5em;
+      }
+      .dialog_only_textarea .dialog_textarea_text::-webkit-input-placeholder {
+        font-weight: 400;
+        font-size: 13px;
+        color: #CCCCCC;
+        letter-spacing: 0;
+      }
+      .dialog_only_textarea .dialog_textarea_text::-moz-input-placeholder {
+        font-weight: 400;
+        font-size: 13px;
+        color: #CCCCCC;
+        letter-spacing: 0;
+      }
+
+      .dialog_only_textarea .dialog_body{
+          background: #F4F4F4;
+      }
+      .dialog_only_textarea .dialog_body {
+        max-width: 500px!important;
+      }
+      .dialog_textarea_tips {
+        font-weight: 400;
+        font-size: 13px;
+        color: #999;
+        margin-top: 5px;
+          margin-bottom:0;
+      }
+      .dialog_textarea_tips .mark_color {
+        color: #ED6661;
+      }
+    </style>
+  </head>
+  <body class="student_end">
+    <div class='dialogDemo'>
+      <div class="toastDialog">轻提示toast</div>
+      <div class="alertDialog">警告/通知alert</div>
+      <div class="confirmDialog">确认confirm</div>
+      <div class="change_password_gate" onclick="openDialog('student_change_password')">修改密码（带input）</div>
+      <div class="exchange_grade_gate" onclick="openDialog('exchange_grade')">转移班级（带查询+选择）</div>
+
+      <div class="error_correction_gate" onclick="openDialog('error_correction')">纠错（复选框+文本框）</div>
+      <div class="doing_think_gate" onclick="openDialog('doing_think')">做题心得(仅文本框）</div>
+      <div class="doing_think_gate" onclick="openDialog('buy_tool_dialog')">购买道具</div>
+      <div class="doing_think_gate" onclick="openDialog('buy_tool_dialog_1')">购买视频</div>
+
+    </div>
+
+    <!-- 修改密码 -->
+    <div class="dialog_container student_change_password">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>修改密码</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('student_change_password')"></i>
+        </div>
+        <div class="dialog_content">
+          <form action="">
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="原密码"/>
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="新密码" />
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="确认密码"/>
+            </div>
+          </form>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('student_change_password')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 转移班级 -->
+    <div class="dialog_container exchange_grade">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>转移班级</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('exchange_grade')"></i>
+        </div>
+        <div class="dialog_content">
+            <div class="exchange_grade_box">
+              <select class="selectpicker show-tick" data-live-search="true">
+                <option>一班</option>
+                <option>二班</option>
+                <option>三班</option>
+                <option>四班</option>
+              </select>
+            </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('exchange_grade')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 纠错弹框 -->
+    <div class="dialog_container error_correction">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>我要纠错</span>
+          <i class='icon iconfont icon-close' onclick="closeDialog('error_correction')"></i>
+        </div>
+        <div class="dialog_content error_correction_content">
+          <div class="error_correction_content_item">
+            <div class="item_title">请将出错处勾选并提交</div>
+            <div class="item_body">
+              <label class='error_type'>
+                <input type="checkbox">题干
+              </label>
+              <label  class='error_type'>
+                <input type="checkbox">答案
+              </label>
+              <label  class='error_type'>
+                <input type="checkbox">试题解析
+              </label>
+              <label  class='error_type'>
+                <input type="checkbox">选项
+              </label>
+              <label  class='error_type'>
+                <input type="checkbox">其他
+              </label>
+            </div>
+          </div>
+          <div class="error_correction_content_item">
+            <div class="item_title">错误描述</div>
+            <div class="item_body">
+              <textarea class="dialog_textarea_text" name="" id="" maxlength="500" placeholder="请将此试题“出错内容”描述，点击提交，我们将会第一时间更正！谢谢"></textarea>
+              <p class="dialog_textarea_tips">共可输入<span class="mark_color">500</span>字，还剩<span class="mark_color">500</span>字</p>
+            </div>
+          </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>提交意见</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 做题心得弹框 start -->
+    <div class="dialog_container dialog_only_textarea doing_think">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>做题心得</span>
+          <i class='icon iconfont icon-close' onclick="closeDialog('doing_think')"></i>
+        </div>
+        <div class="dialog_content">
+          <textarea class="dialog_textarea_text" name="" id="" maxlength="500" placeholder="请您将心得字数控制在500字以内，超出部分将无法显示"></textarea>
+          <p class="dialog_textarea_tips">共可输入<span class="mark_color">500</span>字，还剩<span class="mark_color">500</span>字</p>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>提交</button>
+        </div>
+      </div>
+    </div>
+    <!-- 做题心得弹框 end -->
+
+    <!-- 购买道具弹框  start -->
+    <div class="dialog_container buy_tool_dialog">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>立即购买</span>
+          <i class='icon iconfont icon-close' onclick="closeDialog('buy_tool_dialog')"></i>
+        </div>
+        <div action="" class="dialog_content">
+          <div class="tool_img">
+            <img src="../../images/cmacedu/toolMall_0005.png" alt="">
+          </div>
+          <div class="buy_tool_info">
+            <div class="buy_tool_info_item">
+              <span class="item_label">道具名称</span>
+              <span class="item_value">做题卡
+              </span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">道具用途</span>
+              <span class="item_value">使用“做题卡”，可以增加练武题目10道，效果逐步递减，即增加题目数</span>
+            </div>
+            <div class="buy_tool_info_item buy_tool_info_item_other">
+              <span class="item_label">购买方式
+              </span>
+              <span class="item_value">
+                <div class="item_value_btn active">
+                  积分购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+                <div class="item_value_btn">
+                  铜板购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+              </span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">有效期</span>
+              <span class="item_value">1000天</span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">所需积分</span>
+              <span class="item_value">10个</span>
+            </div>
+            <div class="buy_tool_info_item buy_tool_info_item_other">
+              <span class="item_label">购买个数</span>
+              <span class="item_value">
+                <span class="select_number">
+                  <input placeholder="1" type="number" min="1">
+                <span>最多购买99个</span>
+              </span>
+            </div>
+            <p class="error_tips" style="display: block;">错误提示</p>
+          </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('buy_tool_dialog')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 购买视频 -->
+    <div class="dialog_container buy_tool_dialog buy_tool_dialog_1">
+      <div class="dialog_body" style="max-width: 400px;">
+        <div class="dialog_head">
+          <span>立即购买</span>
+          <i class='icon iconfont icon-close' onclick="closeDialog('buy_tool_dialog')"></i>
+        </div>
+        <div action="" class="dialog_content" style="padding: 30px;">
+          <!-- <div class="tool_img">
+            <img src="../../images/cmacedu/toolMall_0005.png" alt="">
+          </div> -->
+          <div class="buy_tool_info">
+            <div class="buy_tool_info_item buy_tool_info_item_other">
+              <span class="item_label">购买类型
+              </span>
+              <span class="item_value">
+                <div class="item_value_btn active">
+                  整本购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+                <div class="item_value_btn">
+                  单个购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+              </span>
+            </div>
+            <div class="buy_tool_info_item buy_tool_info_item_other">
+              <span class="item_label">购买方式
+              </span>
+              <span class="item_value">
+                <div class="item_value_btn active">
+                  积分购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+                <div class="item_value_btn">
+                  铜板购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+              </span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">有效期</span>
+              <span class="item_value">365天</span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">所需积分</span>
+              <span class="item_value">6000个</span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_value" style="padding-left: 80px;max-width: 100%;">单个购买，共计18个，单价500积分，合计9000积分；整本购买，合计6000积分，更划算！</span>
+            </div>
+            <p class="error_tips" style="left: 80px;display: block;">错误提示</p>
+          </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('buy_tool_dialog')">取消</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- 购买道具弹框  end -->
+
+
+  </body>
+  <script src="hxDialog.js"></script>
+  <script>
+      Toast.init();
+      Alert.init();
+      Confirm.init();
+
+    var toastDialog = document.querySelector('.toastDialog')
+    toastDialog.addEventListener("click", this.showToast, false);
+
+    var alertDialog = document.querySelector('.alertDialog')
+    alertDialog.addEventListener("click", this.showAlert, false);
+
+     var confirmDialog = document.querySelector('.confirmDialog')
+    confirmDialog.addEventListener("click", this.showConfirm, false);
+
+    $('.item_value_btn').click(function () {
+      $(this).siblings().removeClass('active')
+      $(this).addClass('active')
+    })
+
+    function showAlert() {
+      // console.log('alertDialog')
+      // 仅一个按钮 类名为 alert_btn (必传三个参数)
+      Alert.show('提示', '你要走运了', '确定');
+
+      var alertBtn = document.querySelector('.alert_btn')
+
+      // 可自定义点击事件
+      // console.log(alertBtn)
+      alertBtn.addEventListener('click', Alert.hidden, false)
+      //  隐藏弹框调用 Alert.hidden()
+
+    }
+    function showToast() {
+      // console.log('toastDialog')
+      // 无按钮
+      Toast.show('你真帅你真帅你真帅你真帅你真帅', 3000);
+    }
+
+    function showConfirm() {
+      // console.log('toastDialog')
+
+      // 有两个按钮 类名为 confirm_btn / cancel_btn (必传四个参数)
+      Confirm.show('提示', '你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了你要走运了', '确定', '取消');
+
+       var cancelBtn = document.querySelector('.cancel_btn')
+
+      // 可自定义点击事件
+      // console.log(cancelBtn)
+      cancelBtn.addEventListener('click', Confirm.hidden, false)
+      //  隐藏弹框调用 Confirm.hidden()
+    }
+
+    function openDialog(className) {
+      $('.student_end').css('overflow','hidden')
+      $('.' + className).css('display', 'block')
+    }
+    function closeDialog(className) {
+      $('.student_end').css('overflow','auto')
+      $('.' + className).css('display', 'none')
+    }
+  </script>
+</html>

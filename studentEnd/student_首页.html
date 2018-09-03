@@ -1,0 +1,930 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta name="format-detection" content="telephone=no">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="title" content="财刀网-财会税务学习的网上家园">
+    <meta name="description" content="财刀网是全国权威的财税知识学习与税务实训和会计能力认证的平台，是财会人员提高专业知识和业务水平的专业平台。网站包括会计税务实训软件、财税知识竞赛平台、CMAC认证以及财税法规、税务稽查案例，票据管理，票据实训等内容，内容丰富，信息权威，是财会从业人员的良师益友。">
+    <meta name="keywords" content="会计税务实训软件，票据管理，票据实训，会计教学案例库，会计准则，会计基础，会计科目，税务稽查，财务会计税务知识学习，CMAC认证，会计职业资格考试，增值税，个人及企业所得税，会计从业资格职称考试，财务会计实训报告">
+    <meta name="baidu_union_verify" content="08ed6c23c7fde59f9aebacb7767d5b7d">
+    <meta name="360-site-verification" content="6223660590c7e66db15b0c98c8dd366d">
+    <meta name="sogou_site_verification" content="omeVabD9RC">
+    <meta name="baidu-site-verification" content="ilM9MCsCDP">
+    <title>学生端-首页</title>
+    <link rel="shortcut icon" href="http://resource.caidao8.com/images/favicon.ico" type="image/ico">
+    <link rel="Bookmark" href="http://resource.caidao8.com/images/favicon.ico">
+    <!-- <link rel="stylesheet" type="text/css" href="../../style/caodao8-1015.css" media="all"> -->
+
+      <!-- 新增 -->
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <link rel="stylesheet" href="../../style/css/bootstrap-select.css">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css" media="all">
+
+    <script src="../../style/js/jquery-1.11.1.min.js"></script>
+
+    <!-- 新增 -->
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+    <script src="../../style/js/bootstrap-select.js"></script>
+    <script src="../../style/js/radialIndicator.js"></script>
+    <!-- <script type="text/javascript" src="../../style/js/scroll_logo.js"></script> -->
+    <script src="../commonPage/hxDialog.js"></script>
+
+  </head>
+  <!-- 此处之后结构有变动 -->
+  <body class="student_end student_home">
+    <!-- 充值提示 start  -->
+    <div class="recharge_tip_container">
+      <div class="recharge_tip_content">
+        <div class="alert_icon icon iconfont icon-alert"></div>
+        <div class="alert_text">
+          您的铜板： <span class="alert_text_red">0</span>个，积分：<span class="alert_text_red">200</span>分，为了您更好的学习，请及时<a href="">充值</a>!
+          <span class="alert_text_gray">（通过打擂台或做补充信息的任务可以获得铜板奖励）</span>
+        </div>
+        <div class="alert_close icon iconfont icon-close" onclick="hiddenRechargeTip()"></div>
+      </div>
+    </div>
+    <!-- 充值提示 end  -->
+
+    <!-- 顶部导航 start -->
+    <nav class="top_bar_container">
+      <div class="student_top_nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="student_logo">
+          <a class="navbar-brand" href="#">
+            <span class='student_end_nav_logo'></span>
+            <!-- <img alt="" src="../../images/cmacedu/cmacLogo.png"> -->
+            <span>CMAC</span>
+          </a>
+        </div>
+
+        <div class="student_top_bar">
+          <ul class="student_top_bar_left">
+            <li class="menu_item menu_active">
+              <a href="#">首页</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">习武堂</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                竞技场<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    打擂台
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    竞技
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    英雄榜
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    排行榜
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                通行证<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    认证体系
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    晋级标准
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    练武分析
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的证书
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    证书查询
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    评测报告
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                就业帮<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    职位查看
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的就业
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    就业指导
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                道具商城<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    道具商城
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    考前冲刺
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专精特训
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    财税法规
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="top_nav_search_area">
+            <input class="top_nav_search_input" type="text" placeholder="搜索财税法规、视频、课件等">
+            <span class="icon iconfont icon-chaxun"></span>
+          </div>
+
+          <ul class="student_top_bar_right">
+            <li class="dropdown">
+              <a class="top_nav_right_item dropdown-toggle" onclick="toggleDialog('sign_dialog')">
+                <div class="icon iconfont icon-qiandao"></div>
+                <div class='nav_item_text'>签到</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+
+              <!-- 签到下拉列表 -->
+              <div class="dropdown-menu sign_dialog">
+                <div class="caret_icon"></div>
+                <div style="" id="calendar" class="sign_main_container">
+                  <div class="calendar_main">
+                    <div class="sign_main" id="sign_layer"></div>
+                    <div class="sign_footer">
+                      <div class="reward_tip">
+                        <span class="border_dashed">1积分</span>
+                        <span class="border_solid">再签到1天有惊喜哦～</span>
+                      </div>
+                      <p class="sign_tip">
+                        今日获得积分数 | 已连续签到2天<span class="icon iconfont icon-tips"></span>
+                      </p>
+                    </div>
+                    <div class="sign_in_rule">
+                      <h4 class="text-center">签到规则</h4>
+                      <ul>
+                        <li>1.每签到一次可获得1个基础积分；</li>
+                        <li>2.连续签到3天额外赠送3个积分，连续签到7天额外赠送5个积分，连续签到15天额外赠送10积分</li>
+                        <li>3.期间如有中断或连续签到满15天重新开始计算连续签到天数。</li>
+                      </ul>
+                      <div class="icon iconfont icon-close"></div>
+                    </div>
+                  </div>
+
+                </div>
+              </div>
+            </li>
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-message"></div>
+                <div class='nav_item_text'>消息</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class='top_nav_right_item user_center_gate dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class='top_nav_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                <span class="new_message_dot"></span>
+              </a>
+
+              <!-- 个人中心 -->
+              <div class="dropdown-menu">
+                <div class="caret_icon"></div>
+                <div class="top_bar_user_center">
+                  <div class="user_center_module_1">
+                    <img class='user_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                    <div class="user_info">
+                      <div class="user_info_top">
+                        <span class="user_name">白兔兔</span>
+                        <span class="total_credit">总学分 45</span>
+                      </div>
+                      <div class="user_info_bottom">
+                        <span class="grade_label">CMAC级别：</span>
+                        <span class="current_grade">实习会计</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_2">
+                    <div class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-work"></i>
+                        作业
+                      </div>
+                      <div class="number">
+                        10
+                      </div>
+                    </div>
+                    <div class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-user_center"></i>
+                        个人中心
+                      </div>
+                    </div>
+                    <div class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-renwu"></i>
+                        任务
+                      </div>
+                      <div class="number">
+                        14
+                      </div>
+                    </div>
+                    <div class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-exercise"></i>
+                        我的练习
+                      </div>
+                      <img class="exercise_gift_img" src="../../images/cmacedu/gift.svg" alt="">
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_3">
+                    <div class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-currentGrade"></i>
+                        本级学分
+                      </span>
+                      <div class="progress_container">
+                        <div class="progress_inner" style="width: 70%;"></div>
+                      </div>
+                      <div class="number">
+                        <span class="has_credit">144</span>/<span class="need_credit">756</span>
+                      </div>
+                    </div>
+                    <div class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-tongban"></i>
+                        铜板
+                        <a href="" class='module_item_left_sub'>马上充值</a>
+                      </span>
+                      <div class="module_item_right">0.0</div>
+                    </div>
+                    <div class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-jifen"></i>
+                        积分
+                        <a href="" class='module_item_left_sub'>如何获取积分？</a>
+                      </span>
+                      <div class="module_item_right">30</div>
+                    </div>
+                  </div>
+
+                  <div class="user_center_module_4">
+                    <div onclick="openDialog('student_change_password')">修改密码</div>
+                    <div>安全退出</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- 顶部导航 end -->
+    <!-- 清除浮动 -->
+    <div class="clearFix"></div>
+
+    <!-- 主内容区域 start -->
+    <div>
+      <!-- banner区域（含个人信息展示+微信快捷入口）-->
+      <div class="home_banner_area">
+        <div class="win1200" style="position:relative">
+          <div class="lian_wu_gate">
+            <div class="pc_lian_wu">
+              <img class="lian_wu_text" src="../../images/cmacedu/xwtText.png" alt="" width="180" height="80">
+              <a class="lian_wu_btn" href="">练武功</a>
+            </div>
+            <div class="mobile_lian_wu">
+              <p class="lian_wu_text">微信练武更方便</p>
+              <img class="qr_code" src="../../images/cmacedu/weChatQrCode.png" alt="" width="164" height="162">
+            </div>
+          </div>
+          <div class="home_banner_info">
+            <div class="banner_info_top">
+              <div class="banner_img"></div>
+              <div class="card_area">
+                <!-- 头像+姓名+目标级别 -->
+                <div class="cell">
+                  <img class="cell_img" src="../../images/cmacedu/userAvatar.png" alt="" width="40" height="40">
+                  <div class="cell_text">
+                    <p class="main_text">HI, <span>白兔兔</span></p>
+                    <p class="sub_text">
+                      目标级别：<span>CMAC1级</span>
+                      <a href="http://www.caidao8.com/p/cmacindex" class="icon iconfont icon-bangzhu what_cmac"  data-container="body" data-toggle="popover" data-placement="bottom" data-content="什么是CMAC?"></a>
+                    </p>
+                  </div>
+                </div>
+
+                <!-- 报告+证书 -->
+                <a class="card report_card" href="">
+                  我的学习报告
+                </a>
+                <a class="card cert_card" href="">
+                  我获得的证书
+                </a>
+              </div>
+            </div>
+            <div class="banner_info_bottom">
+              <ul class="grade_num_area">
+                <li class="item">
+                  <div id="indicatorContainerWrap" class="progress_wrapper">
+                    <div class="prg-cont rad-prg" id="indicatorContainer"></div>
+                    <p class="progress_text">我的学分</p>
+                  </div>
+                </li>
+                <li class="item">
+                  <p class="num">34</p>
+                  <p class="size_14">铜板</p>
+                  <a href="">马上充值</a>
+                </li>
+                <li class="item">
+                  <p class="num">34</p>
+                  <p class="size_14">积分</p>
+                  <a href="">如何获得积分</a>
+                </li>
+              </ul>
+              <div class="guide_area">
+                <a href="http://faq.caidao8.com/help/xwtxsjc.html" class="item col-md-6 text-center">
+                  <p class="icon iconfont icon-xinshoujiaocheng"></p>
+                  <p>新手教程</p>
+                </a>
+                <a href="http://faq.caidao8.com/help/edit_pic.html" class="item col-md-6 text-center">
+                  <p class="icon iconfont icon-wenti"></p>
+                  <p>常见问题</p>
+                </a>
+                <a href="http://www.caidao8.com/student/onlineChargeView" class="item col-md-6 text-center">
+                  <p class="icon iconfont icon-zhanghu"></p>
+                  <p>账户充值</p>
+                </a>
+                <a href="http://www.caidao8.com/studentcenter/myAssets?menu=myassets" class="item col-md-6 text-center">
+                  <p class="icon iconfont icon-jiaoyijilu"></p>
+                  <p>交易记录</p>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 商城+争霸区域 -->
+      <div class="big_bg student_container">
+        <div class="win1200">
+          <div class="ltzb_box" >
+            <ul class="lt_tit"><span  class="lt_line"></span><span class="lt_f30">擂台争霸</span><span class="lt_line"></span></ul>
+            <div class="">
+              <ul class="lt_list_box">
+                <li class="w340_280"><span class="xylt_ico"></span><p class="tit_f24">学员擂台</p><p class="tit_f14">学员之间PK（刺激、有输赢）条件：>200学分,铜板数>1</p></li>
+                <li class="w340_280"><span class="qtb_ico"></span><p class="tit_f24">抢铜板</p><p class="tit_f14">学员之间PK（刺激、有输赢）条件：铜板数>0.1</p></li>
+                <li class="w340_280"><span class="xtlt_ico"></span><p class="tit_f24">系统擂台</p><p class="tit_f14">学员之间PK（刺激、有输赢）条件：铜板数>1</p></li>
+              </ul>
+            </div>
+          </div>
+          <div class="ltzb_box" >
+            <ul class="lt_tit"><span  class="lt_line"></span><span class="lt_f30">商城道具</span><span class="lt_line"></span></ul>
+            <div class="" >
+              <ul class="dj_list_box">
+                <li class="w340_280_2"><span class="jtk_ico"></span><p class="tit_f24">记题卡</p><p class="tit_f12">使用"记题卡"，该题内容与 做题信息将自动保存到"我的 习题"中，方便您日后浏览或 学习。仅限习武堂。</p></li>
+                <li class="w340_280_2"><span class="ttk_ico"></span><p class="tit_f24">跳题卡</p><p class="tit_f12">使用" 跳题卡"将跳过本题，进入 下一道题目，不减少当日作题限额， 仅限习武堂使用。当日当题有效。</p></li>
+                <li class="w340_280_2"><span class="ztk_ico"></span><p class="tit_f24">做题卡</p><p class="tit_f12">使用"做题卡"，可以增加练武题 目10道，效果逐步递减，即增加题 目数=10-当日使用次数，此卡最少 增加1道，每日限用155张。效果当 天内有效。仅限习武堂使用。</p></li>
+                <div class="clear"></div>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 主内容区域 end -->
+
+    <!-- footer区域 start -->
+    <div  class="new_foot_box">
+      <div class="win1200">
+        <div class="foot_nav">
+          <ul class="kf_ico">
+           <li><img src="../../images/kf_ico.png" /></li>
+           <li>客服电话</li>
+           <li>0571-56688106</li>
+          </ul>
+          <ul class="about">
+            <li><h4>关于我们</h4></li>
+            <li><a href="#">公司简介</a></li>
+            <li><a href="#">新闻资讯</a></li>
+            <li><a href="#">联系我们</a></li>
+          </ul>
+          <ul class="pr_list">
+            <li><h4>产品速递</h4></li>
+            <li><a href="#">税务实训平台</a></li>
+            <li><a href="#">饱学席</a></li>
+            <li><a href="#">作业管理系统</a></li>
+          </ul>
+          <ul class="hot_news">
+            <li><h4>热门活动</h4></li>
+            <li><a href="#">衡信杯全国税务技能大赛</a></li>
+            <li><a href="#">衡信杯全国税务技能大赛</a></li>
+            <li><a href="#">衡信杯全国税务技能大赛</a></li>
+           </ul>
+           <ul class="weixin">
+            <li style="padding-left:6px;"><img src="../../images/2wm.png" /></li>
+            <li >扫码关注</li>
+           </ul>
+        </div>
+      </div>
+      <div class="clear"></div>
+      <div class="Copyright">Copyright@2015-2016　财刀网　浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号</div>
+    </div>
+    <!-- footer区域 end -->
+
+    <!-- 滚动工具栏 start -->
+    <div class="toolbar">
+      <a target="blank" href="tencent://message/?uin=1461038420&Site=在线客服&Menu=yes" alt="点击这里给我发消息"  class="toolbar-item toolbar-item-app"></a>
+      <a href="javascript:void(0);" class="toolbar-item toolbar-item-weixin"><span class="toolbar-layer"></span></a>
+      <a href="http://www.caidao8.com/static/feeback.htm" target="_blank" class="toolbar-item toolbar-item-feedback"></a>
+      <a href="javascript:scroll(0,0);" id="top" class="toolbar-item toolbar-item-top"></a>
+    </div>
+    <!-- 滚动工具栏 end -->
+
+    <!-- 弹框区域 start -->
+      <!-- 修改密码 -->
+    <div class="dialog_container student_change_password">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>修改密码</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('student_change_password')"></i>
+        </div>
+        <div class="dialog_content">
+          <form action="">
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="原密码"/>
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="新密码" />
+            </div>
+            <div class='form_input_item'>
+              <label for="">*</label>
+              <input type="password" autocomplete="true" required placeholder="确认密码"/>
+            </div>
+          </form>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('student_change_password')">取消</button>
+        </div>
+      </div>
+    </div>
+
+      <!-- 加入学校-选择学校班级 -->
+    <div class="dialog_container join_school">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>申请加入学校</span>
+          <i class='icon iconfont icon-close_hover' onclick="closeDialog('join_school')"></i>
+        </div>
+        <div class="dialog_content">
+            <div class="join_school_box">
+              <select class="selectpicker show-tick select_school" data-live-search="true">
+                <option selected disabled>请选择学校</option>
+                <option>浙江理工大学</option>
+                <option>z</option>
+                <option>this is a bug</option>
+                <option>it is a dog</option>
+                <option>浙江理工大学</option>
+                <option>杭州电子科技大学</option>
+                <option>工商大学</option>
+                <option>浙江传媒</option>
+              </select>
+              <select class="selectpicker show-tick select_class" data-live-search="true">
+                <option selected disabled>请选择班级</option>
+                <option>一班</option>
+                <option>二班</option>
+                <option>三班</option>
+                <option>四班</option>
+              </select>
+            </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('join_school')">取消</button>
+        </div>
+      </div>
+    </div>
+    <!-- 弹框区域 start -->
+
+    <!-- 签到弹框js -->
+    <script>
+      Toast.init()
+      var calUtil = {
+        showYear:2015,
+        showMonth:1,
+        showDay: 1,
+        showDays:1,
+        eventName:"load",
+        //初始化签到列表
+        init:function(signList,s){
+          calUtil.setMonthAndDay();
+          if (typeof(s) == 'undefined') {
+          } else {
+            signList.splice('','',s);
+          }
+          console.warn('当前已签到列表为', signList)
+          calUtil.draw(signList);
+          calUtil.bindEnvent(signList);
+        },
+        draw:function(signList){
+          // console.log(signList);
+          // 判断是否满足签到条件
+          if(signList.length > 21){
+            $jq("#sign_note").empty();
+            $jq("#sign_note").html('<button class="sign_contener" type="button"><i class="fa fa-calendar-check-o" aria-hidden="true"></i>已达标，获取1次抽奖</button>');
+          }
+          var str = calUtil.drawCal(calUtil.showYear,calUtil.showMonth,signList);
+          $jq("#sign_layer").html(str);
+          var calendarName=calUtil.showYear + "年" + calUtil.showMonth + "月" + calUtil.showDay + "日" ;
+          $jq(".calendar_month_span").html(calendarName);
+        },
+
+        // 绑定事件----点击签到（在此处自定义 1、签到限制 及 2、签到达到某一限额后的事件）
+        bindEnvent:function(signList){
+          $jq(".can_sign").click(function(){
+            var tmp = {"signDay":$jq(this).html()};
+            calUtil.init(signList,tmp);
+            Toast.show('恭喜您签到成功')
+          });
+          // $jq(".expired").click(function(){
+          //   Toast.show('昨天已经过去～～～')
+          // });
+          // $jq(".no_arrive").click(function(){
+          //   Toast.show('明天尚未开始～～～')
+          // });
+          $jq(".prevMonth").click(function () {
+            calUtil.eventName = 'prev';
+            console.log(calUtil.eventName)
+            calUtil.init(signList);
+          });
+          $jq(".nextMonth").click(function () {
+            calUtil.eventName = 'next';
+            calUtil.init(signList);
+          });
+        },
+        //设置年月天
+        setMonthAndDay:function(){
+          switch(calUtil.eventName)
+          {
+            case "load":
+              var current = new Date();
+              calUtil.showYear=current.getFullYear();
+              calUtil.showMonth=current.getMonth() + 1;
+              calUtil.showDay=current.getDate();
+              break;
+            case "prev":
+              var nowMonth=$jq(".calendar_month_span").html().split("年")[1].split("月")[0];
+              calUtil.showMonth=parseInt(nowMonth)-1;
+              console.log('上个月', calUtil.showMonth)
+              if(calUtil.showMonth==0)
+              {
+                  calUtil.showMonth=12;
+                  calUtil.showYear-=1;
+              }
+              break;
+            case "next":
+              var nowMonth=$jq(".calendar_month_span").html().split("年")[1].split("月")[0];
+              calUtil.showMonth=parseInt(nowMonth)+1;
+              if(calUtil.showMonth==13)
+              {
+                  calUtil.showMonth=1;
+                  calUtil.showYear+=1;
+              }
+              break;
+          }
+        },
+        // 获取本月天数
+        getDaysInmonth : function(iMonth, iYear){
+         var dPrevDate = new Date(iYear, iMonth, 0);
+         return dPrevDate.getDate();
+        },
+        bulidCal : function(iYear, iMonth) {
+         var aMonth = new Array();
+         aMonth[0] = new Array(7);
+         aMonth[1] = new Array(7);
+         aMonth[2] = new Array(7);
+         aMonth[3] = new Array(7);
+         aMonth[4] = new Array(7);
+         aMonth[5] = new Array(7);
+         aMonth[6] = new Array(7);
+         var dCalDate = new Date(iYear, iMonth - 1, 1);
+         // 获取本月第一天为礼拜几
+         var iDayOfFirst = dCalDate.getDay();
+         var iDaysInMonth = calUtil.getDaysInmonth(iMonth, iYear);
+         var iVarDate = 1;
+         var d, w;
+         aMonth[0][0] = "日";
+         aMonth[0][1] = "一";
+         aMonth[0][2] = "二";
+         aMonth[0][3] = "三";
+         aMonth[0][4] = "四";
+         aMonth[0][5] = "五";
+         aMonth[0][6] = "六";
+         // 渲染本月日历
+         for (d = iDayOfFirst; d < 7; d++) {
+          aMonth[1][d] = iVarDate;
+          iVarDate++;
+         }
+         for (w = 2; w < 7; w++) {
+          for (d = 0; d < 7; d++) {
+           if (iVarDate <= iDaysInMonth) {
+            aMonth[w][d] = iVarDate;
+            iVarDate++;
+           }
+          }
+         }
+         return aMonth;
+        },
+        // 判断是否已签到
+        ifHasSigned : function(signList,day){
+         var signed = false;
+         $jq.each(signList,function(index,item){
+          if(item.signDay == day) {
+           signed = true;
+           return false;
+          }
+         });
+         return signed ;
+        },
+
+        // 判断是否已过时间
+        ifHasExpired : function(day){
+          var expired = false;
+          // console.warn('当前时间', calUtil.showDay)
+          if(calUtil.showDay > day) {
+            expired = true;
+          }
+          return expired ;
+        },
+
+        // 绘制日历列表
+        drawCal : function(iYear, iMonth ,signList) {
+         var myMonth = calUtil.bulidCal(iYear, iMonth);
+         var htmls = new Array();
+         htmls.push("<div class='sign_succ_calendar_title'><span class='prevMonth'><</span>");
+         htmls.push("<div class='calendar_month_span'></div><span class='nextMonth'>></span>");
+         htmls.push("</div>");
+         htmls.push("<div class='sign_equal' id='sign_cal'>");
+         htmls.push("<div class='sign_row'>");
+         htmls.push("<div class='th_1 bold'>" + myMonth[0][0] + "</div>");
+         htmls.push("<div class='th_2 bold'>" + myMonth[0][1] + "</div>");
+         htmls.push("<div class='th_3 bold'>" + myMonth[0][2] + "</div>");
+         htmls.push("<div class='th_4 bold'>" + myMonth[0][3] + "</div>");
+         htmls.push("<div class='th_5 bold'>" + myMonth[0][4] + "</div>");
+         htmls.push("<div class='th_6 bold'>" + myMonth[0][5] + "</div>");
+         htmls.push("<div class='th_7 bold'>" + myMonth[0][6] + "</div>");
+         htmls.push("</div>");
+         var d, w;
+         for (w = 1; w < 6; w++) {
+          htmls.push("<div class='sign_row'>");
+          for (d = 0; d < 7; d++) {
+            var ifHasSigned = calUtil.ifHasSigned(signList,myMonth[w][d]);
+            var ifHasExpired = calUtil.ifHasExpired(myMonth[w][d]);
+            // console.log("001:"+ifHasSigned);
+            if(ifHasSigned && typeof(myMonth[w][d]) != 'undefined'){
+              htmls.push("<div class='td_"+d+" on'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</div>");
+            } else if (ifHasExpired && typeof(myMonth[w][d]) != 'undefined') {
+              htmls.push("<div class='td_"+d+" calendar_record expired'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</div>");
+            } else if ( calUtil.showDay === myMonth[w][d] && typeof(myMonth[w][d]) != 'undefined') {
+              htmls.push("<div class='td_"+d+" calendar_record currentDay can_sign'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</div>");
+            } else {
+              htmls.push("<div class='td_"+d+" calendar_record no_arrive'>" + (!isNaN(myMonth[w][d]) ? myMonth[w][d] : " ") + "</div>");
+            }
+          }
+          htmls.push("</div>");
+         }
+         htmls.push("</div>");
+         htmls.push("</div>");
+         return htmls.join('');
+        }
+      };
+    </script>
+
+    <!-- 滚动工具栏 start -->
+    <script>
+      $jq(function() {
+        $jq(".proLeftnav dd").hover(function () {
+          $jq("a", this).stop().animate({
+            'padding-left': '0px'
+          }, 300); // move down - hide
+          $jq("span", this).stop().animate({
+            'left': '0px'
+          }, 300); // move down - show
+        }, function () {
+          $jq("a", this).stop().animate({
+            'padding-left': '0px'
+          }, 300); // move down - hide
+          $jq("span", this).stop().animate({
+            'left': '-250px'
+          }, 300); // move down - show
+        });
+
+        $jq(".case_con ul li").hover(function () {
+          $jq("a", this).stop().animate({
+            'padding-left': '0px'
+          }, 300); // move down - hide
+          $jq("span", this).stop().animate({
+            'left': '0px'
+          }, 300); // move down - show
+        }, function () {
+          $jq("a", this).stop().animate({
+            'padding-left': '0px'
+          }, 300); // move down - hide
+          $jq("span", this).stop().animate({
+            'left': '-250px'
+          }, 300); // move down - show
+        });
+
+        $jq('.case_con ul li').hover(function () {
+          $jq('.case_sub_al', this).fadeIn(150)
+          $jq(this).css({
+            'z-index': '7'
+          })
+        }, function () {
+          $jq('.case_sub_al', this).fadeOut(150)
+          $jq(this).css({
+            'z-index': '5'
+          })
+        })
+      });
+    </script>
+    <script>
+      $jq(function () {
+        $jq('.sign_main_container .calendar_main .sign_footer .sign_tip .icon').click(function () {
+          $jq('.calendar_main').animate({
+            top: '-390px'
+          }, 300, 'swing')
+        })
+        $jq('.sign_main_container .calendar_main .sign_in_rule .icon').click(function () {
+          $jq('.calendar_main').animate({
+            top: '0'
+          }, 300, 'swing')
+
+        })
+        //ajax获取日历json数据
+        var signList=[{"signDay":"1"}];
+        calUtil.init(signList);
+        Confirm.init();
+        // 判断是否加入学校，若没有，则弹出该弹框
+        joinSchoolPre();
+
+        /*我的学分进度条 start*/
+        // 此处初始化cmac当前级别总学分+用户当前学分
+        $jq('#indicatorContainer').radialIndicator({
+          barColor: {
+            0: '#488EFF',
+            10: '#488EFF',
+            33: '#488EFF',
+            66: '#188EFF',
+            100: '#188EFF'
+          },
+          fontColor: '#007AFF',
+          fontSize: '38',
+          fontWeight: 'bold',
+          radius: 60,
+          barWidth: 6,
+          curBarWidth: 14,
+          showPercentage : false,
+          displayNumber: true,
+          minValue: 0, // 当前级别最低学分
+          maxValue: 999 // 当前级别最高学分
+        });
+        // 设置用户当前学分
+        var radialObj = $jq('#indicatorContainer').data('radialIndicator');
+        radialObj.value(499); //设置初始值
+        // radialObj.animate(499); // 设置初始值（有动态效果）
+        // radialObj.value();  // 获取当前值
+        /*我的学分进度条 start*/
+
+        $jq('.what_cmac').hover(function () {
+          $jq(this).popover('show')
+        },function () {
+          $jq(this).popover('hide')
+        })
+
+      })
+      function toggleDialog(className) {
+        if ($jq('.' + className).css('display') === 'none') {
+          openDialog(className)
+          // 点击弹框区域外关闭（Bug:iframe外点击无效 ）
+          var dialogState = false
+          setTimeout(function () {
+            dialogState = true
+          }, 100)
+          $jq(document).click(function (e) {
+            if (dialogState) {
+              var container = $jq('.' + className);
+              var $target = $jq(e.target);
+              console.log('container', container.has($target), container.is($target))
+              if(!container.is($target) && container.has($target).length === 0){
+                if (!$jq('.prevMonth').is($target) && !$target.hasClass('prevMonth') && !$jq('.nextMonth').is($target) && !$target.hasClass('nextMonth')) {
+                  closeDialog(className)
+                  dialogState = !dialogState;
+                }
+              }
+            }
+          })
+        } else {
+          closeDialog(className)
+        }
+      }
+      function openDialog(className) {
+        $jq('.student_end').css('overflow','hidden')
+        $jq('.' + className).css('display', 'block')
+      }
+      function closeDialog(className) {
+        $jq('.student_end').css('overflow','auto')
+        $jq('.' + className).css('display', 'none')
+      }
+      function hiddenRechargeTip() {
+        $jq('.student_end .recharge_tip_container').css('display', 'none')
+      }
+
+      function joinSchoolPre() {
+        // 有两个按钮 类名为 confirm_btn / cancel_btn (必传四个参数)
+        Confirm.show('温馨提示', '您尚未加入任何学校，有些功能需要加入学校后才能正常使用，现在是否申请加入？', '加入学校', '继续浏览');
+
+         var cancelBtn = document.querySelector('.cancel_btn')
+         var confirmBtn = document.querySelector('.confirm_btn')
+         $jq('.confirm_btn').click(function () {
+          Confirm.hidden();
+           openDialog('join_school');
+         })
+        // 可自定义点击事件
+        cancelBtn.addEventListener('click', Confirm.hidden, false)
+        //  隐藏弹框调用 Confirm.hidden()
+      }
+    </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

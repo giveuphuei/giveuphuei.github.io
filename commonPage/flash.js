@@ -1,0 +1,1 @@
+function chkFlash(){var b=$jq.browser.msie;var a=true;if(b){try{var d=new ActiveXObject("ShockwaveFlash.ShockwaveFlash")}catch(c){a=false}}else{if(!navigator.plugins["Shockwave Flash"]){a=false}}return a};

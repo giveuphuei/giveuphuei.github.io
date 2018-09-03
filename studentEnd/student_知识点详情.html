@@ -1,0 +1,397 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0023)http://www.caidao8.com/ -->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=EDGE,chrome=1">
+    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>学生端-知识点详情页</title>
+    <link href="../../style/cmacedu/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/cmac_school.css" media="all">
+    <!--    <link rel="stylesheet" type="text/css" href="http://testresource.caidao8.com/style/cmacedu/css/cmac_school.css"> -->
+
+    <link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+    <script type="text/javascript" src="../../style/js/jquery-1.8.3.min.js"></script>
+    <script src="../../style/cmacedu/js/bootstrap.min.js"></script>
+  </head>
+  <!-- 此处之后结构有变动 -->
+  <body class="student_end">
+    <nav class="top_bar_container">
+      <div class="student_top_nav">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="student_logo">
+          <a class="navbar-brand" href="#">
+            <img class='student_end_nav_logo' alt="" src="../../images/cmacedu/cmacLogo.png">
+            <span>CMAC</span>
+          </a>
+        </div>
+
+        <div class="student_top_bar">
+          <ul class="student_top_bar_left">
+            <li class="menu_item menu_active">
+              <a href="#">首页</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">习武堂</a>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                竞技场<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    打擂台
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    竞技
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    英雄榜
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    排行榜
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item menu_tongxz">
+              <a href="#">
+                通行证<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    认证体系
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    晋级标准
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    练武分析
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的证书
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    证书查询
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专项证书查询
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    评测报告
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                就业帮<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    职位查看
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    我的就业
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    就业指导
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu_item">
+              <a href="#">
+                道具商城<span class="icon iconfont"></span>
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">
+                    道具商城
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    考前冲刺
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    专精特训
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    财税法规
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+
+          <div class="top_nav_search_area">
+            <input class="top_nav_search_input" type="text" placeholder="搜索财税法规、视频、课件等">
+            <span class="icon iconfont icon-chaxun"></span>
+          </div>
+
+          <ul class="student_top_bar_right">
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-qiandao"></div>
+                <div class='nav_item_text'>签到</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li>
+              <a class="top_nav_right_item" href="">
+                <div class="icon iconfont icon-message"></div>
+                <div class='nav_item_text'>消息</div>
+                <span class="new_message_dot" style="display: none;"></span>
+              </a>
+            </li>
+            <li class="dropdown">
+              <a class='top_nav_right_item user_center_gate dropdown-toggle' data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                <img class='top_nav_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                <span class="new_message_dot"></span>
+              </a>
+
+              <!-- 个人中心 -->
+              <div class="dropdown-menu">
+                <div class="caret_icon"></div>
+                <div class="top_bar_user_center">
+                  <div class="user_center_module_1">
+                    <img class='user_avatar' src="../../images/cmacedu/userAvatar.png" alt="">
+                    <div class="user_info">
+                      <div class="user_info_top">
+                        <span class="user_name">白兔兔</span>
+                        <span class="total_credit">总学分 45</span>
+                      </div>
+                      <div class="user_info_bottom">
+                        <span class="grade_label">CMAC级别：</span>
+                        <span class="current_grade">实习会计</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_2">
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-work"></i>
+                        作业
+                      </div>
+                      <div class="number">
+                        10
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-user_center"></i>
+                        个人中心
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-renwu"></i>
+                        任务
+                      </div>
+                      <div class="number">
+                        14
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <div class="module_item_left">
+                        <i class="icon iconfont icon-exercise"></i>
+                        我的练习
+                      </div>
+                      <img class="exercise_gift_img" src="../../images/cmacedu/gift.svg" alt="">
+                    </a>
+                  </div>
+                  <div class="user_center_split_line"></div>
+                  <div class="user_center_module_3">
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-currentGrade"></i>
+                        本级学分
+                      </span>
+                      <div class="progress_container">
+                        <div class="progress_inner" style="width: 70%;"></div>
+                      </div>
+                      <div class="number">
+                        <span class="has_credit">144</span>/<span class="need_credit">756</span>
+                      </div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-tongban"></i>
+                        铜板
+                        <span class='module_item_left_sub'>马上充值</span>
+                      </span>
+                      <div class="module_item_right">0.0</div>
+                    </a>
+                    <a href="" class='module_item'>
+                      <span class="module_item_left">
+                        <i class="icon iconfont icon-jifen"></i>
+                        积分
+                        <span href="" class='module_item_left_sub'>如何获取积分？</span>
+                      </span>
+                      <div class="module_item_right">30</div>
+                    </a>
+                  </div>
+
+                  <div class="user_center_module_4">
+                    <div onclick="openDialog('student_change_password')">修改密码</div>
+                    <div>安全退出</div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!--知识点详情-->
+    <div class="xwt_xuexi">
+      <div class="top_pic">
+          <div style="color:#FFFFFF; font-size:24px; line-height:90px; text-align:center">● 知识点法规库 ● </div>
+      </div>
+      <div class="win1200">
+        <div>当前位置：<a href="#">知识点</a>  /　 会计法规</div>
+        <div class="xuexi_con">
+          <div class="news">
+            <ul  class="left_box">
+              <p class="title_24">Excel必看的一些操作</p>
+              <p class="title_18">副标题内容显示</p>
+              <div style="border-bottom:#ddd solid 1px; margin-bottom:15px; height:3px"></div>
+              <p class="title_14">发布：财刀网 <span  class="padding_left35">日期：2018-5-15</span> <span class="jiucuo" ><a href="#" onclick="openDialog('buy_tool_dialog')">我要收藏</a>| <a href="#">>>查找更多</a></span></p>
+              <div class="news_info">
+                <p><strong>一、让不同类型数据用不同颜色显示</strong></p>
+                <p>在工资表中，如果想让大于等于2000元的工资总额以“红色”显示，大于等于1500元的工资</p>
+                <p>总额以“蓝色”显示，低于1000元的工资总额以“棕色”显示，其它以“黑色”显示，我们可以这样设置。</p>
+                <p>1.打开“工资表”工作簿，选中“工资总额”所在列，执行“格式→条件格式”命令，打开</p>
+                <p> “条件格式”对话框。单击第二个方框右侧的下拉按钮，选中“大于或等于”选项，在后面的方框中输入数值“2000”。单击“格式”按钮，打开“单元格格式”对话框，将“字体”的“颜色”设置为“红色”。</p>
+                <p>2.按“添加”按钮，并仿照上面的操作设置好其它条件(大于等于1500，字体设置为“蓝色”；小于1000，字体设置为“棕色”)。</p>
+                <p>3.设置完成后，按下“确定”按钮。看看工资表吧，工资总额的数据是不是按你的要求以不同颜色显示出来了。</p>
+                <p><strong>二、建立分类下拉列表填充项</strong></p>
+                <p>我们常常要将企业的名称输入到表格中，为了保持名称的一致性，利用“数据有效性”功能</p>
+                <p>对话框，输入名称——“专业符号”，确定后，即在工作区中出现一个工具条。切换到“命令”标签中，选中“类别”下面的“宏”，将“命令”下面的“自定义按钮”项拖到“专业符号”栏上(有多少个特殊符号就拖多少个按钮)。3.选中其中一个“自定义按钮”，仿照第2个秘技的第1点对它们进行命名。4.右击某个命名后的按钮，在随后弹出的快捷菜单中，选“指定宏”选项，打开“指定宏”对话框，选中相应的宏(如fuhao1等)，确定退出。重复此步操作，将按钮与相应的宏链接起来。5.关闭“自定义”对话框，以后可以像使用普通工具栏一样，使用“专业符号”工具栏，向单元格中快速输入专业符号了。</p>
+                <p class="Copyright">【来源：财刀网学员100001202105509】</p>
+                <p class="jiucuo"><i class="jc_ico"></i>以上信息有误？<a href="#">我要纠错</a></p>
+              </div>
+            </ul>
+            <ul class="right_box">
+              <li><strong>相关知识点导航</strong></li>
+              <li>暂无相关内容展示</li>
+            </ul>
+            <div class="clear"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <div class="footer">
+      <p>浙江衡信教育科技有限公司　版权所有 浙ICP备10009426号 <br>Copyright@2015-2016</p>
+    </div>
+
+    
+    <!-- 购买道具弹框  start -->
+    <div class="dialog_container buy_tool_dialog">
+      <div class="dialog_body">
+        <div class="dialog_head">
+          <span>立即购买</span>
+          <i class='icon iconfont icon-close' onclick="closeDialog('buy_tool_dialog')"></i>
+        </div>
+        <div action="" class="dialog_content">
+          <div class="tool_img">
+            <img src="../../images/cmacedu/toolMall_0005.png" alt="">
+          </div>
+          <div class="buy_tool_info">
+            <div class="buy_tool_info_item">
+              <span class="item_label">道具名称</span>
+              <span class="item_value">做题卡
+              </span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">道具用途</span>
+              <span class="item_value">使用“做题卡”，可以增加练武题目10道，效果逐步递减，即增加题目数</span>
+            </div>
+            <div class="buy_tool_info_item buy_tool_info_item_other">
+              <span class="item_label">购买方式
+              </span>
+              <span class="item_value">
+                <div class="item_value_btn active">
+                  积分购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+                <div class="item_value_btn">
+                  铜板购买
+                  <span class="icon iconfont icon-number_active"></span>
+                </div>
+              </span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">有效期</span>
+              <span class="item_value">1000天</span>
+            </div>
+            <div class="buy_tool_info_item">
+              <span class="item_label">所需积分</span>
+              <span class="item_value">10个</span>
+            </div>
+            <div class="buy_tool_info_item buy_tool_info_item_other">
+              <span class="item_label">购买个数</span>
+              <span class="item_value">
+                <span class="select_number">
+                  <input placeholder="1" type="number" min="1">
+                <span>最多购买99个</span>
+              </span>
+            </div>
+            <p class="error_tips" style="display: block;">错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示错误提示</p>
+          </div>
+        </div>
+        <div class="dialog_btn">
+          <button class='dialog_main_btn'>确定</button>
+          <button class='dialog_sub_btn' onclick="closeDialog('buy_tool_dialog')">取消</button>
+        </div>
+      </div>
+    </div>
+    <!-- 购买道具弹框  end -->
+
+
+    <script>
+      function openDialog(className) {
+        $('.student_end').css('overflow','hidden')
+        $('.' + className).css('display', 'block')
+      }
+      function closeDialog(className) {
+        $('.student_end').css('overflow','auto')
+        $('.' + className).css('display', 'none')
+      }
+    </script>
+  </body>
+</html>

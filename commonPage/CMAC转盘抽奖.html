@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!-- saved from url=(0119)http://www.17sucai.com/preview/513767/2017-04-17/%E8%BD%AC%E7%9B%98%E6%8A%BD%E5%A5%96%E6%8F%92%E4%BB%B6css32/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<link rel="stylesheet" href="../../style/cmacedu/fonts/iconfont.css">
+	<link rel="stylesheet" type="text/css" href="../../style/cmacedu/css/jiang.css">
+	<script src="../../style/cmacedu/js/jquery.min.js"></script>
+	<script src="../../style/cmacedu/js/rotaryDraw.js"></script>
+	<title>转盘抽奖</title>
+</head>
+<body style="background:#f82c2b url(../../images/cmacedu/back.png) no-repeat;background-size:100% 150%;-moz-background-size:100% 150%; ">
+	<div style="padding:10px;color:#fff;font-size:12px; text-align:center;">
+		<h1 >CMAC积分大奖任你抽</h1>
+		<h5>大奖等你来拿</h5>
+	</div>
+	<!--效果1  可以转8格-->
+	<div class="box">
+		<img src="../../images/cmacedu/img_01.png" class="img01" alt="">
+		<img src="../../images/cmacedu/img_03.png" class="drawBtn" style="top: 295px;">
+	</div>
+	<!--效果1 end-->
+	<!--效果2 可以转12格-->
+	<div class="box1" style="display:none">
+		<img src="../../images/cmacedu/img_02.png" class="img01" alt="">
+		<img src="../../images/cmacedu/img_03.png" class="drawBtn2" style="top: 267px;">
+	</div>
+	<!--效果2 end-->
+	
+	<script>
+	$(".box .img01").load(function() {
+		var obj = $(".drawBtn");
+		var hei = $(this).height();
+		var hei2 = obj.height();
+		obj.css("top",(hei - hei2)/2);
+	});
+	$(".box1 .img01").load(function() {
+		var obj = $(".drawBtn2");
+		var hei = $(this).height();
+		var hei2 = obj.height();
+		obj.css("top",(hei - hei2)/2);
+	});
+	</script>
+	<script>
+	//share份额[数字没有默认],
+	//speed速度[单位s,最小0.1s],
+	//velocityCurve速度曲线[linear匀速，ease慢快慢，ease-in慢慢开始，ease-out慢慢结束，ease-in-out慢快慢等，用的是css3的速度曲线],可以不写，ease默认值；
+	//callback回调函数
+	//weeks几周[默认2周，可以不写]
+	//几份和回调函数这两个参数是必填
+	function callbackA(ind)
+	{
+	// mizhu.alert('恭喜', '中奖啦！'+ind);
+		// alert("第一个回调"+ind);
+    // henxin.reward(-1, '中奖啦~', '恭喜您抽到“加时卡2张”');
+    henxin.rewardPhone(ind, '中奖啦~', '恭喜您抽到“加时卡2张”');
+	};
+	function callbackB(ind)
+	{
+		alert("第二个回调"+ind);
+	};
+	var newdraw =new turntableDraw('.img01',{
+		share:8,
+		speed:"3s",
+		velocityCurve:"ease",
+		weeks:6,
+		callback:function(num)
+		{
+			callbackA(num);
+		},
+	});
+	var newdraw2 =new turntableDraw('.drawBtn2',{
+		share:12,
+		speed:"3s",
+		velocityCurve:"ease",
+		weeks:6,
+		callback:function(num)
+		{
+			callbackB(num);
+		},
+	});
+	$(".drawBtn").click(function(event) {
+		//ajax
+		newdraw.goto(parseInt(Math.random()*8)+1);
+	});
+	$(".drawBtn2").click(function(event) {
+		//ajax
+		newdraw2.goto(parseInt(Math.random()*12)+1);
+	});
+	</script>
+	<!-- 各种弹出层效果 -->
+	<!--div class="alert" onClick="mizhu.alert('恭喜', '中奖啦！');">其中一种提示信息</div-->
+	<!--div class="alert" onClick="mizhu.alert('', '这是alert效果','alert_red');">alert_带图标</div-->
+	<!--div class="alert" onClick="mizhu.alert('alert_带标题带图标', '这是alert效果','alert_green');">alert_带标题带图标</div-->
+	<!--div class="alert" onClick="mizhu.alert('', '这是alert效果');">alert_无标题无图标</div -->
+	<!--=============================================================================================================-->
+	<!--div class="alert confirm" onClick="_confirm1()">confirm_无标题</div -->
+	<!--div class="alert confirm" onClick="_confirm2()">confirm_带标题</div -->
+	<!--=============================================================================================================-->
+	<!--div class="alert open" onClick="mizhu.open(600, 400, '财刀网', 'http://www.caidao8.com');">open</div-->
+	<!--=============================================================================================================-->
+	<!--div class="alert toast" onClick="mizhu.toast('已取消关注');">toast_默认3秒消失</div -->
+	<!--div class="alert toast" onClick="mizhu.toast('已取消关注', 6000);">toast_自定义时间(6秒)</div -->
+	<!--=============================================================================================================-->
+	<!-- div class="alert later">不定时更新</div -->
+	<script src="../../style/cmacedu/js/ui.js"></script>
+	<script type="text/javascript">
+		function _confirm1() {
+			mizhu.confirm('', '是否要取消关注？', function(flag) {
+				if(flag) {
+					mizhu.alert('', '取消成功');
+				}
+			});
+		}
+		function _confirm2() {
+			mizhu.confirm('温馨提醒', '是否要取消关注？', function(flag) {
+				if(flag) {
+					mizhu.alert('', '取消成功');
+				}
+			});
+		}
+	</script>
+	<!-- 各种弹出层效果 end-->
+
+
+   <!--  中奖弹框  -->
+   <!-- 没资格 -->
+	 <div class="reward_dialog_container nochance_dialog" style="display: none;">
+      <div class="reward_dialog_body">
+        <div class="reward_dialog_head">
+          <a class="icon iconfont icon-close"></a>
+        </div>
+        <div class="reward_dialog_content">
+          <div class="dialog_text">
+            <div class="dialog_text_title">
+              对不起~
+            </div>
+            <div class="dialog_text_main">
+              您当前的抽奖机会为0，请继续练习吧
+            </div>
+            <div class="dialog_text_sub">
+              （完成当日练武限额并取得学分≥15即可获得1次免费抽奖的机会）
+            </div>
+          </div>
+          <div class="dialog_image">
+            <img src="../../images/cmacedu/reward_meizige.png" alt="" />
+          </div>
+        </div>
+        <div class="dialog_btn">
+          <button>确定</button>
+        </div>
+      </div>
+   </div>
+
+
+    <!-- 很遗憾 -->
+    <div class="reward_dialog_container nochance_dialog" style="display: none;">
+      <div class="reward_dialog_body">
+        <div class="reward_dialog_head">
+          <a class="icon iconfont icon-close"></a>
+        </div>
+        <div class="reward_dialog_content">
+          <div class="dialog_text">
+            <div class="dialog_text_title">
+              很遗憾~
+            </div>
+            <div class="dialog_text_main">
+              今天亲已经抽过奖了，明天再来吧
+            </div>
+          </div>
+          <div class="dialog_image">
+            <img src="../../images/cmacedu/reward_henyihan.png" alt="" />
+          </div>
+        </div>
+        <div class="dialog_btn">
+          <button>继续抽奖</button>
+        </div>
+      </div>
+    </div>
+
+    <script>
+    </script>
+
+</body>
+</html>
